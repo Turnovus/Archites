@@ -12,6 +12,10 @@
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
 
+        <thingCategories Inherit="False">
+            <li>Turn_ThingCategory_ArchiteCells</li>
+        </thingCategories>
+
         <comps>
             <li Class="ArchiteReinforcement.CompProperties_UseEffectAddToRecord">
                 <record>Turn_Record_ArchiteCellsUsed</record>
@@ -31,7 +35,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>1500</MarketValue>
+            <MarketValue>250</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -46,7 +50,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>3500</MarketValue>
+            <MarketValue>750</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -61,7 +65,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>8000</MarketValue>
+            <MarketValue>1500</MarketValue>
         </statBases>
     </ThingDef>
 

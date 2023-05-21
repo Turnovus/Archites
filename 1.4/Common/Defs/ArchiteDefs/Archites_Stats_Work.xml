@@ -178,6 +178,7 @@
         <label>excavation</label>
         <upgradeType>Factor</upgradeType>
         <effectPerLevel>0.1</effectPerLevel>
+        <baseOffset>1.0</baseOffset>
         <stat>DeepDrillingSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
