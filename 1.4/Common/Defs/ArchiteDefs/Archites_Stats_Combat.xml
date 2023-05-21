@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Trap Spring Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_PawnTrapSpringChance</defName>
+        <label>archite pod of nimbleness</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PawnTrapSpringChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_PawnTrapSpringChance</defName>
+        <label>nimbleness</label>
+        <maxUses>10</maxUses>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>-0.10</effectPerLevel>
+        <stat>PawnTrapSpringChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Melee Armor Penetration -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MeleeArmorPenetration</defName>
+        <label>archite pod of piercing</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeArmorPenetration</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MeleeArmorPenetration</defName>
+        <label>piercing</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset> <!-- stat * 1 at level 0, * 1.04 at level 1 -->
+        <effectPerLevel>0.04</effectPerLevel>
+        <stat>MeleeArmorPenetration</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Mortar Miss Radius Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MortarMissRadiusFactor</defName>
+        <label>archite pod of bombardment</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MortarMissRadiusFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MortarMissRadiusFactor</defName>
+        <label>bombardment</label>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1</baseOffset> <!-- stat * 1 at level 0, * 1.02 at level 1 -->
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MortarMissRadiusFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Melee Dodge Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MeleeDodgeChance</defName>
+        <label>archite pod of swiftness</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeDodgeChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MeleeDodgeChance</defName>
+        <label>swiftness</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MeleeDodgeChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Aiming Time -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_AimingDelayFactor</defName>
+        <label>archite pod of focus</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_AimingDelayFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_AimingDelayFactor</defName>
+        <label>focus</label>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <stat>AimingDelayFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Melee Hit Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MeleeHitChance</defName>
+        <label>archite pod of brawling</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeHitChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MeleeHitChance</defName>
+        <label>brawling</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MeleeHitChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Shooting Accuracy -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_ShootingAccuracyPawn</defName>
+        <label>archite pod of precision</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ShootingAccuracyPawn</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_ShootingAccuracyPawn</defName>
+        <label>precision</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>ShootingAccuracyPawn</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Incoming Damage Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_IncomingDamageFactor</defName>
+        <label>archite pod of durability</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_IncomingDamageFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_IncomingDamageFactor</defName>
+        <label>durability</label>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.025</effectPerLevel>
+        <stat>IncomingDamageFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

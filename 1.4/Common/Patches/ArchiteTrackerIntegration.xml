@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- Add an empty comps block to the human def, if nobody else has added one -->
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Human"]/comps</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Human"]</xpath>
+                    <value>
+                        <comps></comps>
+                    </value>
+                </nomatch>
+            </li>
+            <!-- Add the ArchiteTracker to the human def's comps -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Human"]/comps</xpath>
+                <value>
+                    <li>
+                        <compClass>ArchiteReinforcement.CompArchiteTracker</compClass>
+                    </li>
+                </value>
+            </li>
+
+            <!-- Add an empty inspectorTabs block to the human def, if nobody else has added one -->
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Human"]/inspectorTabs</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Human"]</xpath>
+                    <value>
+                        <inspectorTabs></inspectorTabs>
+                    </value>
+                </nomatch>
+            </li>
+            <!-- Add the archite upgrades tab to the human def's inspectorTabs -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Human"]/inspectorTabs</xpath>
+                <value>
+                    <li>ArchiteReinforcement.ITab_Pawn_ArchiteUpgrades</li>
+                </value>
+            </li>
+
+            <!-- Check if any alien race is loaded -->
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <!-- Add a comps block to any alien race that doesn't already have one -->
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success> <!-- Because there may be zero hits -->
+                            <xpath>Defs/AlienRace.ThingDef_AlienRace[count(comps)=0]</xpath>
+                            <value>
+                                <comps></comps>
+                            </value>
+                        </li>
+                        <!-- Add the archite tracker to all alien races -->
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>Defs/AlienRace.ThingDef_AlienRace/comps</xpath>
+                            <value>
+                                <li>
+                                    <compClass>ArchiteReinforcement.CompArchiteTracker</compClass>
+                                </li>
+                            </value>
+                        </li>
+
+                        <!-- Add inspectorTabs to aliens that don't have it, then add the upgrades tab -->
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>Defs/AlienRace.ThingDef_AlienRace[count(inspectorTabs)=0]</xpath>
+                            <value>
+                                <inspectorTabs></inspectorTabs>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>Defs/AlienRace.ThingDef_AlienRace/inspectorTabs</xpath>
+                            <value>
+                                <li>ArchiteReinforcement.ITab_Pawn_ArchiteUpgrades</li>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </li>
+            
+        </operations>
+    </Operation>
+
+</Patch>

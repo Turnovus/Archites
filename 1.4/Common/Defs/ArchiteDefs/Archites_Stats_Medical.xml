@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== MINOR PODS ==========-->
+    <!-- Medical Operation Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_MedicalOperationSpeed</defName>
+        <label>archite pod of cutting</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MedicalOperationSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_MedicalOperationSpeed</defName>
+        <label>cutting</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>MedicalOperationSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Medical Tend Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MedicalTendSpeed</defName>
+        <label>archite pod of triage</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MedicalTendSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MedicalTendSpeed</defName>
+        <label>triage</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>MedicalTendSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Medical Tend Quality -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MedicalTendQuality</defName>
+        <label>archite pod of medicine</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MedicalTendQuality</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MedicalTendQuality</defName>
+        <label>medicine</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.075</effectPerLevel>
+        <stat>MedicalTendQuality</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Medical Surgery Success Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MedicalSurgerySuccessChance</defName>
+        <label>archite pod of surgery</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MedicalSurgerySuccessChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MedicalSurgerySuccessChance</defName>
+        <label>surgery</label>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>MedicalSurgerySuccessChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

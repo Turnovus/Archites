@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteThing">
+        <defName>Turn_ArchiteReinforcement_Chamber</defName>
+        <label>archite chamber</label>
+        <description>A storage device for countless archotech mechanites. The chamber is capable of infusing any humanoid with its contained archites. These archites will then proceed to permanently enhance some aspect of their new host.</description>
+
+        <stackLimit>5</stackLimit>
+        <relicChance>0</relicChance>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchiteChamber</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>160</MarketValue>
+        </statBases>
+
+        <comps Inherit="False">
+            <li Class="CompProperties_Usable">
+                <useJob>UseArtifact</useJob>
+                <useLabel>Use {0_label}</useLabel>
+            </li>
+            <li Class="CompProperties_UseEffectDestroySelf" />
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteProgress">
+                <defaultStoredArchites>45</defaultStoredArchites>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

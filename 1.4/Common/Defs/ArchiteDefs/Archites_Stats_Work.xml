@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Repair Success Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_FixBrokenDownBuildingSuccessChance</defName>
+        <label>archite pod of restoration</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_FixBrokenDownBuildingSuccessChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_FixBrokenDownBuildingSuccessChance</defName>
+        <label>restoration</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <maxUses>15</maxUses>
+        <stat>FixBrokenDownBuildingSuccessChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Cleaning Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_CleaningSpeed</defName>
+        <label>archite pod of tidiness</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_CleaningSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_CleaningSpeed</defName>
+        <label>tidiness</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>CleaningSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MINOR PODS ==========-->
+    <!-- Smoothing Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_SmoothingSpeed</defName>
+        <label>archite pod of polishing</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_SmoothingSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_SmoothingSpeed</defName>
+        <label>polishing</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>SmoothingSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Animal Gather Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_AnimalGatherSpeed</defName>
+        <label>archite pod of ranching</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_AnimalGatherSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_AnimalGatherSpeed</defName>
+        <label>ranching</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>AnimalGatherSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Construct Success Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_ConstructSuccessChance</defName>
+        <label>archite pod of measurement</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ConstructSuccessChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_ConstructSuccessChance</defName>
+        <label>measurement</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <maxUses>15</maxUses>
+        <stat>ConstructSuccessChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Mining Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MiningSpeed</defName>
+        <label>archite pod of tunneling</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MiningSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MiningSpeed</defName>
+        <label>tunneling</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>MiningSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Deep Drilling Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_DeepDrillingSpeed</defName>
+        <label>archite pod of excavation</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_DeepDrillingSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_DeepDrillingSpeed</defName>
+        <label>excavation</label>
+        <upgradeType>Factor</upgradeType>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>DeepDrillingSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Research Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ResearchSpeed</defName>
+        <label>archite pod of discovery</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ResearchSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ResearchSpeed</defName>
+        <label>discovery</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>ResearchSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Plant Work Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_PlantWorkSpeed</defName>
+        <label>archite pod of agriculture</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PlantWorkSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_PlantWorkSpeed</defName>
+        <label>agriculture</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>PlantWorkSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Hunting Stealth -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_HuntingStealth</defName>
+        <label>archite pod of forestry</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_HuntingStealth</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_HuntingStealth</defName>
+        <label>forestry</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <maxUses>15</maxUses>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>HuntingStealth</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Construction Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ConstructionSpeed</defName>
+        <label>archite pod of building</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ConstructionSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ConstructionSpeed</defName>
+        <label>building</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>ConstructionSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Global work speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_WorkSpeedGlobal</defName>
+        <label>archite pod of efficiency</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_WorkSpeedGlobal</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_WorkSpeedGlobal</defName>
+        <label>efficiency</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>WorkSpeedGlobal</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Mining Yield -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MiningYield</defName>
+        <label>archite pod of prospecting</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MiningYield</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MiningYield</defName>
+        <label>prsopecting</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MiningYield</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Animal Gather Yield -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_AnimalGatherYield</defName>
+        <label>archite pod of farming</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_AnimalGatherYield</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_AnimalGatherYield</defName>
+        <label>farming</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>AnimalGatherYield</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Plant Gather Yield -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_PlantHarvestYield</defName>
+        <label>archite pod of botany</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PlantHarvestYield</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_PlantHarvestYield</defName>
+        <label>botany</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>PlantHarvestYield</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

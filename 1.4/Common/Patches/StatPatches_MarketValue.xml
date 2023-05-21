@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[@Name="MarketValueBase"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_SpentArchites"/>
+        </value>
+    </Operation>
+
+</Patch>

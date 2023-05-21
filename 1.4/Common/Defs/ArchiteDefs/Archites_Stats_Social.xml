@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== MINOR PODS ==========-->
+    <!-- Arrest Success Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_ArrestSuccessChance</defName>
+        <label>archite pod of enforcement</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ArrestSuccessChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_ArrestSuccessChance</defName>
+        <label>enforcement</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <stat>ArrestSuccessChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Negotiation Ability -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_NegotiationAbility</defName>
+        <label>archite pod of diplomacy</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_NegotiationAbility</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_NegotiationAbility</defName>
+        <label>diplomacy</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.08</effectPerLevel>
+        <stat>NegotiationAbility</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Social Impact -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_SocialImpact</defName>
+        <label>archite pod of personality</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_SocialImpact</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_SocialImpact</defName>
+        <label>personality</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <stat>SocialImpact</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Pawn Beauty -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_PawnBeauty</defName>
+        <label>archite pod of magnificence</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PawnBeauty</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_PawnBeauty</defName>
+        <label>magnificence</label>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>1.0</effectPerLevel>
+        <maxUses>6</maxUses>
+        <stat>PawnBeauty</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Trade Price Improvement -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_TradePriceImprovement</defName>
+        <label>archite pod of mercantalism</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_TradePriceImprovement</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_TradePriceImprovement</defName>
+        <label>mercantalism</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.08</effectPerLevel>
+        <stat>TradePriceImprovement</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

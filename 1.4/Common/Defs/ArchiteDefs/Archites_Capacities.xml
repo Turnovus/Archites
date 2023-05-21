@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!-- Base for all cells -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteThing" Name="ArchiteReinforcement.BaseArchiteCell" Abstract="True">
+        <description>A single-use pod containing a dose of specially-designed archotech mechanites. Upon activation, these archites will enter the user's body and remain there permanently, slightly enhancing their health capacities.</description>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchiteCell</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectAddToRecord">
+                <record>Turn_Record_ArchiteCellsUsed</record>
+                <amount>1</amount>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Capacities that mostly affect a pawn's day-to-day life, and not so much survivability or combat -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteCell" Name="ArchiteReinforcement.ArchiteCellMinor" Abstract="True">
+        <graphicData>
+            <color>(1.0, 0.0, 0.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- Capacities that do affect things like survivability and combat, except for Consciousness -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteCell" Name="ArchiteReinforcement.ArchiteCellNormal" Abstract="True">
+        <graphicData>
+            <color>(0.0, 0.0, 1.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>3500</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- Basically just Consciousness, since it affects a lot of different things -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteCell" Name="ArchiteReinforcement.ArchiteCellMajor" Abstract="True">
+        <graphicData>
+            <color>(1.0, 0.0, 1.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>8000</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Minor" Abstract="True">
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <marketValuePerLevel>150</marketValuePerLevel>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Normal" Abstract="True">
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <marketValuePerLevel>300</marketValuePerLevel>
+        <upgradeValue>2.5</upgradeValue>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Major" Abstract="True">
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <marketValuePerLevel>750</marketValuePerLevel>
+        <upgradeValue>5.0</upgradeValue>
+    </ArchiteReinforcement.CapacityArchiteDef>
+    <!--========== MINOR CELLS ==========-->
+    <!-- Talking -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
+        <defName>Turn_ArchiteCell_Talking</defName>
+        <label>archite cell of words</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Talking</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_Talking</defName>
+        <capacity>Talking</capacity>
+        <label>words</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Eating -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
+        <defName>Turn_ArchiteCell_Eating</defName>
+        <label>archite cell of stomach</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Eating</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_Eating</defName>
+        <capacity>Eating</capacity>
+        <label>stomach</label>
+        <upgradeValue>1.5</upgradeValue>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Hearing -->
+    <!-- Minor cell, normal upgrade -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
+        <defName>Turn_ArchiteCell_Hearing</defName>
+        <label>archite cell of ears</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Hearing</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Hearing</defName>
+        <capacity>Hearing</capacity>
+        <label>ears</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+    
+    <!--========== NORMAL CELLS ==========-->
+    <!-- Moving -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Moving</defName>
+        <label>archite cell of legs</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Moving</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Moving</defName>
+        <capacity>Moving</capacity>
+        <label>legs</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Manipulation -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Manipulation</defName>
+        <label>archite cell of hands</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Manipulation</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Manipulation</defName>
+        <capacity>Manipulation</capacity>
+        <label>hands</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Sight -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Sight</defName>
+        <label>archite cell of eyes</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Sight</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Sight</defName>
+        <capacity>Sight</capacity>
+        <label>eyes</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!--Breathing -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Breathing</defName>
+        <label>archite cell of lungs</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Breathing</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Breathing</defName>
+        <capacity>Breathing</capacity>
+        <label>lungs</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Blood filtration -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_BloodFiltration</defName>
+        <label>archite cell of purity</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_BloodFiltration</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_BloodFiltration</defName>
+        <capacity>BloodFiltration</capacity>
+        <label>purity</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Blood pumping -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_BloodPumping</defName>
+        <label>archite cell of heart</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_BloodPumping</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_BloodPumping</defName>
+        <capacity>BloodPumping</capacity>
+        <label>heart</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Metabolism -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Metabolism</defName>
+        <label>archite cell of energy</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Metabolism</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Metabolism</defName>
+        <capacity>Metabolism</capacity>
+        <label>energy</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!--========== MAJOR CELLS ==========-->
+    <!-- Consciousness -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMajor">
+        <defName>Turn_ArchiteCell_Consciousness</defName>
+        <label>archite cell of awakening</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Consciousness</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_Consciousness</defName>
+        <capacity>Consciousness</capacity>
+        <label>awakening</label>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+</Defs>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Fertility -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_Fertility</defName>
+        <label>archite pod of procreation</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Fertility</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_Fertility</defName>
+        <label>procreation</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>Fertility</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Learning Rate Factor (Child) -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_LearningRateFactor</defName>
+        <label>archite pod of childhood</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_LearningRateFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_LearningRateFactor</defName>
+        <label>childhood</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>LearningRateFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Stagger Time Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_StaggerDurationFactor</defName>
+        <label>archite pod of endurance</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_StaggerDurationFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_StaggerDurationFactor</defName>
+        <label>endurance</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>-0.04</effectPerLevel>
+        <maxUses>25</maxUses>
+        <stat>StaggerDurationFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Ranged Cooldown Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_RangedCooldownFactor</defName>
+        <label>archite pod of frenzy</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_RangedCooldownFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_RangedCooldownFactor</defName>
+        <label>frenzy</label>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>RangedCooldownFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Melee Damage Factor -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MeleeDamageFactor</defName>
+        <label>archite pod of destruction</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeDamageFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MeleeDamageFactor</defName>
+        <label>destruction</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.075</effectPerLevel>
+        <stat>MeleeDamageFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

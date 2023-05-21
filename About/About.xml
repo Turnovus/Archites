@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ModMetaData>
+    
+    <name>Archite Reinforcement</name>
+    <packageId>Turnovus.RimWorld.ArchiteReinforcement</packageId>
+    <author>Turnovus</author>
+    <description>Simple stackable pawn upgrades, acquired as artifacts.</description>
+    <supportedVersions>
+        <li>1.4</li>
+    </supportedVersions>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+    </loadAfter>
+
+</ModMetaData>

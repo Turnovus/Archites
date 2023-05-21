@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Fertility -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="Fertility"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_Fertility</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Learning Rate Factor (Child) -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="LearningRateFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_LearningRateFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Stagger Time Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="StaggerDurationFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_StaggerDurationFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Ranged Cooldown Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="RangedCooldownFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_RangedCooldownFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Melee Damage Factor -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MeleeDamageFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

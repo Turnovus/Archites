@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LanguageData>
+
+    <ArchiteReinforcement.ITab_Pawn_ArchiteUpgrades>Archites</ArchiteReinforcement.ITab_Pawn_ArchiteUpgrades>
+
+    <ArchiteReinforcement.DivisionProgress>Upgrade progress</ArchiteReinforcement.DivisionProgress>
+    <ArchiteReinforcement.DivisionCapacities>Capacities</ArchiteReinforcement.DivisionCapacities>
+    <ArchiteReinforcement.DivisionStats>Statistics</ArchiteReinforcement.DivisionStats>
+
+    <ArchiteReinforcement.UseFailReasonOther>unknown</ArchiteReinforcement.UseFailReasonOther>
+    <ArchiteReinforcement.UseFailReasonMaxUsed>max number used</ArchiteReinforcement.UseFailReasonMaxUsed>
+    <ArchiteReinforcement.UseFailReasonNoComp>incompatible</ArchiteReinforcement.UseFailReasonNoComp>
+    <ArchiteReinforcement.UseFailReasonExcluded>excluded by other archites</ArchiteReinforcement.UseFailReasonExcluded>
+
+    <ArchiteReinforcement.UpgradeNameFallback>None</ArchiteReinforcement.UpgradeNameFallback>
+
+    <ArchiteReinforcement.WillUpgrade>Enhances {0}</ArchiteReinforcement.WillUpgrade>
+
+    <ArchiteReinforcement.UpgradeProgress>{0} progress: {1} / {2}</ArchiteReinforcement.UpgradeProgress>
+    <ArchiteReinforcement.ArchiteListExplanation>Archites: {0}</ArchiteReinforcement.ArchiteListExplanation>
+    <ArchiteReinforcement.ArchiteUsedListExplanation>Used archites: {0}</ArchiteReinforcement.ArchiteUsedListExplanation>
+
+    <ArchiteReinforcement.MenuAvailableArchites>Available archites: {0} | {1}</ArchiteReinforcement.MenuAvailableArchites>
+    <ArchiteReinforcement.ArchitesTypeQuantity>{0} x{1}</ArchiteReinforcement.ArchitesTypeQuantity>
+
+    <ArchiteReinforcement.MenuItemName>{0} level {1}</ArchiteReinforcement.MenuItemName>
+    <ArchiteReinforcement.MenuItemLevelRatio>{0} / {1}</ArchiteReinforcement.MenuItemLevelRatio>
+    <ArchiteReinforcement.MenuItemCost>Cost to upgrade: {0}x {1} archites</ArchiteReinforcement.MenuItemCost>
+    <ArchiteReinforcement.MenuItemButton>Upgrade</ArchiteReinforcement.MenuItemButton>
+
+    <ArchiteReinforcement.UpgradeTypeStat>stat</ArchiteReinforcement.UpgradeTypeStat>
+    <ArchiteReinforcement.UpgradeTypeStat.Cap>Stat</ArchiteReinforcement.UpgradeTypeStat.Cap>
+    <ArchiteReinforcement.UpgradeTypeCapacity>capacity</ArchiteReinforcement.UpgradeTypeCapacity>
+    <ArchiteReinforcement.UpgradeTypeCapacity.Cap>Capacity</ArchiteReinforcement.UpgradeTypeCapacity.Cap>
+
+    <ArchiteReinforcement.CannotUseWith>Cannot be used with:</ArchiteReinforcement.CannotUseWith>
+    <ArchiteReinforcement.IncompatibilityItem> - {0} ({1})</ArchiteReinforcement.IncompatibilityItem>
+
+    <ArchiteReinforcement.PerLevelHeader>Effects per level:</ArchiteReinforcement.PerLevelHeader>
+    <ArchiteReinforcement.PerLevelItem> - Level {0}: {1}</ArchiteReinforcement.PerLevelItem>
+    <ArchiteReinforcement.PerLevelItem.EtCetera> - ...</ArchiteReinforcement.PerLevelItem.EtCetera>
+    <ArchiteReinforcement.DescriptionMaxLevel>Max uses: {0}</ArchiteReinforcement.DescriptionMaxLevel>
+    <ArchiteReinforcement.DescriptionMaxLevel.Unlimited>Unlimited</ArchiteReinforcement.DescriptionMaxLevel.Unlimited>
+
+</LanguageData>

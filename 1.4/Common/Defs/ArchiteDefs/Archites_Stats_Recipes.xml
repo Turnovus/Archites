@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!-- 
+        Most of the recipe-type stats are, themselves, dependent on capacities or other stats,
+        so I feel it better to encourage collecting the underlying pod/cell to affect the stats,
+        rather than flooding the thing pools with a bunch of niche pods applicable to a single
+        job.
+        
+        But getting more meat from animals is never a bad thing.
+    -->
+
+    <!--========== MINOR PODS ==========-->
+    <!-- food poison chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_FoodPoisonChance</defName>
+        <label>archite pod of sanitation</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_FoodPoisonChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_FoodPoisonChance</defName>
+        <label>sanitation</label>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.2</effectPerLevel>
+        <stat>FoodPoisonChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Butchery Efficiency -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ButcheryFleshEfficiency</defName>
+        <label>archite pod of meat</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ButcheryFleshEfficiency</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ButcheryFleshEfficiency</defName>
+        <label>meat</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>ButcheryFleshEfficiency</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Mechanoid Shredding Efficiency -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ButcheryMechanoidEfficiency</defName>
+        <label>archite pod of bolts</label>
+
+        <graphicData>
+            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ButcheryMechanoidEfficiency</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ButcheryMechanoidEfficiency</defName>
+        <label>bolts</label>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>ButcheryMechanoidEfficiency</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>
