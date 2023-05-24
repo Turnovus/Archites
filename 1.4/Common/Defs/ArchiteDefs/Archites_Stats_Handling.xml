@@ -23,7 +23,7 @@
         <defName>Turn_ArchiteUpgrade_TameAnimalChance</defName>
         <label>domestication</label>
         <upgradeType>Factor</upgradeType>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <baseOffset>1</baseOffset>
         <stat>TameAnimalChance</stat>
     </ArchiteReinforcement.StatArchiteDef>
@@ -48,7 +48,7 @@
         <defName>Turn_ArchiteUpgrade_TrainAnimalChance</defName>
         <label>commanding</label>
         <upgradeType>Factor</upgradeType>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <baseOffset>1</baseOffset>
         <stat>TrainAnimalChance</stat>
     </ArchiteReinforcement.StatArchiteDef>

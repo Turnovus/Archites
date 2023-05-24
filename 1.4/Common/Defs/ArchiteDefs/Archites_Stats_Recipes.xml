@@ -33,7 +33,7 @@
         <label>sanitation</label>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.2</effectPerLevel>
+        <effectPerLevel>0.25</effectPerLevel>
         <stat>FoodPoisonChance</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -59,7 +59,7 @@
         <label>meat</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.08</effectPerLevel>
         <stat>ButcheryFleshEfficiency</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -84,7 +84,7 @@
         <label>bolts</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.08</effectPerLevel>
         <stat>ButcheryMechanoidEfficiency</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

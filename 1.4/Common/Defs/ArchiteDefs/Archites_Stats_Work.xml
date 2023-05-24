@@ -24,8 +24,8 @@
         <label>restoration</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
-        <maxUses>15</maxUses>
+        <effectPerLevel>0.15</effectPerLevel>
+        <maxUses>10</maxUses>
         <stat>FixBrokenDownBuildingSuccessChance</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -50,7 +50,7 @@
         <label>tidiness</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.20</effectPerLevel>
         <stat>CleaningSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -76,7 +76,7 @@
         <label>polishing</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.2</effectPerLevel>
         <stat>SmoothingSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -101,7 +101,7 @@
         <label>ranching</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.15</effectPerLevel>
+        <effectPerLevel>0.20</effectPerLevel>
         <stat>AnimalGatherSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -126,8 +126,8 @@
         <label>measurement</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
-        <maxUses>15</maxUses>
+        <effectPerLevel>0.15</effectPerLevel>
+        <maxUses>10</maxUses>
         <stat>ConstructSuccessChance</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -153,7 +153,7 @@
         <label>tunneling</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>MiningSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -177,7 +177,7 @@
         <defName>Turn_ArchiteUpgrade_DeepDrillingSpeed</defName>
         <label>excavation</label>
         <upgradeType>Factor</upgradeType>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <baseOffset>1.0</baseOffset>
         <stat>DeepDrillingSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
@@ -203,7 +203,7 @@
         <label>discovery</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.10</effectPerLevel>
         <stat>ResearchSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -228,7 +228,7 @@
         <label>agriculture</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>PlantWorkSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -254,7 +254,7 @@
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <maxUses>15</maxUses>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.075</effectPerLevel>
         <stat>HuntingStealth</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -279,7 +279,7 @@
         <label>building</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>ConstructionSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -305,7 +305,7 @@
         <label>efficiency</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>WorkSpeedGlobal</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -330,7 +330,7 @@
         <label>prsopecting</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.12</effectPerLevel>
         <stat>MiningYield</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -355,7 +355,7 @@
         <label>farming</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.12</effectPerLevel>
         <stat>AnimalGatherYield</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -380,7 +380,7 @@
         <label>botany</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.08</effectPerLevel>
         <stat>PlantHarvestYield</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

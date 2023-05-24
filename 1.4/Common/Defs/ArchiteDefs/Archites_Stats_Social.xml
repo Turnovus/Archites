@@ -24,7 +24,7 @@
         <label>enforcement</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.18</effectPerLevel>
         <stat>ArrestSuccessChance</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -49,7 +49,7 @@
         <label>diplomacy</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.08</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>NegotiationAbility</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -74,7 +74,7 @@
         <label>personality</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.20</effectPerLevel>
         <stat>SocialImpact</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

@@ -59,7 +59,7 @@
         <label>attunement</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.025</effectPerLevel>
+        <effectPerLevel>0.035</effectPerLevel>
         <stat>PsychicSensitivity</stat>
         <exclusionTags>
             <li>PsychicSensitivity</li>

@@ -24,7 +24,7 @@
         <label>cutting</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.25</effectPerLevel>
         <stat>MedicalOperationSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -50,7 +50,7 @@
         <label>triage</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.1</effectPerLevel>
+        <effectPerLevel>0.20</effectPerLevel>
         <stat>MedicalTendSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

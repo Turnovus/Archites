@@ -23,7 +23,7 @@
         <defName>Turn_ArchiteUpgrade_MaxNutrition</defName>
         <label>hunger</label>
         <upgradeType>Offset</upgradeType>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.10</effectPerLevel>
         <stat>MaxNutrition</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -48,7 +48,7 @@
         <defName>Turn_ArchiteUpgrade_LifespanFactor</defName>
         <label>longevity</label>
         <upgradeType>Offset</upgradeType>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>LifespanFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -74,7 +74,7 @@
         <label>motion</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.025</effectPerLevel>
+        <effectPerLevel>0.030</effectPerLevel>
         <stat>MoveSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -99,7 +99,7 @@
         <label>resilience</label>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.20</effectPerLevel>
+        <effectPerLevel>0.25</effectPerLevel>
         <stat>MentalBreakThreshold</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -124,7 +124,7 @@
         <label>restfulness</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.08</effectPerLevel>
+        <effectPerLevel>0.10</effectPerLevel>
         <stat>RestRateMultiplier</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -274,7 +274,7 @@
         <label>education</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.12</effectPerLevel>
+        <effectPerLevel>0.14</effectPerLevel>
         <stat>GlobalLearningFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -324,7 +324,7 @@
         <label>regeneration</label>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <stat>InjuryHealingFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 </Defs>

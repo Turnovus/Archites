@@ -67,7 +67,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>300</MarketValue>
+            <MarketValue>750</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -82,7 +82,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>800</MarketValue>
+            <MarketValue>1200</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -97,7 +97,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>1400</MarketValue>
+            <MarketValue>1900</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -112,7 +112,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>4500</MarketValue>
+            <MarketValue>3500</MarketValue>
         </statBases>
     </ThingDef>
 
