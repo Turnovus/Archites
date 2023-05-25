@@ -23,9 +23,12 @@ namespace ArchiteReinforcement
             bool forTradePrice
         )
         {
+            if (forTradePrice)
+                return;
+
             bool useImpactors = impactors != null;
 
-            if ((capacity.zeroIfCannotBeAwake && !diffSet.pawn.health.capacities.CanBeAwake))
+            if (capacity.zeroIfCannotBeAwake && !diffSet.pawn.health.capacities.CanBeAwake)
                 return;
 
             CompArchiteTracker comp = diffSet.pawn?.ArchiteTracker();

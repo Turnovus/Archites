@@ -115,6 +115,51 @@ namespace ArchiteReinforcement
 
             return upgradeValue > other.upgradeValue ? -1 : 1;
         }
+
+        public string UpgradeBreakdown()
+        {
+            string str;
+
+            str = effectDescriptionOverride.NullOrEmpty() ?
+                (string)"ArchiteReinforcement.WillUpgrade".Translate(NameOfThingToUpgrade) :
+                effectDescriptionOverride + " " + NameOfThingToUpgrade;
+
+            str += "\n\n";
+            str += "ArchiteReinforcement.PerLevelHeader".Translate();
+
+            int iterations = 10;
+            if (maxUses != null)
+                iterations = Math.Min(10, (int)maxUses);
+
+            for (int i = 1; i <= iterations; i++)
+            {
+                str += "\n";
+                str += "ArchiteReinforcement.PerLevelItem".Translate(i.ToString(), ValueReadoutAtLevel(i));
+            }
+
+            if (maxUses == null || iterations < maxUses)
+                str += "\n" + "ArchiteReinforcement.PerLevelItem.EtCetera".Translate();
+
+            str += "\n\n";
+            str += "ArchiteReinforcement.DescriptionMaxLevel".Translate(
+                maxUses == null ?
+                    (string)"ArchiteReinforcement.DescriptionMaxLevel.Unlimited".Translate() :
+                    maxUses.ToString()
+            );
+
+            return str;
+        }
+
+        public string DescriptionWithBreakdown()
+        {
+            string str = description;
+            string str2 = UpgradeBreakdown();
+
+            if (!str.NullOrEmpty())
+                str += "\n\n" + str2;
+
+            return str;
+        }
     }
     
     public class StatArchiteDef : ArchiteDef

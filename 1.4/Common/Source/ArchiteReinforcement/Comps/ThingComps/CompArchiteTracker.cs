@@ -224,6 +224,8 @@ namespace ArchiteReinforcement
 
         public void AddStatArchiteProgress(float amount)
         {
+            int levelsGained = 0;
+
             statArchiteProgress += amount;
             while (statArchiteProgress >= StatUpgradeCost)
             {
@@ -231,12 +233,18 @@ namespace ArchiteReinforcement
                 statArchitesToSpend += 1f;
                 cachedTotalStatArchites += 1f;
                 ParentPawn.records.AddTo(MyDefOf.Turn_Record_ArchitesAcquired_Stat, 1f);
+                levelsGained += 1;
             }
+
             cachedTotalStatArchites = null;
+            if (levelsGained > 0)
+                NotifyGotUpgrades(parent, levelsGained, "ArchiteReinforcement.UpgradeTypeStat".Translate());
         }
 
         public void AddCapacityArchiteProgress(float amount)
         {
+            int levelsGained = 0;
+
             capacityArchiteProgress += amount;
             while (capacityArchiteProgress >= CapacityUpgradeCost)
             {
@@ -244,8 +252,12 @@ namespace ArchiteReinforcement
                 capacityArchitesToSpend += 1f;
                 cachedTotalCapacityArchites += 1f;
                 ParentPawn.records.AddTo(MyDefOf.Turn_Record_ArchitesAcquired_Capacity, 1f);
+                levelsGained += 1;
             }
+
             cachedTotalCapacityArchites = null;
+            if (levelsGained > 0)
+                NotifyGotUpgrades(parent, levelsGained, "ArchiteReinforcement.UpgradeTypeCapacity".Translate());
         }
 
         public void AddTotalArchiteProgress(float amount)
@@ -259,6 +271,14 @@ namespace ArchiteReinforcement
 
         public void AddStatLevel() =>
             AddStatArchiteProgress(StatUpgradeCost);
+
+        public static void NotifyGotUpgrades(Thing pawn, int levels, string upgradeTypeLabel)
+        {
+            string fullString = levels == 1 ? "ArchiteReinforcement.PawnGainedUpgrade" : "ArchiteReinforcement.PawnGainedUpgrade.Plural";
+            fullString = fullString.Translate(pawn.LabelCap, upgradeTypeLabel, levels);
+
+            Messages.Message(fullString, pawn, MessageTypeDefOf.PositiveEvent);
+        }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {

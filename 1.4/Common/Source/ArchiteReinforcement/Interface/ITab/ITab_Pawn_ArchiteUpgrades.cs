@@ -185,6 +185,12 @@ namespace ArchiteReinforcement
                         }
                     }
 
+                    if (Mouse.IsOver(rowRect))
+                    {
+                        Widgets.DrawHighlight(rowRect);
+                        TooltipHandler.TipRegion(rowRect, cap.DescriptionWithBreakdown());
+                    }
+
                     alternate = !alternate;
                 }
             }
@@ -241,6 +247,12 @@ namespace ArchiteReinforcement
                         {
                             comp.TryBuyUpgrade(stat);
                         }
+                    }
+
+                    if (Mouse.IsOver(rowRect))
+                    {
+                        Widgets.DrawHighlight(rowRect);
+                        TooltipHandler.TipRegion(rowRect, stat.DescriptionWithBreakdown());
                     }
 
                     alternate = !alternate;

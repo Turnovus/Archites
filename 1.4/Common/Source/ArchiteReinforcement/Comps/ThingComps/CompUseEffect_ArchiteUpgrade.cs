@@ -101,38 +101,9 @@ namespace ArchiteReinforcement
             return fullString;
         }
 
-        public override string GetDescriptionPart()
-        {
-            string fullString = string.Empty;
-            fullString += Props.upgrade.effectDescriptionOverride.NullOrEmpty() ?
-                (string)"ArchiteReinforcement.WillUpgrade".Translate(UpgradeName) :
-                Props.upgrade.effectDescriptionOverride + " " + UpgradeName;
-
-            fullString += "\n\n";
-            fullString += "ArchiteReinforcement.PerLevelHeader".Translate();
-
-            int iterations = 10;
-            if (Props.upgrade.maxUses != null)
-                iterations = Math.Min(10, (int)Props.upgrade.maxUses);
-
-            for (int i = 1; i <= iterations; i++)
-            {
-                fullString += "\n";
-                fullString += "ArchiteReinforcement.PerLevelItem".Translate(i.ToString(), Props.upgrade.ValueReadoutAtLevel(i));
-            }
-
-            if (Props.upgrade.maxUses == null || iterations < Props.upgrade.maxUses)
-                fullString += "\n" + "ArchiteReinforcement.PerLevelItem.EtCetera".Translate();
-
-            fullString += "\n\n";
-            fullString += "ArchiteReinforcement.DescriptionMaxLevel".Translate(
-                Props.upgrade.maxUses == null ?
-                    (string)"ArchiteReinforcement.DescriptionMaxLevel.Unlimited".Translate() :
-                    Props.upgrade.maxUses.ToString()
-            );
-
-            return fullString;
-        }
+        public override string GetDescriptionPart() =>
+            Props?.upgrade?.DescriptionWithBreakdown() ?? string.Empty;
+            
     }
 
     public class CompProperties_UseEffectArchiteUpgrade : CompProperties_UseEffect

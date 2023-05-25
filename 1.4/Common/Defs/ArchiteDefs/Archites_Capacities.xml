@@ -107,6 +107,7 @@
         <defName>Turn_ArchiteUpgrade_Talking</defName>
         <capacity>Talking</capacity>
         <label>words</label>
+        <description>Archites inhabit the airways, enhancing the host's vocal organs as much as possible, while directly manipulating the acoustics of the vocal chamber.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Eating -->
@@ -125,6 +126,7 @@
         <capacity>Eating</capacity>
         <label>stomach</label>
         <upgradeValue>1.5</upgradeValue>
+        <description>Archites reside in the host's mouth, rending food apart as it is chewed.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Hearing -->
@@ -143,6 +145,7 @@
         <defName>Turn_ArchiteUpgrade_Hearing</defName>
         <capacity>Hearing</capacity>
         <label>ears</label>
+        <description>Archites reside in the host's inner ear, enhancing and stimulating the cochlear nerves to extend the audible range of sounds beyond what is normally possible.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
     
     <!--========== NORMAL CELLS ==========-->
@@ -161,6 +164,7 @@
         <defName>Turn_ArchiteUpgrade_Moving</defName>
         <capacity>Moving</capacity>
         <label>legs</label>
+        <description>Archites saturate the muscle tissues of the host, providing energy to and relieving fatigue from cells, while strengthening the ligaments and tendons. This allows the host to move more quickly, and without risk of exhaustion.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Manipulation -->
@@ -178,6 +182,7 @@
         <defName>Turn_ArchiteUpgrade_Manipulation</defName>
         <capacity>Manipulation</capacity>
         <label>hands</label>
+        <description>Archites saturate the ligaments of the host's hands. They intercept signals from the central nervous system to improve stability, while also enhancing the the host's conscious control over their hands' movements.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Sight -->
@@ -195,6 +200,7 @@
         <defName>Turn_ArchiteUpgrade_Sight</defName>
         <capacity>Sight</capacity>
         <label>eyes</label>
+        <description>Archites reside in the eyes. Working in tandem with the rods and cones of the eye, they are capable of sensing and interpreting wavelengths of light not normally visible to the human eye.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!--Breathing -->
@@ -212,6 +218,7 @@
         <defName>Turn_ArchiteUpgrade_Breathing</defName>
         <capacity>Breathing</capacity>
         <label>lungs</label>
+        <description>Archites saturate the alveoli of the lungs, further facilitating the exchange of gasses to and from the blood cells.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Blood filtration -->
@@ -229,6 +236,7 @@
         <defName>Turn_ArchiteUpgrade_BloodFiltration</defName>
         <capacity>BloodFiltration</capacity>
         <label>purity</label>
+        <description>Archites course through any and all of the host's ducts, tubes, and vessels, seeking out and neutralizing any threat to the host's health.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Blood pumping -->
@@ -246,6 +254,7 @@
         <defName>Turn_ArchiteUpgrade_BloodPumping</defName>
         <capacity>BloodPumping</capacity>
         <label>heart</label>
+        <description>Archites bind to the host's red blood cells, carrying along additional oxygen and carbon monoxide.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!-- Metabolism -->
@@ -263,6 +272,7 @@
         <defName>Turn_ArchiteUpgrade_Metabolism</defName>
         <capacity>Metabolism</capacity>
         <label>energy</label>
+        <description>Archites travel within the host's blood plasma, improving the saturation and absorption of nutrients throughout the body.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <!--========== MAJOR CELLS ==========-->
@@ -281,6 +291,7 @@
         <defName>Turn_ArchiteUpgrade_Consciousness</defName>
         <capacity>Consciousness</capacity>
         <label>awakening</label>
+        <description>Archites bind to the synapses of the central nervous system, increasing neurological activity by stimulating and coordinating neural signals across the brain.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
 
 </Defs>
