@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_SocialIdeoSpreadFrequencyFactor</defName>
         <label>preaching</label>
+        <description>Archites in the brain cause adjustments to behavior, encouraging the host to share their beliefs with others.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.06</effectPerLevel>
@@ -47,6 +48,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_HackingSpeed</defName>
         <label>decryption</label>
+        <description>Archites in the brain accelerate and coordinate synapses in the regions associated with problem-solving and creative thinking, making the host more adept at hacking into computers.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.08</effectPerLevel>
@@ -73,6 +75,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_ConversionPower</defName>
         <label>persuasion</label>
+        <description>Archites in the brain enhance social awareness, making the host more persuasive when trying to share their beliefs with others.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>
@@ -98,6 +101,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_SuppressionPower</defName>
         <label>domination</label>
+        <description>Archites in the brain enhance social awareness, allowing the host to more easily prey on the fears of others.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.085</effectPerLevel>
@@ -123,6 +127,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_PruningSpeed</defName>
         <label>gauranlen</label>
+        <description>Archites in the brain enhance the host's psychic connection with their connected gauranlen tree.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.085</effectPerLevel>
@@ -149,6 +154,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_BiosculpterOccupantSpeed</defName>
         <label>transhumanism</label>
+        <description>Archites throughout the body speed up the biosculpting process, reducing the amount of time the host spends in any cycle.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>

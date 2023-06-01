@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_MaxNutrition</defName>
         <label>hunger</label>
+        <description>Archites travel in the blood plasma, raising the saturation point of the nutrients it contains. This allows the host to intake additional nutrients effectively without excess.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>0.10</effectPerLevel>
         <stat>MaxNutrition</stat>
@@ -47,6 +48,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_LifespanFactor</defName>
         <label>longevity</label>
+        <description>Archites saturate the cells, restoring genetic material, and replenishing cellular resources that deplete with age.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>0.15</effectPerLevel>
         <stat>LifespanFactor</stat>
@@ -72,6 +74,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MoveSpeed</defName>
         <label>motion</label>
+        <description>Archites in the legs enhance the muscle tissue, allowing the host to move faster while withstanding a greater deal of strain.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.030</effectPerLevel>
@@ -97,6 +100,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MentalBreakThreshold</defName>
         <label>resilience</label>
+        <description>Archites in the brain adjust hormones and neurotransmitters associated with mood, allowing the host to cope with dire external stimuli.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
         <effectPerLevel>0.25</effectPerLevel>
@@ -122,6 +126,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_RestRateMultiplier</defName>
         <label>restfulness</label>
+        <description>Archites throughout the body clean out waste material and repair cellular damage as the host sleeps, accelerating the natural resting process.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>
@@ -147,6 +152,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ComfyTemperatureMin</defName>
         <label>heating</label>
+        <description>Archites beneath the skin trap in body heat, allowing the host to operate in colder temperatures while maintaining homeostasis.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>-2.5</effectPerLevel>
         <stat>ComfyTemperatureMin</stat>
@@ -171,6 +177,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ComfyTemperatureMax</defName>
         <label>cooling</label>
+        <description>Archites form a barrier beneath the skin to diffuse environmental heat, allowing the host to operate in excessively hot temperatures while maintaining homeostasis.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>2.5</effectPerLevel>
         <stat>ComfyTemperatureMax</stat>
@@ -195,6 +202,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ToxicEnvironmentResistance</defName>
         <label>freshness</label>
+        <description>Archites drift freely through the airways, collecting and disposing of any aerosolized toxins inhaled by the host.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>0.0625</effectPerLevel>
         <maxUses>16</maxUses>
@@ -220,6 +228,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_RestFallRateFactor</defName>
         <label>insomnia</label>
+        <description>Archites throughout the body maintian, nourish, and cleanse tissue, reducing the rate at which the host experiences fatigue.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
         <effectPerLevel>0.20</effectPerLevel>
@@ -247,6 +256,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_ToxicResistance</defName>
         <label>decontamination</label>
+        <description>Archites drift freely through the blood stream, collecting and disposing of any toxins inside of the host.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>0.0625</effectPerLevel>
         <maxUses>16</maxUses>
@@ -272,6 +282,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_GlobalLearningFactor</defName>
         <label>education</label>
+        <description>Archites in the brain improve neuroplasticity, enhancing the host's ability to retain new knowledge.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.14</effectPerLevel>
@@ -297,6 +308,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_ImmunityGainSpeed</defName>
         <label>immunity</label>
+        <description>Archites throughout the body cultivate and strengthen immune cells, improving the host's ability to respond to various diseases.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.02</effectPerLevel>
@@ -322,6 +334,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_InjuryHealingFactor</defName>
         <label>regeneration</label>
+        <description>Archites saturate the body tissue, aiding the natural healing process in repairing any injuries that may befall the host.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>

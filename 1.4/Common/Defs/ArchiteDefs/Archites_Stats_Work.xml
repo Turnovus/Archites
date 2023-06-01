@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_FixBrokenDownBuildingSuccessChance</defName>
         <label>restoration</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing for careful manipulation of delicate machinery and electronics.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -48,6 +49,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_CleaningSpeed</defName>
         <label>tidiness</label>
+        <description>Archites break through dust, grime, mold, mildew, and stains. They work on carpets, hardwood, and tile. They leave surfaces looking good as new, or your money back, guaranteed.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.20</effectPerLevel>
@@ -74,6 +76,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_SmoothingSpeed</defName>
         <label>polishing</label>
+        <description>Archites on the surfaces of the hands allow the host to change the grit of their palms at will, making them capable of sanding down and smoothing surfaces with ease.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.2</effectPerLevel>
@@ -99,6 +102,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_AnimalGatherSpeed</defName>
         <label>ranching</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing them to gather products from animals more quickly.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.20</effectPerLevel>
@@ -124,6 +128,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_ConstructSuccessChance</defName>
         <label>measurement</label>
+        <description>Archites in the brain's visual center enhance their host's innate understanding of the scale of the world around them, improving their precision in construction tasks.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -151,6 +156,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MiningSpeed</defName>
         <label>tunneling</label>
+        <description>Archites in the arms enhance the strength of the muscles, allowing the host to break through rocks more easily.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -176,6 +182,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_DeepDrillingSpeed</defName>
         <label>excavation</label>
+        <description>Archites in the arm and back muscles support the host while operating heavy mining equipment.</description>
         <upgradeType>Factor</upgradeType>
         <effectPerLevel>0.15</effectPerLevel>
         <baseOffset>1.0</baseOffset>
@@ -201,6 +208,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ResearchSpeed</defName>
         <label>discovery</label>
+        <description>Archites in the brain accelerate and coordinate synapses in the regions associated with problem-solving and creative thinking, making the host more adept at performing research.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>
@@ -226,6 +234,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_PlantWorkSpeed</defName>
         <label>agriculture</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing them to sow and harvest crops more efficiently</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -251,6 +260,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_HuntingStealth</defName>
         <label>forestry</label>
+        <description>Archites on the surface of the skin mask the host's scent, making them less detectable by wild animals.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <maxUses>15</maxUses>
@@ -277,6 +287,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ConstructionSpeed</defName>
         <label>building</label>
+        <description>Archites throughout the body improve the host's lifting strength, allowing them to perform construction tasks more easily.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -303,6 +314,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_WorkSpeedGlobal</defName>
         <label>efficiency</label>
+        <description>Archites in the arms and hands greatly improve manual dexterity, allowing the host to carry out a number of tasks more quickly.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -328,6 +340,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_MiningYield</defName>
         <label>prsopecting</label>
+        <description>Archites mysteriously enhance the amount of resources their host produces when mining. Nobody is quite sure where the extra resources come from.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.12</effectPerLevel>
@@ -353,6 +366,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_AnimalGatherYield</defName>
         <label>farming</label>
+        <description>Archites mysteriously enhance the amount of product their host produces when collecting from animals. Nobody is quite sure where the extra products come from.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.12</effectPerLevel>
@@ -378,6 +392,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_PlantHarvestYield</defName>
         <label>botany</label>
+        <description>Archites mysteriously enhance the amount of harvest their host produces from plants. Nobody is quite sure where the extra harvest comes from.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.08</effectPerLevel>

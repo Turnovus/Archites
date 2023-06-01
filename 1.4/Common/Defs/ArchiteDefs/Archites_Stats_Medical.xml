@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_MedicalOperationSpeed</defName>
         <label>cutting</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing for precise surgical procedures to be performed more quickly.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.25</effectPerLevel>
@@ -48,6 +49,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MedicalTendSpeed</defName>
         <label>triage</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing for medical care to be administered more quickly.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.20</effectPerLevel>
@@ -74,6 +76,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_MedicalTendQuality</defName>
         <label>medicine</label>
+        <description>Archites in the hands improve the host's manual stability, allowing for more delicate and effect administration of medical care.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.075</effectPerLevel>
@@ -99,6 +102,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_MedicalSurgerySuccessChance</defName>
         <label>surgery</label>
+        <description>Archites in the hands improve the host's manual stability, allowing for precise surgical procedures to be performed with a lower risk of complication.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>0.15</effectPerLevel>
         <stat>MedicalSurgerySuccessChance</stat>

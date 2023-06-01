@@ -21,6 +21,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_PawnTrapSpringChance</defName>
         <label>nimbleness</label>
+        <description>Archites in the ligaments and tendons improve the dexterity of their host, allowing them to move through traps with extreme care.</description>
         <maxUses>10</maxUses>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>-0.10</effectPerLevel>
@@ -47,6 +48,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MeleeArmorPenetration</defName>
         <label>piercing</label>
+        <description>Archites improve the strength and dexterity of the arm muscles, making the host capable of more deft and calculated strikes that have a higher chance of making it through an adversery's armor.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset> <!-- stat * 1 at level 0, * 1.04 at level 1 -->
         <effectPerLevel>0.04</effectPerLevel>
@@ -72,6 +74,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MortarMissRadiusFactor</defName>
         <label>bombardment</label>
+        <description>Archites in the central nervous system improve their host's intuition in calculating long-range mortar trajectories.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1</baseOffset> <!-- stat * 1 at level 0, * 1.02 at level 1 -->
         <effectPerLevel>0.05</effectPerLevel>
@@ -97,6 +100,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_MeleeDodgeChance</defName>
         <label>swiftness</label>
+        <description>Archites in the peripheral nervous system reduce the latency of nerve signals, allowing the host to respond to incoming threats more quickly.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.05</effectPerLevel>
@@ -122,6 +126,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_AimingDelayFactor</defName>
         <label>focus</label>
+        <description>Archites in the arm muscles improve the stability and dexterity of the hands, reducing the amount of time needed for the host to line up a shot.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>
@@ -148,6 +153,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_MeleeHitChance</defName>
         <label>brawling</label>
+        <description>Archites in the peripheral nervous system coordinate signals going to and from the brain, improving the host's responsiveness in one-on-one conflicts.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.05</effectPerLevel>
@@ -173,6 +179,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_ShootingAccuracyPawn</defName>
         <label>precision</label>
+        <description>Archites in the eyes improve the host's visual acuity, allowing them to more easily aqcuire and track targets over long distances.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.05</effectPerLevel>
@@ -198,9 +205,10 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_IncomingDamageFactor</defName>
         <label>durability</label>
+        <description>Archites under the skin condesne and harden in response to any incoming threat, effectively increasing the amount of effort needed to meaningfully injure the host.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.025</effectPerLevel>
+        <effectPerLevel>0.075</effectPerLevel>
         <stat>IncomingDamageFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

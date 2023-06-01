@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_PsychicSilence</defName>
         <label>silence</label>
+        <description>Archites in the brain block incoming and outgoing psychic energies, dulling the host's psychic presence.</description>
         <maxUses>16</maxUses>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
@@ -57,6 +58,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_PsychicSensitivity</defName>
         <label>attunement</label>
+        <description>Archites in the brain amplify incoming and outgoing psychic energies, strengthening the host's psychic presence.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.035</effectPerLevel>

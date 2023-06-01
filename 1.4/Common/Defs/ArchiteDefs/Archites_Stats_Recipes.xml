@@ -31,6 +31,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_FoodPoisonChance</defName>
         <label>sanitation</label>
+        <description>Archites on the surface of the skin eliminate filth and pathogens, reducing the likelihood of the host spreading disease when cooking meals.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.25</effectPerLevel>
@@ -57,6 +58,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ButcheryFleshEfficiency</defName>
         <label>meat</label>
+        <description>Archites mysteriously enhance the amount of meat their host produces when butchering corpses. Nobody is quite sure where the extra meat comes from.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.08</effectPerLevel>
@@ -82,6 +84,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_ButcheryMechanoidEfficiency</defName>
         <label>bolts</label>
+        <description>Archites mysteriously enhance the amount of metal their host produces when dismantling corpses. Nobody is quite sure where the extra metal comes from.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.08</effectPerLevel>

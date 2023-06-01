@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_ArrestSuccessChance</defName>
         <label>enforcement</label>
+        <description>Archites in the central nervous system enhance their host's confidence, making them more assertive and dominating when tasked with taking others into custody.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.18</effectPerLevel>
@@ -47,6 +48,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_NegotiationAbility</defName>
         <label>diplomacy</label>
+        <description>Archites in the central nervous system increase their host's social empathy, giving them an upper hand in negotiations.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -72,6 +74,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_SocialImpact</defName>
         <label>personality</label>
+        <description>Archites alter the hormonal levels in their host, making them a more confident, outspoken, and generally memorable person.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.20</effectPerLevel>
@@ -98,6 +101,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_PawnBeauty</defName>
         <label>magnificence</label>
+        <description>Archites infuse the skeletal and muscular tissue of their host, and reshape it into something more desirable.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>1.0</effectPerLevel>
         <maxUses>6</maxUses>
@@ -124,6 +128,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_TradePriceImprovement</defName>
         <label>mercantalism</label>
+        <description>Archites in the central nervous system increase their host's social empathy, giving them an upper hand in leveraging trade deals.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.08</effectPerLevel>

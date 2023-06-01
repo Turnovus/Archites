@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_Fertility</defName>
         <label>procreation</label>
+        <description>Archites in the sex organs cultivate and foster the sex cells, improving the host's fertility.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -47,6 +48,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
         <defName>Turn_ArchiteUpgrade_LearningRateFactor</defName>
         <label>childhood</label>
+        <description>Archites in the brain enhance neuroplasticity, allowing hosts to gain more learning from childish activities.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
@@ -73,10 +75,11 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_StaggerDurationFactor</defName>
         <label>endurance</label>
+        <description>Archites throughout the body allow the muscles to stiffen in response to incoming attacks, allowing the host to shrug of the damage and keep moving.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>-0.04</effectPerLevel>
-        <maxUses>25</maxUses>
+        <effectPerLevel>-0.05</effectPerLevel>
+        <maxUses>20</maxUses>
         <stat>StaggerDurationFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -99,9 +102,10 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
         <defName>Turn_ArchiteUpgrade_RangedCooldownFactor</defName>
         <label>frenzy</label>
+        <description>Archites in the hands improve manual dexterity and stability, allowing the host to get off shots more quickly.</description>
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.08</effectPerLevel>
         <stat>RangedCooldownFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -125,6 +129,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
         <defName>Turn_ArchiteUpgrade_MeleeDamageFactor</defName>
         <label>destruction</label>
+        <description>Archites in the arms strengthen the muscles, allowing the host to bash things apart with great ease.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.075</effectPerLevel>

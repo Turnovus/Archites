@@ -22,6 +22,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_TameAnimalChance</defName>
         <label>domestication</label>
+        <description>Archites emanate a dim psychic aura around the host. The aura is tuned to the minds of wild animals, making them more likely to respond positively to taming attempts.</description>
         <upgradeType>Factor</upgradeType>
         <effectPerLevel>0.15</effectPerLevel>
         <baseOffset>1</baseOffset>
@@ -47,6 +48,7 @@
     <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_TrainAnimalChance</defName>
         <label>commanding</label>
+        <description>Archites emanate a dim psychic aura around the host. The aura is tuned to the minds of domestic animals, making them more receptive towards commands.</description>
         <upgradeType>Factor</upgradeType>
         <effectPerLevel>0.15</effectPerLevel>
         <baseOffset>1</baseOffset>
