@@ -11,7 +11,7 @@
         <relicChance>0</relicChance>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchiteChamber</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchiteChamber</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
 

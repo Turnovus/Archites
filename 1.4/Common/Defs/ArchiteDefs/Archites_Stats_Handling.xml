@@ -9,7 +9,7 @@
         <label>archite pod of domestication</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>
@@ -35,7 +35,7 @@
         <label>archite pod of commanding</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>

@@ -18,7 +18,7 @@
         <label>archite pod of sanitation</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -45,7 +45,7 @@
         <label>archite pod of meat</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -71,7 +71,7 @@
         <label>archite pod of bolts</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>

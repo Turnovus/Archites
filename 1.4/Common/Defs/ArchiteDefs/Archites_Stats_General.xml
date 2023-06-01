@@ -9,7 +9,7 @@
         <label>archite pod of hunger</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
 
         <comps>
@@ -35,7 +35,7 @@
         <label>archite pod of longevity</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
         
         <comps>
@@ -61,7 +61,7 @@
         <label>archite pod of motion</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
         </graphicData>
         
         <comps>
@@ -87,7 +87,7 @@
         <label>archite pod of resilience</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>
@@ -113,7 +113,7 @@
         <label>archite pod of restfulness</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
 
         <comps>
@@ -139,7 +139,7 @@
         <label>archite pod of heating</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Thermal</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Thermal</texPath>
         </graphicData>
         
         <comps>
@@ -164,7 +164,7 @@
         <label>archite pod of cooling</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Thermal</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Thermal</texPath>
         </graphicData>
         
         <comps>
@@ -189,7 +189,7 @@
         <label>archite pod of freshness</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>
@@ -215,7 +215,7 @@
         <label>archite pod of insomnia</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
         
         <comps>
@@ -243,7 +243,7 @@
         <label>archite pod of decontamination</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>
@@ -269,7 +269,7 @@
         <label>archite pod of education</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
         </graphicData>
 
         <comps>
@@ -295,7 +295,7 @@
         <label>archite pod of immunity</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
 
         <comps>
@@ -321,7 +321,7 @@
         <label>archite pod of regeneration</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
 
         <comps>

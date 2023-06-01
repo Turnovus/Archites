@@ -38,7 +38,7 @@
         <description>A single-use pod containing a dose of specially-designed archotech mechanites. Upon activation, these archites will enter the user's body and remain there permanently, slightly enhancing their capabilities.</description>
         
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
         </graphicData>

@@ -9,7 +9,7 @@
         <label>archite pod of limit</label>
         
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
         </graphicData>
 
         <comps>
@@ -38,7 +38,7 @@
         <label>archite pod of solitude</label>
         
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
         </graphicData>
 
         <comps>
@@ -68,7 +68,7 @@
         <label>archite pod of casting</label>
         
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
         </graphicData>
 
         <comps>
@@ -97,7 +97,7 @@
         <label>archite pod of simplicity</label>
         
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
         </graphicData>
 
         <comps>

@@ -9,7 +9,7 @@
         <label>archite pod of enforcement</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
         </graphicData>
         
         <comps>
@@ -35,7 +35,7 @@
         <label>archite pod of diplomacy</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
         </graphicData>
         
         <comps>
@@ -61,7 +61,7 @@
         <label>archite pod of personality</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
         </graphicData>
         
         <comps>
@@ -88,7 +88,7 @@
         <label>archite pod of magnificence</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
         </graphicData>
         
         <comps>
@@ -115,7 +115,7 @@
         <label>archite pod of mercantalism</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Social</texPath>
         </graphicData>
         
         <comps>

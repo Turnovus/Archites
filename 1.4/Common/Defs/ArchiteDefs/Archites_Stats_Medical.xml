@@ -9,7 +9,7 @@
         <label>archite pod of cutting</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
         </graphicData>
 
         <comps>
@@ -36,7 +36,7 @@
         <label>archite pod of triage</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
         </graphicData>
 
         <comps>
@@ -63,7 +63,7 @@
         <label>archite pod of medicine</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
         </graphicData>
 
         <comps>
@@ -89,7 +89,7 @@
         <label>archite pod of surgery</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Cross</texPath>
         </graphicData>
 
         <comps>

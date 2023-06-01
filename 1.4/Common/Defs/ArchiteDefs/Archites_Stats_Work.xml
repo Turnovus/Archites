@@ -9,7 +9,7 @@
         <label>archite pod of restoration</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -36,7 +36,7 @@
         <label>archite pod of tidiness</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -63,7 +63,7 @@
         <label>archite pod of polishing</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -89,7 +89,7 @@
         <label>archite pod of ranching</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -115,7 +115,7 @@
         <label>archite pod of measurement</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -143,7 +143,7 @@
         <label>archite pod of tunneling</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -169,7 +169,7 @@
         <label>archite pod of excavation</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -195,7 +195,7 @@
         <label>archite pod of discovery</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
         </graphicData>
 
         <comps>
@@ -221,7 +221,7 @@
         <label>archite pod of agriculture</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
         </graphicData>
 
         <comps>
@@ -247,7 +247,7 @@
         <label>archite pod of forestry</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -274,7 +274,7 @@
         <label>archite pod of building</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -301,7 +301,7 @@
         <label>archite pod of efficiency</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -327,7 +327,7 @@
         <label>archite pod of prospecting</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -353,7 +353,7 @@
         <label>archite pod of farming</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
         </graphicData>
 
         <comps>
@@ -379,7 +379,7 @@
         <label>archite pod of botany</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
         </graphicData>
 
         <comps>

@@ -9,7 +9,7 @@
         <label>archite pod of silence</label>
         
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
         </graphicData>
 
         <comps>
@@ -45,7 +45,7 @@
         <label>archite pod of attunement</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
         </graphicData>
 
         <comps>

@@ -9,7 +9,7 @@
         <label>archite pod of procreation</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
         </graphicData>
 
         <comps>
@@ -35,7 +35,7 @@
         <label>archite pod of childhood</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
         </graphicData>
 
         <comps>
@@ -62,7 +62,7 @@
         <label>archite pod of endurance</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>
@@ -89,7 +89,7 @@
         <label>archite pod of frenzy</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
         </graphicData>
         
         <comps>
@@ -116,7 +116,7 @@
         <label>archite pod of destruction</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
         </graphicData>
 
         <comps>

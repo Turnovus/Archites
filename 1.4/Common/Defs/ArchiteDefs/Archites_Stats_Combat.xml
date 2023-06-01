@@ -8,7 +8,7 @@
         <label>archite pod of nimbleness</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
         </graphicData>
 
         <comps>
@@ -35,7 +35,7 @@
         <label>archite pod of piercing</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
         </graphicData>
 
         <comps>
@@ -61,7 +61,7 @@
         <label>archite pod of bombardment</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
         </graphicData>
 
         <comps>
@@ -87,7 +87,7 @@
         <label>archite pod of swiftness</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
         </graphicData>
         
         <comps>
@@ -113,7 +113,7 @@
         <label>archite pod of focus</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
         </graphicData>
         
         <comps>
@@ -140,7 +140,7 @@
         <label>archite pod of brawling</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
         </graphicData>
 
         <comps>
@@ -166,7 +166,7 @@
         <label>archite pod of precision</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
         </graphicData>
         
         <comps>
@@ -192,7 +192,7 @@
         <label>archite pod of durability</label>
 
         <graphicData>
-            <texPath>Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
         </graphicData>
         
         <comps>
