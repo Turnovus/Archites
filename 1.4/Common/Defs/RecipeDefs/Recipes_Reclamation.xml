@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <RecipeDef Name="ArchiteReinforcement.ReclamationRecipeBase" Abstract="True">
+        <jobString>Breaking down artifact.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <workAmount>550</workAmount>
+
+        <products>
+            <Turn_ArchiteReinforcement_ReclaimedArchites>1</Turn_ArchiteReinforcement_ReclaimedArchites>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ArchiteReinforcement.ReclamationRecipeBase">
+        <defName>Turn_Recipe_ReclaimFromArchiteUpgrade</defName>
+        <label>reclaim archites from pod or cell</label>
+        <description>Break down a pod or cell into its component archites, then reclaim the archites to repurpose them.</description>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Turn_ThingCategory_ArchitePods</li>
+                        <li>Turn_ThingCategory_ArchiteCells</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Turn_ThingCategory_ArchitePods</li>
+                <li>Turn_ThingCategory_ArchiteCells</li>
+            </categories>
+        </fixedIngredientFilter>
+
+        <modExtensions>
+            <li Class="CF.UseOutputWorkers">
+                <outputWorkers>
+                    <li Class="ArchiteReinforcement.OutputWorker_ReclaimArchitesFromUpgrade" />
+                </outputWorkers>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

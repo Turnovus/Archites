@@ -10,6 +10,11 @@ namespace ArchiteReinforcement
 {
     public class CompArchiteTracker : ThingComp
     {
+        public const float StartStatCost = 50f;
+        public const float StartCapCost = 150f;
+        public const float StatCostPerArchite = 10f;
+        public const float CapCostPerArchite = 35f;
+
         public Dictionary<StatArchiteDef, int> statUpgrades = new Dictionary<StatArchiteDef, int>();
         public Dictionary<CapacityArchiteDef, int> capacityUpgrades = new Dictionary<CapacityArchiteDef, int>();
         public float statArchiteProgress = 0f;
@@ -68,10 +73,10 @@ namespace ArchiteReinforcement
         }
 
         public float StatUpgradeCost =>
-            Math.Max(50, TotalStatArchiteUpgradeValue * 10);
+            Math.Max(StartStatCost, TotalStatArchiteUpgradeValue * StatCostPerArchite);
 
         public float CapacityUpgradeCost =>
-            Math.Max(250, TotalCapacityArchiteUpgradeValue * 50);
+            Math.Max(StartCapCost, TotalCapacityArchiteUpgradeValue * CapCostPerArchite);
 
         public Pawn ParentPawn => parent as Pawn;
 

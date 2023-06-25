@@ -64,11 +64,11 @@ namespace ArchiteReinforcement
 
             using (TextBlock.Default())
             {
-                FillTab(comp, new Rect(Vector2.zero, size), ref capScrollPosition, ref statScrollPosition);
+                FillTab(comp, new Rect(Vector2.zero, size), ref capScrollPosition, ref statScrollPosition, PlayerCanBuyArchitesFor(SelPawn));
             }
         }
 
-        private static void FillTab(CompArchiteTracker comp, Rect rect, ref Vector2 capScroll, ref Vector2 statScroll)
+        private static void FillTab(CompArchiteTracker comp, Rect rect, ref Vector2 capScroll, ref Vector2 statScroll, bool canBuyUpgrades)
         {
             int capCount = comp.capacityUpgrades.Count;
             int statCount = comp.statUpgrades.Count;
@@ -176,12 +176,16 @@ namespace ArchiteReinforcement
 
                     Widgets.Label(rectName, "ArchiteReinforcement.MenuItemName".Translate(cap.LabelCap, levelReadout));
                     Widgets.Label(rectEffect, cap.ValueModAtLevel(levelInt, cap.capacity.LabelCap));
-                    Widgets.Label(rectCost, "ArchiteReinforcement.MenuItemCost".Translate(cap.upgradeValue.ToStringByStyle(ToStringStyle.FloatMaxTwo), "ArchiteReinforcement.UpgradeTypeCapacity".Translate()));
-                    if (comp.capacityArchitesToSpend >= cap.upgradeValue)
+
+                    if (canBuyUpgrades)
                     {
-                        if (Widgets.ButtonText(rectButton, "ArchiteReinforcement.MenuItemButton".Translate()))
+                        Widgets.Label(rectCost, "ArchiteReinforcement.MenuItemCost".Translate(cap.upgradeValue.ToStringByStyle(ToStringStyle.FloatMaxTwo), "ArchiteReinforcement.UpgradeTypeCapacity".Translate()));
+                        if (comp.capacityArchitesToSpend >= cap.upgradeValue)
                         {
-                            comp.TryBuyUpgrade(cap);
+                            if (Widgets.ButtonText(rectButton, "ArchiteReinforcement.MenuItemButton".Translate()))
+                            {
+                                comp.TryBuyUpgrade(cap);
+                            }
                         }
                     }
 
@@ -240,12 +244,16 @@ namespace ArchiteReinforcement
 
                     Widgets.Label(rectName, "ArchiteReinforcement.MenuItemName".Translate(stat.LabelCap, levelReadout));
                     Widgets.Label(rectEffect, stat.ValueModAtLevel(levelInt, stat.stat.LabelCap));
-                    Widgets.Label(rectCost, "ArchiteReinforcement.MenuItemCost".Translate(stat.upgradeValue.ToStringByStyle(ToStringStyle.FloatMaxTwo), "ArchiteReinforcement.UpgradeTypeStat".Translate()));
-                    if (comp.statArchitesToSpend >= stat.upgradeValue)
+
+                    if (canBuyUpgrades)
                     {
-                        if (Widgets.ButtonText(rectButton, "ArchiteReinforcement.MenuItemButton".Translate()))
+                        Widgets.Label(rectCost, "ArchiteReinforcement.MenuItemCost".Translate(stat.upgradeValue.ToStringByStyle(ToStringStyle.FloatMaxTwo), "ArchiteReinforcement.UpgradeTypeStat".Translate()));
+                        if (comp.statArchitesToSpend >= stat.upgradeValue)
                         {
-                            comp.TryBuyUpgrade(stat);
+                            if (Widgets.ButtonText(rectButton, "ArchiteReinforcement.MenuItemButton".Translate()))
+                            {
+                                comp.TryBuyUpgrade(stat);
+                            }
                         }
                     }
 
@@ -264,5 +272,8 @@ namespace ArchiteReinforcement
 
             GUI.EndGroup();
         }
+
+        public static bool PlayerCanBuyArchitesFor(Pawn pawn) =>
+            pawn.Faction == Faction.OfPlayer || pawn.IsSlaveOfColony;
     }
 }

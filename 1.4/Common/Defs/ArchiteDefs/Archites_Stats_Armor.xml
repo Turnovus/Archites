@@ -103,7 +103,7 @@
         <effectPerLevel>-0.04</effectPerLevel>
         <maxUses>25</maxUses>
         <stat>Flammability</stat>
-        <effectDescriptionOverride>Reduces</effectDescriptionOverride>
+        <effectDescriptionOverride>reduces</effectDescriptionOverride>
     </ArchiteReinforcement.StatArchiteDef>
 
 </Defs>

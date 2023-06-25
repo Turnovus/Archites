@@ -14,14 +14,17 @@
     <ArchiteReinforcement.UseFailReasonExcluded>excluded by other archites</ArchiteReinforcement.UseFailReasonExcluded>
 
     <ArchiteReinforcement.UpgradeNameFallback>None</ArchiteReinforcement.UpgradeNameFallback>
+    <ArchiteReinforcement.UpgradeNameFallback.Lower>none</ArchiteReinforcement.UpgradeNameFallback.Lower>
 
     <ArchiteReinforcement.WillUpgrade>Enhances {0}</ArchiteReinforcement.WillUpgrade>
+    <ArchiteReinforcement.EffectDescriptionSimple>enhances</ArchiteReinforcement.EffectDescriptionSimple>
+    <ArchiteReinforcement.ProgressiveExplanation>Each level {0} {1} by {2} more than the last.</ArchiteReinforcement.ProgressiveExplanation>
 
     <ArchiteReinforcement.UpgradeProgress>{0} progress: {1} / {2}</ArchiteReinforcement.UpgradeProgress>
-    <ArchiteReinforcement.ArchiteListExplanation>Archites: {0}</ArchiteReinforcement.ArchiteListExplanation>
+    <ArchiteReinforcement.ArchiteListExplanation>Upgrade points: {0}</ArchiteReinforcement.ArchiteListExplanation>
     <ArchiteReinforcement.ArchiteUsedListExplanation>Used archites: {0}</ArchiteReinforcement.ArchiteUsedListExplanation>
 
-    <ArchiteReinforcement.MenuAvailableArchites>Available archites: {0} | {1}</ArchiteReinforcement.MenuAvailableArchites>
+    <ArchiteReinforcement.MenuAvailableArchites>Available upgrades: {0} | {1}</ArchiteReinforcement.MenuAvailableArchites>
     <ArchiteReinforcement.ArchitesTypeQuantity>{0} x{1}</ArchiteReinforcement.ArchitesTypeQuantity>
 
     <ArchiteReinforcement.MenuItemName>{0} level {1}</ArchiteReinforcement.MenuItemName>
@@ -45,5 +48,8 @@
 
     <ArchiteReinforcement.PawnGainedUpgrade>{0} has a new {1} archite point to spend.</ArchiteReinforcement.PawnGainedUpgrade>
     <ArchiteReinforcement.PawnGainedUpgrade.Plural>{0} has {2} new {1} archites to spend.</ArchiteReinforcement.PawnGainedUpgrade.Plural>
+
+    <ArchiteReinforcement.InspectCapacityCount>Capacity archites: {0}</ArchiteReinforcement.InspectCapacityCount>
+    <ArchiteReinforcement.InspectStatCount>Stat Archites: {0}</ArchiteReinforcement.InspectStatCount>
 
 </LanguageData>

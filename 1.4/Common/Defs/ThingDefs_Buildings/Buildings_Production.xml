@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="BenchBase">
+        <defName>Turn_Building_ArchiteCrucible</defName>
+        <label>archite crucible</label>
+        <description>TODO</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <techLevel>Archotech</techLevel>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Building/Production/ArchiteCrucible</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(3.5,1.5)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+
+        <thingCategories Inherit="False">
+            <li>BuildingsSpecial</li>
+        </thingCategories>
+
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <costStuffCount>50</costStuffCount>
+
+        <!-- Copied from vanometric power cell -->
+        <costList>
+            <Steel>100</Steel>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+
+        <altitudeLayer>Building</altitudeLayer>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <statBases>
+            <WorkToBuild>3500</WorkToBuild>
+            <!-- Beefy building because it's very important. -->
+            <MaxHitPoints>750</MaxHitPoints>
+            <Flammability>0.0</Flammability>
+        </statBases>
+        <size>(3,1)</size>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+
+        <recipes>
+            <li>Turn_Recipe_ReclaimFromArchiteUpgrade</li>
+        </recipes>
+
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <tradeability>Sellable</tradeability>
+        <tradeTags>
+            <li>ExoticBuilding</li>
+        </tradeTags>
+
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>4</glowRadius>
+                <glowColor>(227,233,168,0)</glowColor> <!-- Same as vanometric power cell -->
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

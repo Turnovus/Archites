@@ -13,25 +13,50 @@ namespace ArchiteReinforcement
         public int? maxUses;
         public EUpgradeType upgradeType = EUpgradeType.Offset;
         public float effectPerLevel;
+        public float levelProgressiveRate = 0f;
         public float baseOffset = 0f;
         public float marketValuePerLevel = 0f;
         public List<string> exclusionTags = new List<string>();
         public float upgradeValue = 1f;
         public string effectDescriptionOverride = null;
+        public string progressiveKeyOverride = null;
 
         public virtual bool IsImplied => false;
 
+        public abstract string NameOfThingToUpgradeLower { get; }
         public abstract string NameOfThingToUpgrade { get; }
+
+        public float ModAtLevel(int level)
+        {
+            if (maxUses != null)
+                level = Math.Min(level, (int)maxUses);
+
+            float mod;
+
+            if (levelProgressiveRate <= 0)
+            {
+                mod = baseOffset + (effectPerLevel * level);
+            }
+            else
+            {
+                // nx( 1 - m/2 + x(m/2) ) + b
+                // Where x = level, n = bonus per level, m = progressive bonus, b = base offset
+                mod = 1;
+                mod = mod - (levelProgressiveRate / 2f);
+                mod = mod + (level * (levelProgressiveRate / 2f));
+                mod = mod * level * effectPerLevel;
+                mod += baseOffset;
+            }
+
+            return mod;
+        }
 
         public void ModifyValueAtLevel(ref float value, int level)
         {
             if (level <= 0)
                 return;
 
-            if (maxUses != null)
-                level = Math.Min(level, (int)maxUses);
-
-            float mod = baseOffset + (effectPerLevel * level);
+            float mod = ModAtLevel(level);
 
             switch (upgradeType)
             {
@@ -56,10 +81,7 @@ namespace ArchiteReinforcement
 
         public string ValueReadoutAtLevel(float level)
         {
-            if (maxUses != null)
-                level = Math.Min(level, (int)maxUses);
-
-            float mod = baseOffset + (effectPerLevel * level);
+            float mod = ModAtLevel((int)level);
 
             switch (upgradeType)
             {
@@ -83,7 +105,7 @@ namespace ArchiteReinforcement
             if (maxUses != null)
                 level = Math.Min(level, (int)maxUses);
 
-            float mod = baseOffset + (effectPerLevel * level);
+            float mod = ModAtLevel((int)level);
 
             switch (upgradeType)
             {
@@ -122,7 +144,7 @@ namespace ArchiteReinforcement
 
             str = effectDescriptionOverride.NullOrEmpty() ?
                 (string)"ArchiteReinforcement.WillUpgrade".Translate(NameOfThingToUpgrade) :
-                effectDescriptionOverride + " " + NameOfThingToUpgrade;
+                effectDescriptionOverride.CapitalizeFirst() + " " + NameOfThingToUpgrade;
 
             str += "\n\n";
             str += "ArchiteReinforcement.PerLevelHeader".Translate();
@@ -139,6 +161,12 @@ namespace ArchiteReinforcement
 
             if (maxUses == null || iterations < maxUses)
                 str += "\n" + "ArchiteReinforcement.PerLevelItem.EtCetera".Translate();
+
+            if (levelProgressiveRate > 0f)
+            {
+                str += "\n\n";
+                str += ProgressiveExplanation();
+            }
 
             str += "\n\n";
             str += "ArchiteReinforcement.DescriptionMaxLevel".Translate(
@@ -160,6 +188,14 @@ namespace ArchiteReinforcement
 
             return str;
         }
+
+        public string ProgressiveExplanation()
+        {
+            string enhances = effectDescriptionOverride ?? "ArchiteReinforcement.EffectDescriptionSimple".Translate();
+            string key = progressiveKeyOverride ?? "ArchiteReinforcement.ProgressiveExplanation";
+            float progressive = levelProgressiveRate * effectPerLevel;
+            return key.Translate(enhances, NameOfThingToUpgradeLower, progressive.ToStringByStyle(ToStringStyle.FloatMaxThree));
+        }
     }
     
     public class StatArchiteDef : ArchiteDef
@@ -168,6 +204,7 @@ namespace ArchiteReinforcement
 
         public override bool IsImplied => stat == null;
 
+        public override string NameOfThingToUpgradeLower => stat?.label ?? "ArchiteReinforcement.UpgradeNameFallback.Lower".Translate();
         public override string NameOfThingToUpgrade => stat?.LabelCap ?? "ArchiteReinforcement.UpgradeNameFallback".Translate();
 
         public override int CompareTo(ArchiteDef other)
@@ -201,6 +238,7 @@ namespace ArchiteReinforcement
     {
         public PawnCapacityDef capacity;
 
+        public override string NameOfThingToUpgradeLower => capacity.label;
         public override string NameOfThingToUpgrade => capacity.LabelCap;
 
         public override int CompareTo(ArchiteDef other)

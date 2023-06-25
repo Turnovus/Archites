@@ -79,7 +79,7 @@ namespace ArchiteReinforcement
             string fullString;
 
             if (!Props.upgrade.effectDescriptionOverride.NullOrEmpty())
-                fullString = Props.upgrade.effectDescriptionOverride + " " + UpgradeName;
+                fullString = Props.upgrade.effectDescriptionOverride.CapitalizeFirst() + " " + UpgradeName;
             else
                 fullString = "ArchiteReinforcement.WillUpgrade".Translate(UpgradeName);
 

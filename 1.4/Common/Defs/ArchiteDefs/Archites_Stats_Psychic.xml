@@ -35,7 +35,7 @@
             <li>PsychicEntropyMax</li>
             <li>PsychicEntropyRecoveryRate</li>
         </exclusionTags>
-        <effectDescriptionOverride>Reduces</effectDescriptionOverride>
+        <effectDescriptionOverride>reduces</effectDescriptionOverride>
     </ArchiteReinforcement.StatArchiteDef>
 
     <!--========== MAJOR PODS ==========-->
@@ -61,7 +61,8 @@
         <description>Archites in the brain amplify incoming and outgoing psychic energies, strengthening the host's psychic presence.</description>
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
-        <effectPerLevel>0.035</effectPerLevel>
+        <effectPerLevel>0.030</effectPerLevel>
+        <levelProgressiveRate>0.1</levelProgressiveRate>
         <stat>PsychicSensitivity</stat>
         <exclusionTags>
             <li>PsychicSensitivity</li>

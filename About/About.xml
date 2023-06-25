@@ -20,6 +20,12 @@
             <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
             <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
         </li>
+        <li>
+            <packageId>isorex.communityframework</packageId>
+            <displayName>Community Framework</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2585162118</steamWorkshopUrl>
+            <downloadUrl>https://github.com/ISOR3X/communityframework/releases/latest</downloadUrl>
+        </li>
     </modDependencies>
 
 </ModMetaData>

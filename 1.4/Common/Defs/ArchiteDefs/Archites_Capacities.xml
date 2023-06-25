@@ -113,7 +113,7 @@
     <!-- Eating -->
     <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
         <defName>Turn_ArchiteCell_Eating</defName>
-        <label>archite cell of stomach</label>
+        <label>archite cell of jaws</label>
         <comps>
             <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
                 <upgrade>Turn_ArchiteUpgrade_Eating</upgrade>
@@ -124,7 +124,7 @@
     <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Minor">
         <defName>Turn_ArchiteUpgrade_Eating</defName>
         <capacity>Eating</capacity>
-        <label>stomach</label>
+        <label>jaws</label>
         <upgradeValue>1.5</upgradeValue>
         <description>Archites reside in the host's mouth, rending food apart as it is chewed.</description>
     </ArchiteReinforcement.CapacityArchiteDef>
