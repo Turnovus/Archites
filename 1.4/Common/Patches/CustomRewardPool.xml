@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingSetMakerDef[defName="Reward_ItemsStandard"]/root/options/li[1]/thingSetMaker/options</xpath>
+        <value>
+        
+            <li>
+                <weight>4</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                    <fixedParams>
+                        <qualityGenerator>Reward</qualityGenerator>
+                        <allowNonStackableDuplicates>True</allowNonStackableDuplicates>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchiteSecondary</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+
+            <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                    <fixedParams>
+                        <qualityGenerator>Reward</qualityGenerator>
+                        <allowNonStackableDuplicates>True</allowNonStackableDuplicates>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryLowFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+            <li>
+                <weight>2</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                    <fixedParams>
+                        <qualityGenerator>Reward</qualityGenerator>
+                        <allowNonStackableDuplicates>True</allowNonStackableDuplicates>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryMidFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+            <li>
+                <weight>3</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                    <fixedParams>
+                        <qualityGenerator>Reward</qualityGenerator>
+                        <allowNonStackableDuplicates>True</allowNonStackableDuplicates>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryHighFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+        
+        </value>
+    </Operation>
+
+</Patch>

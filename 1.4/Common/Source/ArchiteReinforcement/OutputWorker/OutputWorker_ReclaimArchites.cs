@@ -75,8 +75,10 @@ namespace ArchiteReinforcement
             archites *= CompArchiteTracker.StartCapCost;
             if (!(upgrade is CapacityArchiteDef))
                 archites *= 0.15f;
-            Log.Message(archites.ToString());
-            return archites * randomRange.RandomInRange;
+
+            archites = archites * randomRange.RandomInRange;
+
+            return archites - (archites % 0.1f);
         }
 
         public override float StatArchitesFrom(Thing thing)
@@ -90,7 +92,46 @@ namespace ArchiteReinforcement
             if (!(upgrade is StatArchiteDef))
                 archites *= 0.15f;
 
-            return archites * randomRange.RandomInRange;
+            archites = archites * randomRange.RandomInRange;
+
+            return archites - (archites % 0.1f);
         }
     }
+
+    public class OutputWorker_ReclaimArchitesFromValue : OutputWorker_ReclaimArchites
+    {
+        public static readonly FloatRange ValueReturnRange = new FloatRange(0.6f, 0.85f);
+
+        public static float BaseArchitesPerMarketValue
+        {
+            get
+            {
+                float marketValue = MyDefOf.Turn_ArchiteReinforcement_Chamber
+                    .GetStatValueAbstract(StatDefOf.MarketValue);
+
+                CompProperties_UseEffectArchiteProgress props =
+                    MyDefOf.Turn_ArchiteReinforcement_Chamber
+                        .GetCompProperties<CompProperties_UseEffectArchiteProgress>();
+
+                return (props?.defaultStoredArchites ?? 1f) / marketValue;
+            }
+        }
+
+        public static float AnyArchitesFrom(Thing thing)
+        {
+            float archites = thing.GetStatValue(StatDefOf.MarketValue)
+                * BaseArchitesPerMarketValue
+                * ValueReturnRange.RandomInRange;
+
+            return archites - (archites % 0.1f);
+        }
+
+        public override float CapacityArchitesFrom(Thing thing)
+            => AnyArchitesFrom(thing);
+
+        public override float StatArchitesFrom(Thing thing)
+            => AnyArchitesFrom(thing);
+    }
+
+
 }

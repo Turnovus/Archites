@@ -31,7 +31,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardMidFreq</li>
+            <li>RewardArchitePrimaryMidFreq</li>
         </thingSetMakerTags>
 
         <statBases>
@@ -46,7 +46,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardMidFreq</li>
+            <li>RewardArchitePrimaryMidFreq</li>
         </thingSetMakerTags>
 
         <statBases>
@@ -61,7 +61,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardLowFreq</li>
+            <li>RewardArchitePrimaryLowFreq</li>
         </thingSetMakerTags>
 
         <statBases>
@@ -74,6 +74,7 @@
         <baseOffset>1.0</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>
         <marketValuePerLevel>150</marketValuePerLevel>
+        <levelProgressiveRate>0.1</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Normal" Abstract="True">
@@ -82,6 +83,7 @@
         <effectPerLevel>0.05</effectPerLevel>
         <marketValuePerLevel>300</marketValuePerLevel>
         <upgradeValue>2.5</upgradeValue>
+        <levelProgressiveRate>0.1</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Major" Abstract="True">
@@ -90,7 +92,9 @@
         <effectPerLevel>0.05</effectPerLevel>
         <marketValuePerLevel>750</marketValuePerLevel>
         <upgradeValue>5.0</upgradeValue>
+        <levelProgressiveRate>0.1</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
+    
     <!--========== MINOR CELLS ==========-->
     <!-- Talking -->
     <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">

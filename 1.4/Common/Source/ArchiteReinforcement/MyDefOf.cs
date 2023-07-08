@@ -17,6 +17,8 @@ namespace ArchiteReinforcement
         public static RecordDef Turn_Record_ArchitesSpent_Stat;
         public static RecordDef Turn_Record_ArchitesSpent_Capacity;
 
+        public static ThingDef Turn_ArchiteReinforcement_Chamber;
+
         static MyDefOf() =>
             DefOfHelper.EnsureInitializedInCtor(typeof(MyDefOf));
     }

@@ -63,7 +63,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardLowFreq</li> <!-- Low freq because low desirability -->
+            <li>RewardArchitePrimaryLowFreq</li> <!-- Low freq because low desirability -->
         </thingSetMakerTags>
 
         <statBases>
@@ -78,7 +78,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardHighFreq</li>
+            <li>RewardArchitePrimaryHighFreq</li>
         </thingSetMakerTags>
 
         <statBases>
@@ -93,7 +93,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardMidFreq</li>
+            <li>RewardArchitePrimaryMidFreq</li>
         </thingSetMakerTags>
 
         <statBases>
@@ -108,7 +108,7 @@
         </graphicData>
 
         <thingSetMakerTags>
-            <li>RewardStandardLowFreq</li>
+            <li>RewardArchitePrimaryLowFreq</li>
         </thingSetMakerTags>
 
         <statBases>

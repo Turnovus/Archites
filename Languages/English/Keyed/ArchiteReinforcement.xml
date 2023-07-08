@@ -21,7 +21,7 @@
     <ArchiteReinforcement.ProgressiveExplanation>Each level {0} {1} by {2} more than the last.</ArchiteReinforcement.ProgressiveExplanation>
 
     <ArchiteReinforcement.UpgradeProgress>{0} progress: {1} / {2}</ArchiteReinforcement.UpgradeProgress>
-    <ArchiteReinforcement.ArchiteListExplanation>Upgrade points: {0}</ArchiteReinforcement.ArchiteListExplanation>
+    <ArchiteReinforcement.ArchiteListExplanation>Archites: {0}</ArchiteReinforcement.ArchiteListExplanation>
     <ArchiteReinforcement.ArchiteUsedListExplanation>Used archites: {0}</ArchiteReinforcement.ArchiteUsedListExplanation>
 
     <ArchiteReinforcement.MenuAvailableArchites>Available upgrades: {0} | {1}</ArchiteReinforcement.MenuAvailableArchites>

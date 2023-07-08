@@ -17,7 +17,7 @@
     <RecipeDef ParentName="ArchiteReinforcement.ReclamationRecipeBase">
         <defName>Turn_Recipe_ReclaimFromArchiteUpgrade</defName>
         <label>reclaim archites from pod or cell</label>
-        <description>Break down a pod or cell into its component archites, then reclaim the archites to repurpose them.</description>
+        <description>Break down a pod or cell into its component archites, then reclaim the archites to repurpose them.\n\nThe amount of archites reclaimed is based on cost to improve the artifact's upgrade.</description>
 
         <ingredients>
             <li>
@@ -41,6 +41,50 @@
             <li Class="CF.UseOutputWorkers">
                 <outputWorkers>
                     <li Class="ArchiteReinforcement.OutputWorker_ReclaimArchitesFromUpgrade" />
+                </outputWorkers>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ArchiteReinforcement.ReclamationRecipeBase">
+        <defName>Turn_Recipe_ReclaimArchitesFromArtifact</defName>
+        <label>reclaim archites from artifact</label>
+        <description>Break down an archotech contraption into its component archites, then reclaim the archites to repurpose them.\n\nThe amount of archites reclaimed is based on the value of the artifact.</description>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Artifacts</li>
+                        <li>BodyPartsArchotech</li>
+                    </categories>
+                    <thingDefs>
+                        <li>Apparel_PsychicShockLance</li>
+                        <li>Apparel_PsychicInsanityLance</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Artifacts</li>
+                <li>BodyPartsArchotech</li>
+            </categories>
+            <disallowedCategories>
+                <li>Turn_ThingCategory_Archites</li>
+            </disallowedCategories>
+            <thingDefs>
+                <li>Apparel_PsychicShockLance</li>
+                <li>Apparel_PsychicInsanityLance</li>
+                <li MayRequire="Ludeon.RimWorld.Biotech">ArchiteCapsule</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+
+        <modExtensions>
+            <li Class="CF.UseOutputWorkers">
+                <outputWorkers>
+                    <li Class="ArchiteReinforcement.OutputWorker_ReclaimArchitesFromValue" />
                 </outputWorkers>
             </li>
         </modExtensions>

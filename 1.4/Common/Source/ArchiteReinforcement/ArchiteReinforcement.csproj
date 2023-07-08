@@ -86,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatParts\StatPart_ArchiteUpgrades.cs" />
     <Compile Include="StatParts\StatPart_SpentArchites.cs" />
+    <Compile Include="WorldGen\GenSteps\GenStep_ArchiteCrucible.cs" />
+    <Compile Include="WorldGen\SiteParts\SitePartWorker_ArchiteCrucible.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
