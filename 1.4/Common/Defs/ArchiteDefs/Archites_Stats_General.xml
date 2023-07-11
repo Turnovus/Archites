@@ -51,6 +51,7 @@
         <description>Archites saturate the cells, restoring genetic material, and replenishing cellular resources that deplete with age.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>0.15</effectPerLevel>
+        <levelProgressiveRate>0.2</levelProgressiveRate>
         <stat>LifespanFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -155,6 +156,7 @@
         <description>Archites beneath the skin trap in body heat, allowing the host to operate in colder temperatures while maintaining homeostasis.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>-2.5</effectPerLevel>
+        <levelProgressiveRate>0.5</levelProgressiveRate>
         <stat>ComfyTemperatureMin</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -180,6 +182,7 @@
         <description>Archites form a barrier beneath the skin to diffuse environmental heat, allowing the host to operate in excessively hot temperatures while maintaining homeostasis.</description>
         <upgradeType>Offset</upgradeType>
         <effectPerLevel>2.5</effectPerLevel>
+        <levelProgressiveRate>0.5</levelProgressiveRate>
         <stat>ComfyTemperatureMax</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

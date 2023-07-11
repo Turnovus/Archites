@@ -11,9 +11,9 @@ namespace ArchiteReinforcement
     public class CompArchiteTracker : ThingComp
     {
         public const float StartStatCost = 50f;
-        public const float StartCapCost = 150f;
+        public const float StartCapCost = 100f;
         public const float StatCostPerArchite = 10f;
-        public const float CapCostPerArchite = 35f;
+        public const float CapCostPerArchite = 16f;
 
         public Dictionary<StatArchiteDef, int> statUpgrades = new Dictionary<StatArchiteDef, int>();
         public Dictionary<CapacityArchiteDef, int> capacityUpgrades = new Dictionary<CapacityArchiteDef, int>();
@@ -24,6 +24,11 @@ namespace ArchiteReinforcement
 
         private float? cachedTotalStatArchites = null;
         private float? cachedTotalCapacityArchites = null;
+        // There are only going to be a small handful of implied archite defs, so we can set them
+        // aside into their own collection so that other parts of code can find them faster on pawns
+        // that have a ton of unique upgrade types.
+        // This collection can only store stat archite defs, because only those can be implicit.
+        private Dictionary<StatArchiteDef, int> impliedLevelsCached = null;
 
         public List<string> ActiveExclusionTags
         {
@@ -57,6 +62,23 @@ namespace ArchiteReinforcement
             }
         }
 
+        public Dictionary<StatArchiteDef, int> ImpliedLevels
+        {
+            get
+            {
+                if(impliedLevelsCached == null)
+                {
+                    impliedLevelsCached = new Dictionary<StatArchiteDef, int>();
+                    foreach (StatArchiteDef def in statUpgrades.Keys)
+                    {
+                        if (def.IsImplied)
+                            impliedLevelsCached[def] = statUpgrades[def];
+                    }
+                }
+                return impliedLevelsCached;
+            }
+        }
+
         public float TotalCapacityArchiteUpgradeValue
         {
             get
@@ -80,6 +102,9 @@ namespace ArchiteReinforcement
 
         public Pawn ParentPawn => parent as Pawn;
 
+        // Maybe cache this later if we're dying for performance, but this should only be a problem
+        // for absolutely stupid edge cases, like if all 50 of the player's colonists have each
+        // individual upgrade type.
         public float MarketValueOffsetFromArchites
         {
             get
@@ -166,8 +191,11 @@ namespace ArchiteReinforcement
                 return statUpgrades.ContainsKey(stat);
             if (upgrade is CapacityArchiteDef cap)
                 return capacityUpgrades.ContainsKey(cap);
-            return false;
+            return false; // No support for custom def types, soz m8.
         }
+
+        public bool HasAnyLevelOfImpliedUpgrade(StatArchiteDef upgrade)
+            => ImpliedLevels.ContainsKey(upgrade);
 
         public int LevelForStat(StatArchiteDef stat)
         {
@@ -176,12 +204,26 @@ namespace ArchiteReinforcement
             return statUpgrades[stat];
         }
 
+        public int LevelForImpliedUpgrade(StatArchiteDef upgrade)
+        {
+            if (!upgrade.IsImplied)
+            {
+                Log.Error("Called LevelForImpliedUpgrade with " + upgrade.ToString() + ", but it is not an implied upgrade!");
+                return 0;
+            }
+            return ImpliedLevels.ContainsKey(upgrade) ? ImpliedLevels[upgrade] : 0;
+        }           
+
+        // Nothing to see here. Just an unused method from when I tried to patch the tracker comp
+        // onto humanlikes using C# instead of an XML patch.
         public static CompProperties NewPropsForDefPatch() =>
             new CompProperties()
             {
                 compClass = typeof(CompArchiteTracker),
             };
 
+        // Any time a pawn acquires any sort of upgrade, it should take place here. It DOES NOT
+        // handle the transaction of upgrade points, but it DOES dirty all of the upgrade caches.
         public void DoUpgrade(ArchiteDef def)
         {
             if (def is StatArchiteDef stat)
@@ -203,6 +245,7 @@ namespace ArchiteReinforcement
 
             cachedTotalStatArchites = null;
             cachedTotalCapacityArchites = null;
+            impliedLevelsCached = null;
         }
 
         public void TryBuyUpgrade(ArchiteDef def)

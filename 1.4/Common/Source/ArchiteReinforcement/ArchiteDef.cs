@@ -33,6 +33,8 @@ namespace ArchiteReinforcement
 
             float mod;
 
+            // No negative progressive rates, because that will cause upgrades to turn into
+            // downgrades after a certain level.
             if (levelProgressiveRate <= 0)
             {
                 mod = baseOffset + (effectPerLevel * level);
@@ -126,16 +128,18 @@ namespace ArchiteReinforcement
 
         public virtual int CompareTo(ArchiteDef other)
         {
-            if (IsImplied && !other.IsImplied)
-                return 1;
+            // More expensive upgrades come first because they tend to be more meaningful.
+            if (other.upgradeValue != upgradeValue)
+                return upgradeValue > other.upgradeValue ? -1 : 1;
 
-            if (other.IsImplied && !IsImplied)
+            // Implied stats come before actual ones because they have special behaviors.
+            if (IsImplied && !other.IsImplied)
                 return -1;
 
-            if (other.upgradeValue == upgradeValue)
-                return 0;
+            if (other.IsImplied && !IsImplied)
+                return 1;
 
-            return upgradeValue > other.upgradeValue ? -1 : 1;
+            return 0;
         }
 
         public string UpgradeBreakdown()
@@ -200,12 +204,17 @@ namespace ArchiteReinforcement
     
     public class StatArchiteDef : ArchiteDef
     {
+        // Lets us set custom names for pods with implied effects
+        public string statLabelOverride = null;
         public StatDef stat;
 
+        // This def is the only one that overrides IsImplied, so it's the only one that can actually
+        // *be* implied. Because I don't really have any need for capacity archite defs to 
+        // ever be implied.
         public override bool IsImplied => stat == null;
 
-        public override string NameOfThingToUpgradeLower => stat?.label ?? "ArchiteReinforcement.UpgradeNameFallback.Lower".Translate();
-        public override string NameOfThingToUpgrade => stat?.LabelCap ?? "ArchiteReinforcement.UpgradeNameFallback".Translate();
+        public override string NameOfThingToUpgradeLower => statLabelOverride ?? stat?.label ?? "ArchiteReinforcement.UpgradeNameFallback.Lower".Translate();
+        public override string NameOfThingToUpgrade => statLabelOverride?.CapitalizeFirst() ?? stat?.LabelCap ?? "ArchiteReinforcement.UpgradeNameFallback".Translate();
 
         public override int CompareTo(ArchiteDef other)
         {
@@ -244,7 +253,7 @@ namespace ArchiteReinforcement
         public override int CompareTo(ArchiteDef other)
         {
             int n = base.CompareTo(other);
-            if (n != 0)
+            if (n != 0) // Base sorting behavior takes priority
                 return n;
 
             if (!(other is CapacityArchiteDef))

@@ -5,7 +5,8 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingSetMakerDef[defName="Reward_ItemsStandard"]/root/options/li[1]/thingSetMaker/options</xpath>
         <value>
-        
+
+            <!-- "Secondary" archite upgrades, meaning things that allow you to improve upgrades you already have instead of adding new ones. -->
             <li>
                 <weight>4</weight>
                 <thingSetMaker Class="ThingSetMaker_MarketValue">
@@ -21,6 +22,25 @@
                 </thingSetMaker>
             </li>
 
+            <!-- A pool for the archite crucible alone. Appears much more frequently if the player does not own one already. -->
+            <li>
+                <weight>0.1</weight>
+                <weightIfPlayerHasNoItem>4</weightIfPlayerHasNoItem>
+                <weightIfPlayerHasNoItemItem>Turn_Building_ArchiteCrucible</weightIfPlayerHasNoItemItem>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                    <fixedParams>
+                        <qualityGenerator>Reward</qualityGenerator>
+                        <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchiteCrucible</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+
+            <!-- Sets for the pods and cells. Better artifacts appear less frequently. -->
             <li>
                 <weight>1</weight>
                 <thingSetMaker Class="ThingSetMaker_MarketValue">

@@ -68,6 +68,7 @@ namespace ArchiteReinforcement
             }
         }
 
+        // I should probably decompose this method at some point, but it works so I don't care.
         private static void FillTab(CompArchiteTracker comp, Rect rect, ref Vector2 capScroll, ref Vector2 statScroll, bool canBuyUpgrades)
         {
             int capCount = comp.capacityUpgrades.Count;
@@ -175,7 +176,7 @@ namespace ArchiteReinforcement
                     string levelReadout = cap.maxUses == null ? level : (string)"ArchiteReinforcement.MenuItemLevelRatio".Translate(level, cap.maxUses.ToString());
 
                     Widgets.Label(rectName, "ArchiteReinforcement.MenuItemName".Translate(cap.LabelCap, levelReadout));
-                    Widgets.Label(rectEffect, cap.ValueModAtLevel(levelInt, cap.capacity.LabelCap));
+                    Widgets.Label(rectEffect, cap.ValueModAtLevel(levelInt, cap.NameOfThingToUpgrade));
 
                     if (canBuyUpgrades)
                     {
@@ -243,7 +244,7 @@ namespace ArchiteReinforcement
                     string levelReadout = stat.maxUses == null ? level : (string)"ArchiteReinforcement.MenuItemLevelRatio".Translate(level, stat.maxUses.ToString());
 
                     Widgets.Label(rectName, "ArchiteReinforcement.MenuItemName".Translate(stat.LabelCap, levelReadout));
-                    Widgets.Label(rectEffect, stat.ValueModAtLevel(levelInt, stat.stat.LabelCap));
+                    Widgets.Label(rectEffect, stat.ValueModAtLevel(levelInt, stat.NameOfThingToUpgrade));
 
                     if (canBuyUpgrades)
                     {

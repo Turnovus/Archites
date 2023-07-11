@@ -212,6 +212,7 @@
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.10</effectPerLevel>
+        <levelProgressiveRate>0.25</levelProgressiveRate>
         <stat>ResearchSpeed</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -318,6 +319,7 @@
         <upgradeType>Factor</upgradeType>
         <baseOffset>1</baseOffset>
         <effectPerLevel>0.15</effectPerLevel>
+        <levelProgressiveRate>0.2</levelProgressiveRate>
         <stat>WorkSpeedGlobal</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

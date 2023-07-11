@@ -76,7 +76,7 @@
         <label>bombardment</label>
         <description>Archites in the central nervous system improve their host's intuition in calculating long-range mortar trajectories.</description>
         <upgradeType>Denominator</upgradeType>
-        <baseOffset>1</baseOffset> <!-- stat * 1 at level 0, * 1.02 at level 1 -->
+        <baseOffset>1</baseOffset>
         <effectPerLevel>0.05</effectPerLevel>
         <stat>MortarMissRadiusFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
@@ -209,6 +209,7 @@
         <upgradeType>Denominator</upgradeType>
         <baseOffset>1.0</baseOffset>
         <effectPerLevel>0.075</effectPerLevel>
+        <levelProgressiveRate>0.5</levelProgressiveRate>
         <stat>IncomingDamageFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 

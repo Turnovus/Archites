@@ -19,11 +19,12 @@ namespace ArchiteReinforcement
         {
             get
             {
+                string fallback = "ArchiteReinforcement.UpgradeNameFallback".Translate();
                 if (Props.upgrade is StatArchiteDef stat)
-                    return stat.stat.label;
+                    return stat.statLabelOverride ?? stat.stat?.label ?? fallback;
                 if (Props.upgrade is CapacityArchiteDef cap)
-                    return cap.capacity.label;
-                return "ArchiteReinforcement.UpgradeNameFallback".Translate();
+                    return cap.capacity.label ?? fallback;
+                return fallback;
             }
         }
 
