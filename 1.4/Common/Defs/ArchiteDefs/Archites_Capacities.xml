@@ -15,6 +15,9 @@
         <thingCategories Inherit="False">
             <li>Turn_ThingCategory_ArchiteCells</li>
         </thingCategories>
+        <tradeTags>
+            <li>ArchiteCell</li>
+        </tradeTags>
 
         <comps>
             <li Class="ArchiteReinforcement.CompProperties_UseEffectAddToRecord">
@@ -35,7 +38,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>250</MarketValue>
+            <MarketValue>1000</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -50,7 +53,7 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>750</MarketValue>
+            <MarketValue>1500</MarketValue>
         </statBases>
     </ThingDef>
 
@@ -65,14 +68,14 @@
         </thingSetMakerTags>
 
         <statBases>
-            <MarketValue>1500</MarketValue>
+            <MarketValue>2600</MarketValue>
         </statBases>
     </ThingDef>
 
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Minor" Abstract="True">
         <upgradeType>Factor</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.20</effectPerLevel>
         <marketValuePerLevel>150</marketValuePerLevel>
         <levelProgressiveRate>0.1</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
@@ -80,7 +83,7 @@
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Normal" Abstract="True">
         <upgradeType>Factor</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.10</effectPerLevel>
         <marketValuePerLevel>300</marketValuePerLevel>
         <upgradeValue>2.5</upgradeValue>
         <levelProgressiveRate>0.1</levelProgressiveRate>
@@ -89,7 +92,7 @@
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Major" Abstract="True">
         <upgradeType>Factor</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.05</effectPerLevel>
+        <effectPerLevel>0.10</effectPerLevel>
         <marketValuePerLevel>750</marketValuePerLevel>
         <upgradeValue>5.0</upgradeValue>
         <levelProgressiveRate>0.1</levelProgressiveRate>

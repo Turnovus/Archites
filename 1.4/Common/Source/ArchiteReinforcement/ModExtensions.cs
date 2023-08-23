@@ -20,4 +20,6 @@ namespace ArchiteReinforcement
                 yield return "No upgrade set.";
         }
     }
+
+    public class PlayerPossessionCountsMinified : DefModExtension { }
 }

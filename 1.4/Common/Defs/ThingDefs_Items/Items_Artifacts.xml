@@ -7,7 +7,6 @@
         <label>archite chamber</label>
         <description>A storage device for countless archotech mechanites. The chamber is capable of infusing any humanoid with its contained archites. These archites will then proceed to permanently enhance some aspect of their new host.</description>
 
-        <stackLimit>5</stackLimit>
         <relicChance>0</relicChance>
 
         <graphicData>
@@ -18,9 +17,12 @@
         <thingSetMakerTags>
             <li>RewardArchiteSecondary</li>
         </thingSetMakerTags>
+        <tradeTags Inherit="False">
+            <li>ArchiteUpgrade</li>
+        </tradeTags>
 
         <statBases>
-            <MarketValue>160</MarketValue>
+            <MarketValue>650</MarketValue>
         </statBases>
 
         <comps Inherit="False">
@@ -30,7 +32,7 @@
             </li>
             <li Class="CompProperties_UseEffectDestroySelf" />
             <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteProgress">
-                <defaultStoredArchites>45</defaultStoredArchites>
+                <defaultStoredArchites>150</defaultStoredArchites>
             </li>
         </comps>
     </ThingDef>

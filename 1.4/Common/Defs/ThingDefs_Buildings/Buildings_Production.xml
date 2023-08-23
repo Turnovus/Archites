@@ -71,6 +71,7 @@
         <tradeability>Sellable</tradeability>
         <tradeTags>
             <li>ExoticBuilding</li>
+            <li>ArchiteAcquisition</li>
         </tradeTags>
 
         <comps>
@@ -79,6 +80,10 @@
                 <glowColor>(227,233,168,0)</glowColor> <!-- Same as vanometric power cell -->
             </li>
         </comps>
+
+        <modExtensions>
+            <li Class="ArchiteReinforcement.PlayerPossessionCountsMinified"/>
+        </modExtensions>
     </ThingDef>
 
 </Defs>

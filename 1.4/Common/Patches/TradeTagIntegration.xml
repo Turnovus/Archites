@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    <!-- Any trader that sells artifacts can also occasionally sell pods, cells, and chambers -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/TraderKindDef/stockGenerators[li[tradeTag="Artifact"]]</xpath>
+        <value>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ArchiteReinforcement</tradeTag>
+                <thingDefCountRange>0~2</thingDefCountRange>
+                <countRange>1~2</countRange>
+            </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ArchiteUpgrade</tradeTag>
+                <thingDefCountRange>0~1</thingDefCountRange>
+                <countRange>0~6</countRange>
+            </li>
+
+            <li Class="StockGenerator_BuyTradeTag"><tag>ArchiteReinforcement</tag></li>
+            <li Class="StockGenerator_BuyTradeTag"><tag>ArchiteUpgrade</tag></li>
+        </value>
+    </Operation>
+
+</Patch>

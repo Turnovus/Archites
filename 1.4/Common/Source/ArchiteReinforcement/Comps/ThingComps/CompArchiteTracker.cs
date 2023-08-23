@@ -204,6 +204,16 @@ namespace ArchiteReinforcement
             return statUpgrades[stat];
         }
 
+        public bool HasAnyUpgradeForCapacity(PawnCapacityDef capacity)
+        {
+            foreach (CapacityArchiteDef def in capacityUpgrades.Keys)
+            {
+                if (def.capacity == capacity)
+                    return true;
+            }
+            return false;
+        }
+
         public int LevelForImpliedUpgrade(StatArchiteDef upgrade)
         {
             if (!upgrade.IsImplied)

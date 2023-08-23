@@ -15,7 +15,7 @@
             <li>Turn_ThingCategory_Archites</li>
         </thingCategories>
         <tradeTags>
-            <li>Artifacts</li>
+            <li>ArchiteReinforcement</li>
         </tradeTags>
 
         <statBases>
@@ -46,6 +46,9 @@
         <thingCategories Inherit="False">
             <li>Turn_ThingCategory_ArchitePods</li>
         </thingCategories>
+        <tradeTags>
+            <li>ArchitePod</li>
+        </tradeTags>
 
         <comps>
             <li Class="ArchiteReinforcement.CompProperties_UseEffectAddToRecord">

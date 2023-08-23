@@ -13,7 +13,7 @@ namespace ArchiteReinforcement
         public virtual float LevelOf(Pawn p)
         {
             ArchiteStatUpgradeExtension ext = def.GetModExtension<ArchiteStatUpgradeExtension>();
-            return pawn.ArchiteTracker()?.LevelForImpliedUpgrade(ext.upgrade) ?? 0f;
+            return p.ArchiteTracker()?.LevelForImpliedUpgrade(ext.upgrade) ?? 0f;
         }
     }
 

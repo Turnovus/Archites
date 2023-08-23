@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <TraderKindDef>
+        <defName>Turn_Trader_Orbital_Relic</defName>
+        <label>relic hunter</label>
+        <orbital>true</orbital>
+
+        <stockGenerators>
+
+            <!--========== Selling ==========-->
+            <!-- All artifacts, increased price -->
+            <li Class="StockGenerator_Tag">
+                <tradeTag>Artifact</tradeTag>
+                <thingDefCountRange>2~15</thingDefCountRange>
+                <countRange>1~4</countRange>
+                <price>Expensive</price>
+            </li>
+
+            <!-- Things that produce archites, increased price -->
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ArchiteAcquisition</tradeTag>
+                <thingDefCountRange>0~3</thingDefCountRange>
+                <countRange>1~3</countRange>
+                <price>Expensive</price>
+            </li>
+
+            <!-- Archite Reinforcement items, standard price -->
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ArchitePod</tradeTag>
+                <thingDefCountRange>6~25</thingDefCountRange>
+                <countRange>1~2</countRange>
+            </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ArchiteCell</tradeTag>
+                <thingDefCountRange>0~8</thingDefCountRange> <!-- There are 11 of these -->
+                <countRange>1</countRange>
+            </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ArchiteUpgrade</tradeTag>
+                <thingDefCountRange>1</thingDefCountRange>
+                <countRange>4~16</countRange>
+            </li>
+
+            <!-- Why not? -->
+            <li MayRequire="Ludeon.RimWorld.Royalty" Class="StockGenerator_Tag">
+                <tradeTag>PsylinkNeuroformer</tradeTag>
+                <thingDefCountRange>0~1</thingDefCountRange>
+                <countRange>1</countRange>
+                <price>Exorbitant</price>
+            </li>
+
+            <!-- Some stuff mostly copied from the exotic trader -->
+            <!-- Genepacks -->
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+                <thingDef>Genepack</thingDef>
+                <countRange>0~5</countRange>
+            </li>
+
+            <!-- Archite capsules -->
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+                <thingDef>ArchiteCapsule</thingDef>
+                <countRange>4~10</countRange>
+                <price>Expensive</price>
+            </li>
+
+            <!-- Deathrest capacity serum -->
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+                <thingDef>DeathrestCapacitySerum</thingDef>
+                <countRange>1</countRange>
+            </li>
+
+            <!--========== Buying ==========-->
+            <li Class="ArchiteReinforcement.StockGenerator_BuyTechLevel"><techLevel>Archotech</techLevel></li>
+            
+            <!-- Buildings like the vano cell and psychic emanator don't use the archotech level, so... -->
+            <li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+
+            <!-- Archite capsules also aren't tagged as archotech for some reason -->
+            <li Class="StockGenerator_BuySingleDef"><thingDef>ArchiteCapsule</thingDef></li>
+
+            <!-- Valuable stuff stolen from mech clusters -->
+            <li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Royalty"><thingDef>UnstablePowerCell</thingDef></li>
+            <li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Royalty"><thingDef>Gloomlight</thingDef></li>
+        </stockGenerators>
+    </TraderKindDef>
+
+</Defs>
