@@ -50,23 +50,5 @@ namespace ArchiteReinforcement
             Scribe_Values.Look(ref capacityArchites, "capacityArchites");
             Scribe_Values.Look(ref statArchites, "statArchites");
         }
-
-        public override void PostPostMake()
-        {
-            base.PostPostMake();
-            Log.Message("PostPostMake");
-            Log.Message(this.ToString());
-            Log.Message(capacityArchites.ToString());
-            Log.Message(statArchites.ToString());
-        }
-
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            base.PostSpawnSetup(respawningAfterLoad);
-            Log.Message("PostSpawnSetup");
-            Log.Message(this.ToString());
-            Log.Message(capacityArchites.ToString());
-            Log.Message(statArchites.ToString());
-        }
     }
 }

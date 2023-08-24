@@ -30,28 +30,21 @@ namespace ArchiteReinforcement
             float capacityArchites = 0f;
             float statArchites = 0f;
 
-            Log.Message(ingredients.Count().ToString());
-
             foreach (Thing ingredient in ingredients)
             {
-                Log.Message(ingredient.def.defName);
                 capacityArchites += CapacityArchitesFrom(ingredient);
                 statArchites += StatArchitesFrom(ingredient);
             }
-            Log.Message(statArchites.ToString());
 
             foreach(Thing product in products)
             {
-                Log.Message(product.def.defName);
                 
                 CompUseEffect_ReclaimedArchites comp = product.TryGetComp<CompUseEffect_ReclaimedArchites>();
-                Log.Message(comp.ToString());
                 if (comp == null)
                     continue;
 
                 comp.capacityArchites = capacityArchites;
                 comp.statArchites = statArchites;
-                Log.Message(comp.statArchites.ToString());
             }
 
             return null;
