@@ -3,22 +3,38 @@
 <Patch>
     <!-- Any trader that sells artifacts can also occasionally sell pods, cells, and chambers -->
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/TraderKindDef/stockGenerators[li[tradeTag="Artifact"]]</xpath>
+        <xpath>Defs/TraderKindDef/stockGenerators[li[@Class="StockGenerator_Tag" and tradeTag="Artifact"]][not(li[tradeTag="ArchiteReinforcement" or tradeTag="ArchitePod" or tradeTag="ArchiteCell"])]</xpath>
         <value>
             <li Class="StockGenerator_Tag">
                 <tradeTag>ArchiteReinforcement</tradeTag>
                 <thingDefCountRange>0~2</thingDefCountRange>
                 <countRange>1~2</countRange>
             </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/TraderKindDef/stockGenerators[li[@Class="StockGenerator_Tag" and tradeTag="Artifact"]][not(li[tradeTag="ArchiteUpgrade"])]</xpath>
+        <value>
             <li Class="StockGenerator_Tag">
                 <tradeTag>ArchiteUpgrade</tradeTag>
                 <thingDefCountRange>0~1</thingDefCountRange>
                 <countRange>0~6</countRange>
             </li>
-
-            <li Class="StockGenerator_BuyTradeTag"><tag>ArchiteReinforcement</tag></li>
-            <li Class="StockGenerator_BuyTradeTag"><tag>ArchiteUpgrade</tag></li>
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/TraderKindDef/stockGenerators[li[tradeTag="Artifact"]][not(li[@Class="StockGenerator_BuyTradeTag" and tag="ArchiteReinforcement"])][not(li[@Class="ArchiteReinforcement.StockGenerator_BuyTechLevel" and techLevel="Archotech"])]</xpath>
+        <value>
+            <li Class="StockGenerator_BuyTradeTag"><tag>ArchiteReinforcement</tag></li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/TraderKindDef/stockGenerators[li[tradeTag="Artifact"]][not(li[@Class="StockGenerator_BuyTradeTag" and tag="ArchiteUpgrade"])][not(li[@Class="ArchiteReinforcement.StockGenerator_BuyTechLevel" and techLevel="Archotech"])]</xpath>
+        <value>
+            <li Class="StockGenerator_BuyTradeTag"><tag>ArchiteUpgrade</tag></li>
+        </value>
+    </Operation>
 </Patch>
