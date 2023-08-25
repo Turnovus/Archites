@@ -78,7 +78,7 @@
             <li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
 
             <!-- Archite capsules also aren't tagged as archotech for some reason -->
-            <li Class="StockGenerator_BuySingleDef"><thingDef>ArchiteCapsule</thingDef></li>
+            <li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Biotech"><thingDef>ArchiteCapsule</thingDef></li>
 
             <!-- Valuable stuff stolen from mech clusters -->
             <li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Royalty"><thingDef>UnstablePowerCell</thingDef></li>
