@@ -57,7 +57,7 @@ namespace ArchiteReinforcement
 
             public override string Readable(Pawn pawn)
             {
-                return string.Format("{0}", archite.LabelCap); //TODO
+                return "ArchiteReinforcement.CapacityTipListItem".Translate(archite.LabelCap);
             }
         }
     }

@@ -11,6 +11,7 @@
     </supportedVersions>
     <loadAfter>
         <li>Ludeon.RimWorld</li>
+        <li>isorex.communityframework</li>
     </loadAfter>
 
     <modDependencies>

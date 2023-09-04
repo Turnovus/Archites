@@ -52,4 +52,7 @@
     <ArchiteReinforcement.InspectCapacityCount>Capacity archites: {0}</ArchiteReinforcement.InspectCapacityCount>
     <ArchiteReinforcement.InspectStatCount>Stat Archites: {0}</ArchiteReinforcement.InspectStatCount>
 
+    <ArchiteReinforcement.CapacityImpactorArchites>  Archites:</ArchiteReinforcement.CapacityImpactorArchites>
+    <ArchiteReinforcement.CapacityTipListItem>   - {0}</ArchiteReinforcement.CapacityTipListItem>
+
 </LanguageData>
