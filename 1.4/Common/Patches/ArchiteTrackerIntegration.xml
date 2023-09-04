@@ -24,8 +24,7 @@
 
     <!-- Stage 2: Add the archite tracker comp to all of the race defs that need one. -->
     <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <!-- Some dark, twisted part of me is enjoying this absolute mess of a rule string -->
+        <!-- No success tag here, because we should always be adding our comp to the human def at the very least. -->
         <xpath>Defs/*[((name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace") and (not(@ParentName) or @ParentName="BasePawn" or (comps[@Inherit="False"]))]/comps</xpath>
         <value>
             <li>
@@ -45,7 +44,6 @@
 
     <!-- Stage 4: Add the archite tracker ITab to all of the race defs that need one. -->
     <Operation Class="PatchOperationAdd">
-        <success>Always</success>
         <xpath>Defs/*[((name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace") and (not(@ParentName) or @ParentName="BasePawn" or (inspectorTabs[@Inherit="False"]))]/inspectorTabs</xpath>
         <value>
             <li>ArchiteReinforcement.ITab_Pawn_ArchiteUpgrades</li>
