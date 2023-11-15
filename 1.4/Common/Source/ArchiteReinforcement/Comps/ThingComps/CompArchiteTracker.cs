@@ -10,10 +10,10 @@ namespace ArchiteReinforcement
 {
     public class CompArchiteTracker : ThingComp
     {
-        public const float StartStatCost = 50f;
-        public const float StartCapCost = 100f;
-        public const float StatCostPerArchite = 10f;
-        public const float CapCostPerArchite = 16f;
+        public const float StartStatCost = 40f;
+        public const float StartCapCost = 80f;
+        public const float StatCostPerArchite = 8f;
+        public const float CapCostPerArchite = 12f;
         // The first n upgrade points earned don't count towards the archite cost of additional points
         public const float CapUpgradeGrace = 15f;
         public const float StatUpgradeGrace = 15f;
