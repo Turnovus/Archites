@@ -37,7 +37,9 @@ namespace ArchiteReinforcement
 
         public override void DrawGUIOverlay()
         {
-            if (assignedPawn == null)
+            if (Find.CameraDriver.CurrentZoom != 0)
+                return;
+            if (assignedPawn == null || Faction != Faction.OfPlayer)
                 return;
             GenMapUI.DrawThingLabel(this, assignedPawn.LabelShort, GenMapUI.DefaultThingLabelColor);
         }

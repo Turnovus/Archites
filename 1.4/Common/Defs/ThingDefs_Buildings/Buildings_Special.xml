@@ -11,6 +11,7 @@
         <techLevel>Archotech</techLevel>
         <tickerType>Normal</tickerType>
 
+        <drawGUIOverlay>True</drawGUIOverlay>
         <graphicData>
             <texPath>ArchiteReinforcement/Things/Building/Misc/ArchitePillar</texPath>
             <graphicClass>Graphic_Single</graphicClass>
