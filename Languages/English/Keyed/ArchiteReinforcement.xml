@@ -55,4 +55,20 @@
     <ArchiteReinforcement.CapacityImpactorArchites>  Archites:</ArchiteReinforcement.CapacityImpactorArchites>
     <ArchiteReinforcement.CapacityTipListItem>   - {0}</ArchiteReinforcement.CapacityTipListItem>
 
+    <ArchiteReinforcement.Pillar.NotAssigned>Not assigned</ArchiteReinforcement.Pillar.NotAssigned>
+    <ArchiteReinforcement.Pillar.Assigned>Assigned to {0}</ArchiteReinforcement.Pillar.Assigned>
+    <ArchiteReinforcement.Pillar.Collecting>Collecting at {0} archites</ArchiteReinforcement.Pillar.Collecting>
+    <ArchiteReinforcement.Pillar.LostAssignment>{0} is no longer assigned to {1_nameDef}.</ArchiteReinforcement.Pillar.LostAssignment>
+    <ArchiteReinforcement.Pillar.Destroyed>{0} assigned to {1_nameDef} was destroyed.</ArchiteReinforcement.Pillar.Destroyed>
+    <ArchiteReinforcement.Pillar.Empty>Pillar empty</ArchiteReinforcement.Pillar.Empty>
+    <ArchiteReinforcement.Pillar.NoArchites>Cannot extract archites: Pillar empty</ArchiteReinforcement.Pillar.NoArchites>
+    <ArchiteReinforcement.Pillar.Extract>Extract archites from {0}</ArchiteReinforcement.Pillar.Extract>
+    <ArchiteReinforcement.Pillar.AssignDesc>Select a {0} to assign to this pillar.\n\nThe selected {0} will automatically collect archites from the pillar when the collection reaches a certain threshold.</ArchiteReinforcement.Pillar.AssignDesc>
+    <ArchiteReinforcement.Pillar.NoPawns>Nobody to assign</ArchiteReinforcement.Pillar.NoPawns>
+    <ArchiteReinforcement.Pillar.Unassign.Label>Clear assignment</ArchiteReinforcement.Pillar.Unassign.Label>
+    <ArchiteReinforcement.Pillar.Unassign.Desc>Remove the {0} assignment from this pillar.\n\nThe assigned {0} will no longer collect archites automatically, but you will still be able to issue the collect order manually.</ArchiteReinforcement.Pillar.Unassign.Desc>
+    <ArchiteReinforcement.Pillar.SetThreshold.Label>Set threshold</ArchiteReinforcement.Pillar.SetThreshold.Label>
+    <ArchiteReinforcement.Pillar.SetThreshold.Desc>Set the automatic collection threshold.\n\nThe assigned {0} will automatically collect archites stored in the pillar if the total count is greater than this number.</ArchiteReinforcement.Pillar.SetThreshold.Desc>
+    <ArchiteReinforcement.Pillar.Slider>Set threshold for archite selection.</ArchiteReinforcement.Pillar.Slider>
+
 </LanguageData>
