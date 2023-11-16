@@ -11,6 +11,7 @@ namespace ArchiteReinforcement
     [DefOf]
     public static class MyDefOf
     {
+        public static JobDef Turn_Job_ExtractPillarArchites;
 
         public static RecordDef Turn_Record_ArchitesAcquired_Stat;
         public static RecordDef Turn_Record_ArchitesAcquired_Capacity;
@@ -18,6 +19,7 @@ namespace ArchiteReinforcement
         public static RecordDef Turn_Record_ArchitesSpent_Capacity;
 
         public static ThingDef Turn_ArchiteReinforcement_Chamber;
+        public static ThingDef Turn_Building_ArchitePillar;
 
         static MyDefOf() =>
             DefOfHelper.EnsureInitializedInCtor(typeof(MyDefOf));
