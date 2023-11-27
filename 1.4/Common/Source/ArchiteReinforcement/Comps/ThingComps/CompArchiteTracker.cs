@@ -379,6 +379,15 @@ namespace ArchiteReinforcement
             Scribe_Values.Look(ref capacityArchiteProgress, "capacityArchiteProgress");
             Scribe_Values.Look(ref statArchitesToSpend, "statArchitesToSpend");
             Scribe_Values.Look(ref capacityArchitesToSpend, "capacityArchitesToSpend");
+
+            if (Scribe.mode == LoadSaveMode.Inactive || Scribe.mode == LoadSaveMode.Saving)
+                return;
+            // Ensure that we have our required collections initialized, in case the player is
+            // loading a save file that did not previously have AR enabled.
+            if (statUpgrades == null)
+                statUpgrades = new Dictionary<StatArchiteDef, int>();
+            if (capacityUpgrades == null)
+                capacityUpgrades = new Dictionary<CapacityArchiteDef, int>();
         }
     }
 }
