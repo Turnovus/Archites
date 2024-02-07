@@ -198,7 +198,7 @@ namespace ArchiteReinforcement
                 return statUpgrades.ContainsKey(stat);
             if (upgrade is CapacityArchiteDef cap)
                 return capacityUpgrades.ContainsKey(cap);
-            return false; // No support for custom def types, soz m8.
+            return false;
         }
 
         public bool HasAnyLevelOfImpliedUpgrade(StatArchiteDef upgrade)
@@ -230,14 +230,6 @@ namespace ArchiteReinforcement
             }
             return ImpliedLevels.ContainsKey(upgrade) ? ImpliedLevels[upgrade] : 0;
         }           
-
-        // Nothing to see here. Just an unused method from when I tried to patch the tracker comp
-        // onto humanlikes using C# instead of an XML patch.
-        public static CompProperties NewPropsForDefPatch() =>
-            new CompProperties()
-            {
-                compClass = typeof(CompArchiteTracker),
-            };
 
         // Any time a pawn acquires any sort of upgrade, it should take place here. It DOES NOT
         // handle the transaction of upgrade points, but it DOES dirty all of the upgrade caches.
