@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <TipSetDef>
+        <defName>Turn_TipSet_ArchiteReinforcement</defName>
+        <tips>
+
+            <li TKey="ArchiteReinforcement.Tip.DiminishingReturns">The more upgrade points somebody has spent, the more archites they will need to earn a new point.</li>
+            <li TKey="ArchiteReinforcement.Tip.ArtifactLevels">Archite pods and cells guarantee a full level of upgrade, making them highly valuable to those that have spent many upgrade points already.</li>
+            <li TKey="ArchiteReinforcement.Tip.UpgradesAreRequired">Archites and upgrade points are useless to those who have not yet received an upgrade from an archite pod or cell.</li>
+
+        </tips>
+    </TipSetDef>
+
+</Defs>
