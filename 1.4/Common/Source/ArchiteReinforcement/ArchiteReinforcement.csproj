@@ -84,8 +84,11 @@
     <Compile Include="Harmony\HealthCardUtility.cs" />
     <Compile Include="Harmony\PatchRunner.cs" />
     <Compile Include="Harmony\PawnCapacityUtility\ArchitesAffectCapacities.cs" />
+    <Compile Include="Harmony\PawnTechHediffsGenerator\GenerateTechHediffsFor_Patch.cs" />
     <Compile Include="Harmony\PlayerItemAccessibilityPatches.cs" />
     <Compile Include="Interface\ITab\ITab_Pawn_ArchiteUpgrades.cs" />
+    <Compile Include="Lib\PawnGenArchiteAllocator.cs" />
+    <Compile Include="Lib\PawnGenArchiteCalculator.cs" />
     <Compile Include="ModExtensions.cs" />
     <Compile Include="MyDefOf.cs" />
     <Compile Include="OutputWorker\OutputWorker_ReclaimArchites.cs" />
