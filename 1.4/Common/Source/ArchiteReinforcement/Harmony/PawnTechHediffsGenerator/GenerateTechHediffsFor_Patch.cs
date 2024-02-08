@@ -31,7 +31,7 @@ namespace ArchiteReinforcement
             tracker.capacityArchitesToSpend = PawnGenArchiteCalculator.CapacityUpgradePointsFor(pawn);
             tracker.statArchitesToSpend = PawnGenArchiteCalculator.StatUpgradePointsFor(pawn);
 
-            PawnGenArchiteAllocator.AllocateAllUnspentPoints(tracker);
+            PawnGenArchiteAllocator.AllocateAllUnspentPoints(pawn);
         }
     }
 }

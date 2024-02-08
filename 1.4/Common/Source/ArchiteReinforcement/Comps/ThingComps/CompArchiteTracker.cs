@@ -204,6 +204,23 @@ namespace ArchiteReinforcement
         public bool HasAnyLevelOfImpliedUpgrade(StatArchiteDef upgrade)
             => ImpliedLevels.ContainsKey(upgrade);
 
+        public int LevelForUpgrade(ArchiteDef upgrade)
+        {
+            if (upgrade is CapacityArchiteDef capacity)
+                return LevelForCapacity(capacity);
+            if (upgrade is StatArchiteDef stat)
+                return LevelForStat(stat);
+
+            return 0;
+        }
+
+        public int LevelForCapacity(CapacityArchiteDef capacity)
+        {
+            if (!capacityUpgrades.ContainsKey(capacity))
+                return 0;
+            return capacityUpgrades[capacity];
+        }
+
         public int LevelForStat(StatArchiteDef stat)
         {
             if (!statUpgrades.ContainsKey(stat))
