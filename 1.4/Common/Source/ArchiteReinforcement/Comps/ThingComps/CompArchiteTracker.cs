@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using RimWorld;
+using UnityEngine;
 
 namespace ArchiteReinforcement
 {
@@ -96,6 +97,10 @@ namespace ArchiteReinforcement
                 return cachedTotalCapacityArchites ?? 0;
             }
         }
+
+        public bool HasAnyUpgrades =>
+            TotalCapacityArchiteUpgradeValue > 0 ||
+            TotalStatArchiteUpgradeValue > 0;
 
         public float StatUpgradeCost =>
             Math.Max(StartStatCost, 
@@ -354,6 +359,11 @@ namespace ArchiteReinforcement
             Messages.Message(fullString, pawn, MessageTypeDefOf.PositiveEvent);
         }
 
+        public override void PostDraw()
+        {
+            ArchiteBadgeDrawer.TryDrawBadge(this);
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (!DebugSettings.ShowDevGizmos)
@@ -397,6 +407,68 @@ namespace ArchiteReinforcement
                 statUpgrades = new Dictionary<StatArchiteDef, int>();
             if (capacityUpgrades == null)
                 capacityUpgrades = new Dictionary<CapacityArchiteDef, int>();
+        }
+    }
+
+    public static class ArchiteBadgeDrawer
+    {
+        public const float MinAlpha = 0.25f;
+        public const float MaxAlpha = 3f;
+        public const int FadeIntervalTicks = 180;
+        public const float BadgeSize = 0.5f;
+
+        public static readonly Vector3 BadgePositionRelative = new Vector3(
+            0.5f,
+            AltitudeLayer.MoteOverhead.AltitudeFor(),
+            0.7f
+        );
+        public static readonly Material BadgeMaterial = MaterialPool.MatFrom("ArchiteReinforcement/Other/ArchiteBadge", ShaderDatabase.Transparent);
+
+        public static void TryDrawBadge(CompArchiteTracker tracker)
+        {
+            Pawn pawn = tracker.ParentPawn;
+
+            if (!ShouldDrawBadge())
+                return;
+
+            DrawBadge(pawn.DrawPos, BadgeOpacityNow());
+
+
+            bool ShouldDrawBadge()
+            {
+                if (!tracker.HasAnyUpgrades)
+                    return false;
+
+                if (pawn.Dead)
+                    return false; // Maybe consider adding badge to corpses for reclamation?
+
+                // TODO: Faction logic, mod settings
+
+                return true;
+            }
+
+            float BadgeOpacityNow()
+            {
+
+                float intervalTick = Math.Abs(pawn.HashOffsetTicks() % FadeIntervalTicks);
+                float alphaFactor = intervalTick / FadeIntervalTicks;
+                alphaFactor = Math.Abs(alphaFactor - 0.5f) * 2f;
+
+                return Mathf.Lerp(MinAlpha, MaxAlpha, alphaFactor);
+            }
+        }
+
+        private static void DrawBadge(Vector3 position, float opacity)
+        {
+            Vector3 drawPosition = new Vector3(position.x, 0f, position.z);
+            drawPosition += BadgePositionRelative;
+
+            Vector3 dimensions = new Vector3(BadgeSize, 1f, BadgeSize);
+            Matrix4x4 matrix = new Matrix4x4();
+            matrix.SetTRS(drawPosition, Quaternion.AngleAxis(0f, Vector3.up), dimensions);
+
+            Material material = FadedMaterialPool.FadedVersionOf(BadgeMaterial, opacity);
+            Graphics.DrawMesh(MeshPool.plane10, matrix, material, 0);
         }
     }
 }
