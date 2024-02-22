@@ -73,6 +73,7 @@ namespace ArchiteReinforcement
             }
         }
 
+        // FIXME: Migrate to CompArchiteTracker
         public static bool PlayerCanBuyArchitesFor(Pawn pawn) =>
             pawn.Faction == Faction.OfPlayer || pawn.IsSlaveOfColony;
     }

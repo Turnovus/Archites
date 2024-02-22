@@ -88,6 +88,7 @@
     <Compile Include="Harmony\PlayerItemAccessibilityPatches.cs" />
     <Compile Include="Interface\Contents\ArchiteUpgradesWindowDrawer.cs" />
     <Compile Include="Interface\ITab\ITab_Pawn_ArchiteUpgrades.cs" />
+    <Compile Include="Interface\Window\Dialog_ViewArchites.cs" />
     <Compile Include="Lib\PawnGenArchiteAllocator.cs" />
     <Compile Include="Lib\PawnGenArchiteCalculator.cs" />
     <Compile Include="ModExtensions.cs" />
