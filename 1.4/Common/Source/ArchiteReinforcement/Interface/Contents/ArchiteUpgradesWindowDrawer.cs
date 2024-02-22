@@ -9,8 +9,14 @@ using UnityEngine;
 
 namespace ArchiteReinforcement
 {
+    [StaticConstructorOnStartup]
     public static class ArchiteUpgradesWindowDrawer
     {
+        private static readonly Texture2D ViewUpgradesButton =
+            ContentFinder<Texture2D>.Get("ArchiteReinforcement/UI/Buttons/ArchiteButton");
+
+        public const float UpgradeButtonSize = 24f;
+
         public const float InnerMargin = 10f;
         public const float ProgressRectFillRatio = 0.20f;
 
@@ -317,6 +323,13 @@ namespace ArchiteReinforcement
 
             if (Widgets.ButtonText(rect, "ArchiteReinforcement.MenuItemButton".Translate()))
                 tracker.TryBuyUpgrade(upgrade);
+        }
+
+        public static void UpgradeViewerButton(float x, float y, Pawn pawn)
+        {
+            Rect rect = new Rect(x, y, UpgradeButtonSize, UpgradeButtonSize);
+            if (Widgets.ButtonImage(rect, ViewUpgradesButton, GUI.color))
+                Find.WindowStack.Add(new Dialog_ViewArchites(pawn, false));
         }
     }
 }

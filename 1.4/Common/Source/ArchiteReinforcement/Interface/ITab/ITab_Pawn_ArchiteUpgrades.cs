@@ -34,11 +34,7 @@ namespace ArchiteReinforcement
                 if (comp == null)
                     return false;
 
-                return !(comp.statUpgrades.NullOrEmpty() && comp.capacityUpgrades.NullOrEmpty()) ||
-                    comp.capacityArchiteProgress > 0 ||
-                    comp.statArchiteProgress > 0 ||
-                    comp.capacityArchitesToSpend > 0 ||
-                    comp.statArchitesToSpend > 0;
+                return comp.CanOpenMenu;
             }
         }
 

@@ -81,6 +81,7 @@
     <Compile Include="Comps\ThingComps\CompUseEffect_ReclaimedArchites.cs" />
     <Compile Include="DebugActions.cs" />
     <Compile Include="DefPatcher.cs" />
+    <Compile Include="Harmony\CharacterCardUtility\DrawCharacterCard_Patch.cs" />
     <Compile Include="Harmony\HealthCardUtility.cs" />
     <Compile Include="Harmony\PatchRunner.cs" />
     <Compile Include="Harmony\PawnCapacityUtility\ArchitesAffectCapacities.cs" />

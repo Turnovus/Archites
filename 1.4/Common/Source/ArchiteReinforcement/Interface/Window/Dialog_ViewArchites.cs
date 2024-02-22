@@ -12,15 +12,17 @@ namespace ArchiteReinforcement
     class Dialog_ViewArchites : Window
     {
         private Pawn targetPawn;
+        bool canBuyUpgrades;
         private Vector2 capacityScrollPosition = Vector2.zero;
         private Vector2 statScrollPosition = Vector2.zero;
 
 
         public override Vector2 InitialSize => new Vector2(736f, 700f); // TODO: Auto-scaling
 
-        public Dialog_ViewArchites(Pawn target)
+        public Dialog_ViewArchites(Pawn target, bool canBuyUpgrades)
         {
             targetPawn = target;
+            this.canBuyUpgrades = canBuyUpgrades;
             closeOnClickedOutside = true;
         }
 
@@ -35,7 +37,7 @@ namespace ArchiteReinforcement
                 inRect,
                 ref capacityScrollPosition,
                 ref statScrollPosition,
-                ITab_Pawn_ArchiteUpgrades.PlayerCanBuyArchitesFor(targetPawn)
+                canBuyUpgrades
             );
         }
     }
