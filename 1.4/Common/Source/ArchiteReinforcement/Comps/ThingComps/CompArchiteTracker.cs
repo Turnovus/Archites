@@ -449,9 +449,26 @@ namespace ArchiteReinforcement
                 if (pawn.Dead)
                     return false; // Maybe consider adding badge to corpses for reclamation?
 
-                // TODO: Faction logic, mod settings
+                return SettingsAllowBadge();
+            }
 
-                return true;
+            bool SettingsAllowBadge()
+            {
+                ModSettings_ArchiteReinforcement settings = Mod_ArchiteReinforcement.ActiveMod.Settings;
+
+                if (pawn.IsSlaveOfColony)
+                    return settings.drawBadgeForSlaves;
+
+                if (pawn.HostileTo(Faction.OfPlayer))
+                    return settings.drawBadgeForHostiles;
+
+                if (pawn.IsPrisonerOfColony)
+                    return settings.drawBadgeForPrisoners;
+
+                if (pawn.Faction == Faction.OfPlayer || pawn.HostFaction == Faction.OfPlayer)
+                    return settings.drawBadgeForColonists;
+
+                return settings.drawBadgeForNeutrals;
             }
 
             float BadgeOpacityNow()

@@ -15,6 +15,9 @@ namespace ArchiteReinforcement
         public const string SettingLabel = ".Label";
         public const string SettingDescription = ".Desc";
 
+        public static Mod_ArchiteReinforcement ActiveMod =>
+            LoadedModManager.GetMod<Mod_ArchiteReinforcement>();
+
         public ModSettings_ArchiteReinforcement Settings =>
             GetSettings<ModSettings_ArchiteReinforcement>();
 

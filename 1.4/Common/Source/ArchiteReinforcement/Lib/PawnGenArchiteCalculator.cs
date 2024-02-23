@@ -21,6 +21,10 @@ namespace ArchiteReinforcement
 
         public static bool ShouldGrantArchitesTo(Pawn pawn)
         {
+            // Prevent all archite spawns if the player has disabled that.
+            if (!Mod_ArchiteReinforcement.ActiveMod.Settings.enableArchiteSpawns)
+                return false;
+
             // N.B.: Forcing archites takes precedence over forbidding them. This means that 
             // individuals with archites are more important than entire communities without, or
             // vice-versa.
@@ -69,7 +73,8 @@ namespace ArchiteReinforcement
 
         public static float ArchiteGenChanceFor(Pawn pawn)
         {
-            return 1f; // TODO: Use the actual base chance instead of just giving everybody archites.
+            // TODO: Incorporate relevant factors on generation chance.
+            return ArchiteGenBaseChance;
         }
 
         public static float CapacityUpgradePointsFor(Pawn pawn)
