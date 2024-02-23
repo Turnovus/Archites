@@ -71,4 +71,6 @@
     <ArchiteReinforcement.Pillar.SetThreshold.Desc>Set the automatic collection threshold.\n\nThe assigned {0} will automatically collect archites stored in the pillar if the total count is greater than this number.</ArchiteReinforcement.Pillar.SetThreshold.Desc>
     <ArchiteReinforcement.Pillar.Slider>Set threshold for archite selection.</ArchiteReinforcement.Pillar.Slider>
 
+    <ArchiteReinforcement.UpgradeButtonTip.CreationMenu>This character has been enhanced by archites in their body. Click here to view the applied effects.</ArchiteReinforcement.UpgradeButtonTip.CreationMenu>
+
 </LanguageData>

@@ -325,9 +325,9 @@ namespace ArchiteReinforcement
                 tracker.TryBuyUpgrade(upgrade);
         }
 
-        public static void UpgradeViewerButton(float x, float y, Pawn pawn)
+        public static void UpgradeViewerButton(Rect rect, Pawn pawn, string tipKey)
         {
-            Rect rect = new Rect(x, y, UpgradeButtonSize, UpgradeButtonSize);
+            TooltipHandler.TipRegionByKey(rect, tipKey);
             if (Widgets.ButtonImage(rect, ViewUpgradesButton, GUI.color))
                 Find.WindowStack.Add(new Dialog_ViewArchites(pawn, false));
         }

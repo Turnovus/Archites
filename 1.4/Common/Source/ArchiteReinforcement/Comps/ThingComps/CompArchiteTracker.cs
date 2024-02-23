@@ -416,6 +416,7 @@ namespace ArchiteReinforcement
         }
     }
 
+    [StaticConstructorOnStartup]
     public static class ArchiteBadgeDrawer
     {
         public const float MinAlpha = 0.25f;
