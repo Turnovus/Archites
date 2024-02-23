@@ -24,6 +24,8 @@ namespace ArchiteReinforcement
             targetPawn = target;
             this.canBuyUpgrades = canBuyUpgrades;
             closeOnClickedOutside = true;
+            absorbInputAroundWindow = true;
+            doCloseX = true;
         }
 
         public override void DoWindowContents(Rect inRect)

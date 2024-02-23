@@ -87,6 +87,7 @@
     <Compile Include="Harmony\PawnCapacityUtility\ArchitesAffectCapacities.cs" />
     <Compile Include="Harmony\PawnTechHediffsGenerator\GenerateTechHediffsFor_Patch.cs" />
     <Compile Include="Harmony\PlayerItemAccessibilityPatches.cs" />
+    <Compile Include="Harmony\TransferableUIUtility\DrawTransferableInfo_Patch.cs" />
     <Compile Include="Interface\Contents\ArchiteUpgradesWindowDrawer.cs" />
     <Compile Include="Interface\ITab\ITab_Pawn_ArchiteUpgrades.cs" />
     <Compile Include="Interface\Window\Dialog_ViewArchites.cs" />
