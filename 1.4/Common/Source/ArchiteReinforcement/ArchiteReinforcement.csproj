@@ -94,6 +94,7 @@
     <Compile Include="Lib\PawnGenArchiteAllocator.cs" />
     <Compile Include="Lib\PawnGenArchiteCalculator.cs" />
     <Compile Include="ModExtensions.cs" />
+    <Compile Include="Mod\ArchiteReinforcement.cs" />
     <Compile Include="MyDefOf.cs" />
     <Compile Include="OutputWorker\OutputWorker_ReclaimArchites.cs" />
     <Compile Include="PatchOperationAddStatPart.cs" />
