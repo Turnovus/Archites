@@ -75,9 +75,9 @@
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Minor" Abstract="True">
         <upgradeType>Factor</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.20</effectPerLevel>
+        <effectPerLevel>0.15</effectPerLevel>
         <marketValuePerLevel>150</marketValuePerLevel>
-        <levelProgressiveRate>0.1</levelProgressiveRate>
+        <levelProgressiveRate>0.04</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Normal" Abstract="True">
@@ -86,16 +86,16 @@
         <effectPerLevel>0.10</effectPerLevel>
         <marketValuePerLevel>300</marketValuePerLevel>
         <upgradeValue>2.5</upgradeValue>
-        <levelProgressiveRate>0.1</levelProgressiveRate>
+        <levelProgressiveRate>0.025</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
 
     <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Major" Abstract="True">
         <upgradeType>Factor</upgradeType>
         <baseOffset>1.0</baseOffset>
-        <effectPerLevel>0.10</effectPerLevel>
+        <effectPerLevel>0.08</effectPerLevel>
         <marketValuePerLevel>750</marketValuePerLevel>
         <upgradeValue>5.0</upgradeValue>
-        <levelProgressiveRate>0.1</levelProgressiveRate>
+        <levelProgressiveRate>0.01</levelProgressiveRate>
     </ArchiteReinforcement.CapacityArchiteDef>
     
     <!--========== MINOR CELLS ==========-->
