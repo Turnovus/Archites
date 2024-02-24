@@ -81,7 +81,6 @@ namespace ArchiteReinforcement
             chance *= ArchiteGenChanceFactorFromFaction(pawn);
             chance *= ArchiteGenChanceFactorFromNobility(pawn);
             chance *= ArchiteGenChanceFactorFromGenetics(pawn);
-            Log.Message(chance.ToString());
 
             return chance;
         }
