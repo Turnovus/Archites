@@ -14,7 +14,7 @@ namespace ArchiteReinforcement
     /// </summary>
     public static class PawnGenArchiteCalculator
     {
-        public const float ArchiteGenBaseChance = 1f / 1_800f;
+        public const float ArchiteGenBaseChance = 1f / 75f;
         // This should pretty much guarantee that at least one of the faction leaders has archites.
         public const float ArchiteGenChanceFactorFactionLeader = 70f;
 
