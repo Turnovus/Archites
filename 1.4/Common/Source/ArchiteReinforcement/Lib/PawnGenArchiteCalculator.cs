@@ -15,8 +15,6 @@ namespace ArchiteReinforcement
     public static class PawnGenArchiteCalculator
     {
         public const float ArchiteGenBaseChance = 1f / 75f;
-        // This should pretty much guarantee that at least one of the faction leaders has archites.
-        public const float ArchiteGenChanceFactorFactionLeader = 70f;
 
         public static readonly FloatRange CapacityArchiteRandRange = new FloatRange(8f, 35f);
         public static readonly FloatRange StatArchiteRandRange = new FloatRange(10f, 40f);
@@ -88,9 +86,6 @@ namespace ArchiteReinforcement
             Faction faction = pawn.Faction;
             if (faction == null)
                 return factor;
-
-            if (faction.leader == pawn)
-                factor *= ArchiteGenChanceFactorFactionLeader;
 
             FactionExtension extension = faction.def.GetModExtension<FactionExtension>();
             if (extension != null)
