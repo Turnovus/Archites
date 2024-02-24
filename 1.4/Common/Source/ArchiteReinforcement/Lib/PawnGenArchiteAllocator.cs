@@ -79,6 +79,7 @@ namespace ArchiteReinforcement
         {
             CompArchiteTracker tracker = pawn.ArchiteTracker();
             Dictionary<ArchiteDef, int> selectedUpgrades = new Dictionary<ArchiteDef, int>();
+            List<string> selectedExclusionTags = new List<string>(tracker.ActiveExclusionTags);
             int iterations = 0;
 
             while (iterations < MaxUpgradeSelectionIterations)
@@ -145,6 +146,15 @@ namespace ArchiteReinforcement
 
             bool CanPickUpgrade(ArchiteDef upgrade)
             {
+                if (!selectedUpgrades.Keys.Contains(upgrade) && !upgrade.exclusionTags.NullOrEmpty())
+                {
+                    foreach (string tag in upgrade.exclusionTags)
+                    {
+                        if (selectedExclusionTags.Contains(tag))
+                            return false;
+                    }
+                }
+
                 if (upgradePointBudget < upgrade.upgradeValue)
                     return false;
 
@@ -167,6 +177,11 @@ namespace ArchiteReinforcement
                 if (!selectedUpgrades.ContainsKey(upgrade))
                     selectedUpgrades[upgrade] = 0;
                 selectedUpgrades[upgrade] += 1;
+
+                foreach (string tag in upgrade.exclusionTags)
+                    if (!selectedExclusionTags.Contains(tag))
+                        selectedExclusionTags.Add(tag);
+                
                 upgradePointBudget -= upgrade.upgradeValue;
             }
 
