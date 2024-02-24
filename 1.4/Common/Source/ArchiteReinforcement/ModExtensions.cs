@@ -27,7 +27,7 @@ namespace ArchiteReinforcement
     {
 #pragma warning disable CS0649
         public float factionMemberArchiteGenChanceFactor = 1f;
-        public float grantedTitleSeniorityArchiteGenChanceFactor = 1f;
+        public float genChanceFacterOffsetPerTitleSeniority = 1f;
 
         public FloatRange memberAnyPointFactorRandom;
         public FloatRange memberCapacityPointFactorRandom;

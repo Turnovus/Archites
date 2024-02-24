@@ -14,7 +14,9 @@ namespace ArchiteReinforcement
     /// </summary>
     public static class PawnGenArchiteCalculator
     {
-        public const float ArchiteGenBaseChance = 1f / 5_000f;
+        public const float ArchiteGenBaseChance = 1f / 1_800f;
+        // This should pretty much guarantee that at least one of the faction leaders has archites.
+        public const float ArchiteGenChanceFactorFactionLeader = 70f;
 
         public static readonly FloatRange CapacityArchiteRandRange = new FloatRange(8f, 35f);
         public static readonly FloatRange StatArchiteRandRange = new FloatRange(10f, 40f);
@@ -73,8 +75,44 @@ namespace ArchiteReinforcement
 
         public static float ArchiteGenChanceFor(Pawn pawn)
         {
-            // TODO: Incorporate relevant factors on generation chance.
-            return ArchiteGenBaseChance;
+            float chance = ArchiteGenBaseChance;
+            chance *= ArchiteGenChanceFactorFromFaction(pawn);
+            chance *= ArchiteGenChanceFactorFromNobility(pawn);
+
+            return chance;
+        }
+
+        private static float ArchiteGenChanceFactorFromFaction(Pawn pawn)
+        {
+            float factor = 1f;
+            Faction faction = pawn.Faction;
+            if (faction == null)
+                return factor;
+
+            if (faction.leader == pawn)
+                factor *= ArchiteGenChanceFactorFactionLeader;
+
+            FactionExtension extension = faction.def.GetModExtension<FactionExtension>();
+            if (extension != null)
+                factor *= extension.factionMemberArchiteGenChanceFactor;
+
+            return factor;
+        }
+
+        private static float ArchiteGenChanceFactorFromNobility(Pawn pawn)
+        {
+            float factor = 1f;
+
+            foreach (RoyalTitle title in pawn.royalty.AllTitlesForReading)
+            {
+                FactionExtension extension = title.faction.def.GetModExtension<FactionExtension>();
+                if (extension == null)
+                    continue;
+
+                factor += extension.genChanceFacterOffsetPerTitleSeniority * title.def.seniority;
+            }
+
+            return factor;
         }
 
         public static float CapacityUpgradePointsFor(Pawn pawn)
