@@ -53,6 +53,10 @@ namespace ArchiteReinforcement
 
         private static bool ArchitesForbiddenFor(Pawn pawn)
         {
+            XenotypeExtension xeno = pawn.genes?.Xenotype?.GetModExtension<XenotypeExtension>();
+            if (xeno?.architesNeverForbidden == true)
+                return false;
+
             if (PlayerFactionPreventsArchites(pawn.Faction))
                 return true;
 
@@ -76,6 +80,8 @@ namespace ArchiteReinforcement
             float chance = ArchiteGenBaseChance;
             chance *= ArchiteGenChanceFactorFromFaction(pawn);
             chance *= ArchiteGenChanceFactorFromNobility(pawn);
+            chance *= ArchiteGenChanceFactorFromGenetics(pawn);
+            Log.Message(chance.ToString());
 
             return chance;
         }
@@ -106,6 +112,22 @@ namespace ArchiteReinforcement
 
                 factor += extension.genChanceFacterOffsetPerTitleSeniority * title.def.seniority;
             }
+
+            return factor;
+        }
+
+        private static float ArchiteGenChanceFactorFromGenetics(Pawn pawn)
+        {
+            float factor = 1f;
+
+            if (!ModLister.BiotechInstalled)
+                return factor;
+
+            XenotypeExtension extension = pawn.genes?.Xenotype?.GetModExtension<XenotypeExtension>();
+            if (extension == null)
+                return factor;
+
+            factor *= extension.architeGenChanceFactor;
 
             return factor;
         }

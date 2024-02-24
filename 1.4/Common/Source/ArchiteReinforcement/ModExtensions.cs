@@ -29,14 +29,21 @@ namespace ArchiteReinforcement
         public float factionMemberArchiteGenChanceFactor = 1f;
         public float genChanceFacterOffsetPerTitleSeniority = 1f;
 
-        public FloatRange memberAnyPointFactorRandom;
-        public FloatRange memberCapacityPointFactorRandom;
-        public FloatRange memberStatPointFactorRandom;
+        public FloatRange memberAnyPointFactorRandom = new FloatRange(1f, 1f);
+        public FloatRange memberCapacityPointFactorRandom = new FloatRange(1f, 1f);
+        public FloatRange memberStatPointFactorRandom = new FloatRange(1f, 1f);
 
         public bool forceArchiteGen = false;
         public bool allowPlayerFactionArchites = false;
 #pragma warning restore CS0649
     }
 
+    public class XenotypeExtension : DefModExtension
+    {
+#pragma warning disable CS0649
+        public float architeGenChanceFactor = 1f;
 
+        public bool architesNeverForbidden = false;
+#pragma warning restore CS0649
+    }
 }

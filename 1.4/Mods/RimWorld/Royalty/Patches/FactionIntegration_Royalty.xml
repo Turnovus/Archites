@@ -8,8 +8,8 @@
             <li Class="ArchiteReinforcement.FactionExtension">
                 <!-- Reduce the base chance so that fewer non-entitled pawns have upgrades. -->
                 <factionMemberArchiteGenChanceFactor>0.9</factionMemberArchiteGenChanceFactor>
-                <!-- Vanilla titles come in steps of 100 seniority, so this is a +30% chance per title level. -->
-                <genChanceFacterOffsetPerTitleSeniority>0.003</genChanceFacterOffsetPerTitleSeniority>
+                <!-- Vanilla titles come in steps of 100 seniority, so this is a +180% chance per title level. -->
+                <genChanceFacterOffsetPerTitleSeniority>0.018</genChanceFacterOffsetPerTitleSeniority>
             </li>
         </value>
     </Operation>
