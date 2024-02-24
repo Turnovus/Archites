@@ -139,7 +139,7 @@ namespace ArchiteReinforcement
             if (tracker == null)
                 return 0f;
 
-            return GetNumReclaimedArchites(tracker.TotalCapacityArchiteUpgradeValue);
+            return GetNumReclaimedArchites(tracker.TotalCapacityArchiteProgressFromFullLevel);
         }
 
         public override float StatArchitesFrom(Thing thing)
@@ -151,7 +151,7 @@ namespace ArchiteReinforcement
             if (tracker == null)
                 return 0f;
 
-            return GetNumReclaimedArchites(tracker.TotalStatArchiteUpgradeValue);
+            return GetNumReclaimedArchites(tracker.TotalStatArchiteProgressFromFullLevel);
         }
 
         private static float GetNumReclaimedArchites(float originalArchiteCount)

@@ -103,13 +103,38 @@ namespace ArchiteReinforcement
             TotalStatArchiteUpgradeValue > 0;
 
         public float StatUpgradeCost =>
-            Math.Max(StartStatCost, 
-                (TotalStatArchiteUpgradeValue - StatUpgradeGrace) * StatCostPerArchite
-            );
+            CalculateUpgradeCost(TotalStatArchiteUpgradeValue, StatCostPerArchite, StartStatCost, StatUpgradeGrace);
 
         public float CapacityUpgradeCost =>
-            Math.Max(StartCapCost,
-                (TotalCapacityArchiteUpgradeValue - CapUpgradeGrace) * CapCostPerArchite
+            CalculateUpgradeCost(TotalCapacityArchiteUpgradeValue, CapCostPerArchite, StartCapCost, CapUpgradeGrace);
+
+        public float TotalCapacityArchiteProgressFromFullLevel
+        {
+            get
+            {
+                float archites = 0;
+                int levels = (int)TotalCapacityArchiteUpgradeValue;
+                for (int i = 1; i <= levels; i++)
+                    archites += CalculateUpgradeCost(i, CapCostPerArchite, StartCapCost, CapUpgradeGrace);
+                return archites;
+            }
+        }
+
+        public float TotalStatArchiteProgressFromFullLevel
+        {
+            get
+            {
+                float archites = 0;
+                int levels = (int)TotalStatArchiteUpgradeValue;
+                for (int i = 1; i <= levels; i++)
+                    archites += CalculateUpgradeCost(i, StatCostPerArchite, StartStatCost, StatUpgradeGrace);
+                return archites;
+            }
+        }
+
+        private float CalculateUpgradeCost(float levelNow, float costPerLevel, float minCost, float grace) =>
+            Math.Max(minCost,
+                (levelNow - grace) * costPerLevel
             );
 
         public Pawn ParentPawn => parent as Pawn;
