@@ -118,13 +118,48 @@ namespace ArchiteReinforcement
         public static float CapacityUpgradePointsFor(Pawn pawn)
         {
             float archites = CapacityArchiteRandRange.RandomInRange;
+            archites *= GetRandomCapacityArchiteFactorFor(pawn);
             return (float)Math.Round(archites, 1);
         }
 
         public static float StatUpgradePointsFor(Pawn pawn)
         {
             float archites = StatArchiteRandRange.RandomInRange;
+            archites *= GetRandomStatArchiteFactorFor(pawn);
             return (float)Math.Round(archites, 1);
+        }
+
+        private static float GetRandomCapacityArchiteFactorFor(Pawn pawn)
+        {
+            float factor = GetRandomBaseArchiteFactorFor(pawn);
+
+            FactionExtension faction = pawn.Faction?.def.GetModExtension<FactionExtension>();
+            if (faction?.memberAnyPointFactorRandom != null)
+                factor *= faction.memberCapacityPointFactorRandom.RandomInRange;
+
+            return factor;
+        }
+
+        private static float GetRandomStatArchiteFactorFor(Pawn pawn)
+        {
+            float factor = GetRandomBaseArchiteFactorFor(pawn);
+
+            FactionExtension faction = pawn.Faction?.def.GetModExtension<FactionExtension>();
+            if (faction?.memberAnyPointFactorRandom != null)
+                factor *= faction.memberStatPointFactorRandom.RandomInRange;
+
+            return factor;
+        }
+
+        private static float GetRandomBaseArchiteFactorFor(Pawn pawn)
+        {
+            float factor = 1f;
+
+            FactionExtension faction = pawn.Faction?.def.GetModExtension<FactionExtension>();
+            if (faction?.memberAnyPointFactorRandom != null)
+                factor *= faction.memberAnyPointFactorRandom.RandomInRange;
+
+            return factor;
         }
     }
 }
