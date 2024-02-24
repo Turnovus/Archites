@@ -47,7 +47,7 @@ namespace ArchiteReinforcement
 
         private static bool FactionForcesArchites(Faction faction)
         {
-            FactionExtension extension = faction.def.GetModExtension<FactionExtension>();
+            FactionExtension extension = faction?.def.GetModExtension<FactionExtension>();
             return extension == null ? false : extension.forceArchiteGen;
         }
 
