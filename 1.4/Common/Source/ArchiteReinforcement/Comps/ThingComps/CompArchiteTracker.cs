@@ -132,10 +132,13 @@ namespace ArchiteReinforcement
             }
         }
 
-        public bool CanOpenMenu => capacityArchiteProgress > 0 ||
-                    statArchiteProgress > 0 ||
-                    capacityArchitesToSpend > 0 ||
-                    statArchitesToSpend > 0;
+        // FIXME: Replace calls to this with HasAnyUpgrades
+        public bool CanOpenMenu =>
+            HasAnyUpgrades ||
+            capacityArchiteProgress > 0 ||
+            statArchiteProgress > 0 ||
+            capacityArchitesToSpend > 0 ||
+            statArchitesToSpend > 0;
 
 
         public bool IsUpgradeMaxLevel(ArchiteDef upgrade)

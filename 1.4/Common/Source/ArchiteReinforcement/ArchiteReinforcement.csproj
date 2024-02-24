@@ -99,6 +99,7 @@
     <Compile Include="OutputWorker\OutputWorker_ReclaimArchites.cs" />
     <Compile Include="PatchOperationAddStatPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialThingFilterWorker\SpecialThingFilterWorker_CorpsesArchite.cs" />
     <Compile Include="StatParts\StatPart_ArchiteUpgrades.cs" />
     <Compile Include="StatParts\StatPart_SpentArchites.cs" />
     <Compile Include="StockGenerator\StockGenerator_BuyTechLevel.cs" />

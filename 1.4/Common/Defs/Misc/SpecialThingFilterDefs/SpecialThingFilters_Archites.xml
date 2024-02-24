@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <SpecialThingFilterDef>
+        <defName>Turn_SpecialThingFilter_AllowArchiteCorpse</defName>
+        <label>allow archite-bearing corpses</label>
+        <description>Allow dead bodies containing archite-based enhancements.</description>
+        <parentCategory>CorpsesHumanlike</parentCategory>
+        <allowedByDefault>true</allowedByDefault>
+        <saveKey>ArchiteReinforcement.AllowArchiteCorpse</saveKey>
+        <workerClass>ArchiteReinforcement.SpecialThingFilterWorker_CorpsesArchite</workerClass>
+    </SpecialThingFilterDef>
+
+    <SpecialThingFilterDef>
+        <defName>Turn_SpecialThingFilter_AllowNonArchiteCorpse</defName>
+        <label>allow archite-free corpses</label>
+        <description>Allow dead bodies that do not contain archite-based enhancements.</description>
+        <parentCategory>CorpsesHumanlike</parentCategory>
+        <allowedByDefault>true</allowedByDefault>
+        <saveKey>ArchiteReinforcement.AllowNonArchiteCorpse</saveKey>
+        <workerClass>ArchiteReinforcement.SpecialThingFilterWorker_CorpsesArchiteInverted</workerClass>
+    </SpecialThingFilterDef>
+
+</Defs>
