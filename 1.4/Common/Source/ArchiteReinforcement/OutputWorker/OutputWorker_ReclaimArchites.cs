@@ -128,7 +128,7 @@ namespace ArchiteReinforcement
 
     public class OutputWorker_ReclaimArchitesFromCorpse : OutputWorker_ReclaimArchites
     {
-        public static readonly FloatRange ReturnRange = new FloatRange(0.35f, 0.5f);
+        public static readonly FloatRange ReturnRange = new FloatRange(0.15f, 0.30f);
 
         public override float CapacityArchitesFrom(Thing thing)
         {

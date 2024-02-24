@@ -93,7 +93,7 @@
     <RecipeDef ParentName="ArchiteReinforcement.ReclamationRecipeBase">
         <defName>Turn_Recipe_ReclaimArchitesFromCorpse</defName>
         <label>reclaim archites from corpse</label>
-        <description>Break down a human corpse, then reclaim any archites that it may contain.\n\nThis process will reclaim nearly half of the corpse's archites.</description>
+        <description>Break down a human corpse, then reclaim any archites that it may contain.\n\nThis process will reclaim a fraction of the corpse's archites.</description>
         <jobString>Breaking down corpse.</jobString>
         <autoStripCorpses>false</autoStripCorpses>
         <ingredients>
