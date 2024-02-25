@@ -20,5 +20,18 @@ namespace ArchiteReinforcement
                         GenPlace.TryPlaceThing(ThingMaker.MakeThing(def), UI.MouseCell(), Find.CurrentMap, ThingPlaceMode.Near);
                 }
             });
+
+        [DebugAction("Archite", null, false, false, false, 0, false, actionType = DebugActionType.ToolMapForPawns, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void GiveRandomUpgrades(Pawn p)
+        {
+            CompArchiteTracker tracker = p.ArchiteTracker();
+            if (tracker == null)
+                return;
+
+            tracker.capacityArchitesToSpend += 100f;
+            tracker.statArchitesToSpend += 100f;
+            PawnGenArchiteAllocator.AllocateAllUnspentPoints(p);
+        }
+
     }
 }

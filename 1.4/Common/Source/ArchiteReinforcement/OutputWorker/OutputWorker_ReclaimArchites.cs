@@ -126,5 +126,39 @@ namespace ArchiteReinforcement
             => AnyArchitesFrom(thing);
     }
 
+    public class OutputWorker_ReclaimArchitesFromCorpse : OutputWorker_ReclaimArchites
+    {
+        public static readonly FloatRange ReturnRange = new FloatRange(0.15f, 0.30f);
 
+        public override float CapacityArchitesFrom(Thing thing)
+        {
+            if (!(thing is Corpse corpse))
+                return 0f;
+
+            CompArchiteTracker tracker = corpse.ArchiteTracker();
+            if (tracker == null)
+                return 0f;
+
+            return GetNumReclaimedArchites(tracker.TotalCapacityArchiteProgressFromFullLevel);
+        }
+
+        public override float StatArchitesFrom(Thing thing)
+        {
+            if (!(thing is Corpse corpse))
+                return 0f;
+
+            CompArchiteTracker tracker = corpse.ArchiteTracker();
+            if (tracker == null)
+                return 0f;
+
+            return GetNumReclaimedArchites(tracker.TotalStatArchiteProgressFromFullLevel);
+        }
+
+        private static float GetNumReclaimedArchites(float originalArchiteCount)
+        {
+            float random = ReturnRange.RandomInRange;
+            float value = originalArchiteCount * random;
+            return value - (value % 0.1f);
+        }
+    }
 }

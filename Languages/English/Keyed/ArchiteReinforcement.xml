@@ -71,4 +71,26 @@
     <ArchiteReinforcement.Pillar.SetThreshold.Desc>Set the automatic collection threshold.\n\nThe assigned {0} will automatically collect archites stored in the pillar if the total count is greater than this number.</ArchiteReinforcement.Pillar.SetThreshold.Desc>
     <ArchiteReinforcement.Pillar.Slider>Set threshold for archite selection.</ArchiteReinforcement.Pillar.Slider>
 
+    <ArchiteReinforcement.UpgradeButtonTip.CreationMenu>This character has been enhanced by archites in their body. Click here to view the applied effects.</ArchiteReinforcement.UpgradeButtonTip.CreationMenu>
+
+    <!--==================== MOD SETTINGS ====================-->
+
+    <ArchiteReinforcement.ModSettings.SettingsCategory>Archite Reinforcement</ArchiteReinforcement.ModSettings.SettingsCategory>
+
+    <ArchiteReinforcement.ModSettings.EnableArchiteSpawns.Label>Allow spawning with archites.</ArchiteReinforcement.ModSettings.EnableArchiteSpawns.Label>
+    <ArchiteReinforcement.ModSettings.EnableArchiteSpawns.Desc>If enabled, non-player characters will rarely spawn with a randomized assortment of archites. Affects both neutral and hostile characters. Adds more challenge and opportunity to the game.</ArchiteReinforcement.ModSettings.EnableArchiteSpawns.Desc>
+
+    <ArchiteReinforcement.ModSettings.ArchiteBadgeVisibility.Label>Archite Badge</ArchiteReinforcement.ModSettings.ArchiteBadgeVisibility.Label>
+    <ArchiteReinforcement.ModSettings.ArchiteBadgeVisibility.Desc>The archite badge is an icon that appears over characters with archite upgrades, so that you can easily pick them out of a crowd. The below settings will allow you to adjust when and where the badge appears.</ArchiteReinforcement.ModSettings.ArchiteBadgeVisibility.Desc>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForColonists.Label>Draw badge for colonists</ArchiteReinforcement.ModSettings.DrawBadgeForColonists.Label>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForColonists.Desc>Should the badge be drawn for player-controlled non-enslaved characters, including colonists and quest lodgers?</ArchiteReinforcement.ModSettings.DrawBadgeForColonists.Desc>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForSlaves.Label>Draw badge for slaves</ArchiteReinforcement.ModSettings.DrawBadgeForSlaves.Label>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForSlaves.Desc>Should the badge be drawn for player-controlled slaves from the Ideology DLC?</ArchiteReinforcement.ModSettings.DrawBadgeForSlaves.Desc>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForPrisoners.Label>Draw badge for prisoners</ArchiteReinforcement.ModSettings.DrawBadgeForPrisoners.Label>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForPrisoners.Desc>Should the badge be drawn for prisoners held by the player?</ArchiteReinforcement.ModSettings.DrawBadgeForPrisoners.Desc>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForHostiles.Label>Draw badge for hostiles</ArchiteReinforcement.ModSettings.DrawBadgeForHostiles.Label>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForHostiles.Desc>Should the badge be drawn for characters who are currently hostile to the player faction?</ArchiteReinforcement.ModSettings.DrawBadgeForHostiles.Desc>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForNeutrals.Label>Draw badge for neutrals</ArchiteReinforcement.ModSettings.DrawBadgeForNeutrals.Label>
+    <ArchiteReinforcement.ModSettings.DrawBadgeForNeutrals.Desc>Should the badge be drawn for characters that do not fit into any of the above categories?</ArchiteReinforcement.ModSettings.DrawBadgeForNeutrals.Desc>
+
 </LanguageData>

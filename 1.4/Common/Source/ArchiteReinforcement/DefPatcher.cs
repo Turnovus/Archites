@@ -46,5 +46,8 @@ namespace ArchiteReinforcement
 
         public static CompArchiteTracker ArchiteTracker(this Pawn pawn) =>
             pawn.TryGetComp<CompArchiteTracker>();
+
+        public static CompArchiteTracker ArchiteTracker(this Corpse corpse) =>
+            corpse.InnerPawn?.ArchiteTracker();
     }
 }

@@ -55,6 +55,7 @@
         <recipes>
             <li>Turn_Recipe_ReclaimFromArchiteUpgrade</li>
             <li>Turn_Recipe_ReclaimArchitesFromArtifact</li>
+            <li>Turn_Recipe_ReclaimArchitesFromCorpse</li>
         </recipes>
 
         <inspectorTabs>

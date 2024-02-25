@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using RimWorld;
+using UnityEngine;
 
 namespace ArchiteReinforcement
 {
@@ -97,14 +98,43 @@ namespace ArchiteReinforcement
             }
         }
 
+        public bool HasAnyUpgrades =>
+            TotalCapacityArchiteUpgradeValue > 0 ||
+            TotalStatArchiteUpgradeValue > 0;
+
         public float StatUpgradeCost =>
-            Math.Max(StartStatCost, 
-                (TotalStatArchiteUpgradeValue - StatUpgradeGrace) * StatCostPerArchite
-            );
+            CalculateUpgradeCost(TotalStatArchiteUpgradeValue, StatCostPerArchite, StartStatCost, StatUpgradeGrace);
 
         public float CapacityUpgradeCost =>
-            Math.Max(StartCapCost,
-                (TotalCapacityArchiteUpgradeValue - CapUpgradeGrace) * CapCostPerArchite
+            CalculateUpgradeCost(TotalCapacityArchiteUpgradeValue, CapCostPerArchite, StartCapCost, CapUpgradeGrace);
+
+        public float TotalCapacityArchiteProgressFromFullLevel
+        {
+            get
+            {
+                float archites = 0;
+                int levels = (int)TotalCapacityArchiteUpgradeValue;
+                for (int i = 1; i <= levels; i++)
+                    archites += CalculateUpgradeCost(i, CapCostPerArchite, StartCapCost, CapUpgradeGrace);
+                return archites;
+            }
+        }
+
+        public float TotalStatArchiteProgressFromFullLevel
+        {
+            get
+            {
+                float archites = 0;
+                int levels = (int)TotalStatArchiteUpgradeValue;
+                for (int i = 1; i <= levels; i++)
+                    archites += CalculateUpgradeCost(i, StatCostPerArchite, StartStatCost, StatUpgradeGrace);
+                return archites;
+            }
+        }
+
+        private float CalculateUpgradeCost(float levelNow, float costPerLevel, float minCost, float grace) =>
+            Math.Max(minCost,
+                (levelNow - grace) * costPerLevel
             );
 
         public Pawn ParentPawn => parent as Pawn;
@@ -126,6 +156,15 @@ namespace ArchiteReinforcement
                 return n;
             }
         }
+
+        // FIXME: Replace calls to this with HasAnyUpgrades
+        public bool CanOpenMenu =>
+            HasAnyUpgrades ||
+            capacityArchiteProgress > 0 ||
+            statArchiteProgress > 0 ||
+            capacityArchitesToSpend > 0 ||
+            statArchitesToSpend > 0;
+
 
         public bool IsUpgradeMaxLevel(ArchiteDef upgrade)
         {
@@ -198,11 +237,28 @@ namespace ArchiteReinforcement
                 return statUpgrades.ContainsKey(stat);
             if (upgrade is CapacityArchiteDef cap)
                 return capacityUpgrades.ContainsKey(cap);
-            return false; // No support for custom def types, soz m8.
+            return false;
         }
 
         public bool HasAnyLevelOfImpliedUpgrade(StatArchiteDef upgrade)
             => ImpliedLevels.ContainsKey(upgrade);
+
+        public int LevelForUpgrade(ArchiteDef upgrade)
+        {
+            if (upgrade is CapacityArchiteDef capacity)
+                return LevelForCapacity(capacity);
+            if (upgrade is StatArchiteDef stat)
+                return LevelForStat(stat);
+
+            return 0;
+        }
+
+        public int LevelForCapacity(CapacityArchiteDef capacity)
+        {
+            if (!capacityUpgrades.ContainsKey(capacity))
+                return 0;
+            return capacityUpgrades[capacity];
+        }
 
         public int LevelForStat(StatArchiteDef stat)
         {
@@ -230,14 +286,6 @@ namespace ArchiteReinforcement
             }
             return ImpliedLevels.ContainsKey(upgrade) ? ImpliedLevels[upgrade] : 0;
         }           
-
-        // Nothing to see here. Just an unused method from when I tried to patch the tracker comp
-        // onto humanlikes using C# instead of an XML patch.
-        public static CompProperties NewPropsForDefPatch() =>
-            new CompProperties()
-            {
-                compClass = typeof(CompArchiteTracker),
-            };
 
         // Any time a pawn acquires any sort of upgrade, it should take place here. It DOES NOT
         // handle the transaction of upgrade points, but it DOES dirty all of the upgrade caches.
@@ -345,6 +393,11 @@ namespace ArchiteReinforcement
             Messages.Message(fullString, pawn, MessageTypeDefOf.PositiveEvent);
         }
 
+        public override void PostDraw()
+        {
+            ArchiteBadgeDrawer.TryDrawBadge(this);
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (!DebugSettings.ShowDevGizmos)
@@ -379,6 +432,95 @@ namespace ArchiteReinforcement
             Scribe_Values.Look(ref capacityArchiteProgress, "capacityArchiteProgress");
             Scribe_Values.Look(ref statArchitesToSpend, "statArchitesToSpend");
             Scribe_Values.Look(ref capacityArchitesToSpend, "capacityArchitesToSpend");
+
+            if (Scribe.mode == LoadSaveMode.Inactive || Scribe.mode == LoadSaveMode.Saving)
+                return;
+            // Ensure that we have our required collections initialized, in case the player is
+            // loading a save file that did not previously have AR enabled.
+            if (statUpgrades == null)
+                statUpgrades = new Dictionary<StatArchiteDef, int>();
+            if (capacityUpgrades == null)
+                capacityUpgrades = new Dictionary<CapacityArchiteDef, int>();
+        }
+    }
+
+    [StaticConstructorOnStartup]
+    public static class ArchiteBadgeDrawer
+    {
+        public const float MinAlpha = 0.25f;
+        public const float MaxAlpha = 3f;
+        public const int FadeIntervalTicks = 180;
+        public const float BadgeSize = 0.5f;
+
+        public static readonly Vector3 BadgePositionRelative = new Vector3(
+            0.5f,
+            AltitudeLayer.MoteOverhead.AltitudeFor(),
+            0.7f
+        );
+        public static readonly Material BadgeMaterial = MaterialPool.MatFrom("ArchiteReinforcement/Other/ArchiteBadge", ShaderDatabase.Transparent);
+
+        public static void TryDrawBadge(CompArchiteTracker tracker)
+        {
+            Pawn pawn = tracker.ParentPawn;
+
+            if (!ShouldDrawBadge())
+                return;
+
+            DrawBadge(pawn.DrawPos, BadgeOpacityNow());
+
+
+            bool ShouldDrawBadge()
+            {
+                if (!tracker.HasAnyUpgrades)
+                    return false;
+
+                if (pawn.Dead)
+                    return false; // Maybe consider adding badge to corpses for reclamation?
+
+                return SettingsAllowBadge();
+            }
+
+            bool SettingsAllowBadge()
+            {
+                ModSettings_ArchiteReinforcement settings = Mod_ArchiteReinforcement.ActiveMod.Settings;
+
+                if (pawn.IsSlaveOfColony)
+                    return settings.drawBadgeForSlaves;
+
+                if (pawn.HostileTo(Faction.OfPlayer))
+                    return settings.drawBadgeForHostiles;
+
+                if (pawn.IsPrisonerOfColony)
+                    return settings.drawBadgeForPrisoners;
+
+                if (pawn.Faction == Faction.OfPlayer || pawn.HostFaction == Faction.OfPlayer)
+                    return settings.drawBadgeForColonists;
+
+                return settings.drawBadgeForNeutrals;
+            }
+
+            float BadgeOpacityNow()
+            {
+
+                float intervalTick = Math.Abs(pawn.HashOffsetTicks() % FadeIntervalTicks);
+                float alphaFactor = intervalTick / FadeIntervalTicks;
+                alphaFactor = Math.Abs(alphaFactor - 0.5f) * 2f;
+
+                return Mathf.Lerp(MinAlpha, MaxAlpha, alphaFactor);
+            }
+        }
+
+        private static void DrawBadge(Vector3 position, float opacity)
+        {
+            Vector3 drawPosition = new Vector3(position.x, 0f, position.z);
+            drawPosition += BadgePositionRelative;
+
+            Vector3 dimensions = new Vector3(BadgeSize, 1f, BadgeSize);
+            Matrix4x4 matrix = new Matrix4x4();
+            matrix.SetTRS(drawPosition, Quaternion.AngleAxis(0f, Vector3.up), dimensions);
+
+            Material material = FadedMaterialPool.FadedVersionOf(BadgeMaterial, opacity);
+            Graphics.DrawMesh(MeshPool.plane10, matrix, material, 0);
         }
     }
 }

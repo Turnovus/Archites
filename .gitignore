@@ -1,3 +1,4 @@
 1.4/Common/Source/ArchiteReinforcement/.vs/
 1.4/Common/Source/ArchiteReinforcement/bin/
 1.4/Common/Source/ArchiteReinforcement/obj/
+*.csproj.user

@@ -90,4 +90,38 @@
         </modExtensions>
     </RecipeDef>
 
+    <RecipeDef ParentName="ArchiteReinforcement.ReclamationRecipeBase">
+        <defName>Turn_Recipe_ReclaimArchitesFromCorpse</defName>
+        <label>reclaim archites from corpse</label>
+        <description>Break down a human corpse, then reclaim any archites that it may contain.\n\nThis process will reclaim a fraction of the corpse's archites.</description>
+        <jobString>Breaking down corpse.</jobString>
+        <autoStripCorpses>false</autoStripCorpses>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Corpses</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>CorpsesHumanlike</li>
+            </categories>
+            <specialFiltersToDisallow>
+                <li>Turn_SpecialThingFilter_AllowNonArchiteCorpse</li>
+            </specialFiltersToDisallow>
+        </fixedIngredientFilter>
+
+        <modExtensions>
+            <li Class="CF.UseOutputWorkers">
+                <outputWorkers>
+                    <li Class="ArchiteReinforcement.OutputWorker_ReclaimArchitesFromCorpse" />
+                </outputWorkers>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
 </Defs>
