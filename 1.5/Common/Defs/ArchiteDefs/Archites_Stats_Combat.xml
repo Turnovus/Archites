@@ -133,6 +133,59 @@
         <stat>AimingDelayFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
+        <!-- Stagger Time Multiplier -->
+        <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+            <defName>Turn_ArchitePod_StaggerDurationFactor</defName>
+            <label>archite pod of endurance</label>
+    
+            <graphicData>
+                <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+            </graphicData>
+            
+            <comps>
+                <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                    <upgrade>Turn_ArchiteUpgrade_StaggerDurationFactor</upgrade>
+                </li>
+            </comps>
+        </ThingDef>
+    
+        <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+            <defName>Turn_ArchiteUpgrade_StaggerDurationFactor</defName>
+            <label>endurance</label>
+            <description>Archites throughout the body allow the muscles to stiffen in response to incoming attacks, allowing the host to shrug of the damage and keep moving.</description>
+            <upgradeType>Factor</upgradeType>
+            <baseOffset>1.0</baseOffset>
+            <effectPerLevel>-0.05</effectPerLevel>
+            <maxUses>20</maxUses>
+            <stat>StaggerDurationFactor</stat>
+        </ArchiteReinforcement.StatArchiteDef>
+    
+        <!-- Ranged Cooldown Multiplier -->
+        <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+            <defName>Turn_ArchitePod_RangedCooldownFactor</defName>
+            <label>archite pod of frenzy</label>
+    
+            <graphicData>
+                <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+            </graphicData>
+            
+            <comps>
+                <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                    <upgrade>Turn_ArchiteUpgrade_RangedCooldownFactor</upgrade>
+                </li>
+            </comps>
+        </ThingDef>
+    
+        <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+            <defName>Turn_ArchiteUpgrade_RangedCooldownFactor</defName>
+            <label>frenzy</label>
+            <description>Archites in the hands improve manual dexterity and stability, allowing the host to get off shots more quickly.</description>
+            <upgradeType>Denominator</upgradeType>
+            <baseOffset>1.0</baseOffset>
+            <effectPerLevel>0.08</effectPerLevel>
+            <stat>RangedCooldownFactor</stat>
+        </ArchiteReinforcement.StatArchiteDef>
+
     <!--========== MAJOR PODS ==========-->
     <!-- Melee Hit Chance -->
     <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
@@ -211,6 +264,32 @@
         <effectPerLevel>0.075</effectPerLevel>
         <levelProgressiveRate>0.5</levelProgressiveRate>
         <stat>IncomingDamageFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Melee Damage Factor -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MeleeDamageFactor</defName>
+        <label>archite pod of destruction</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeDamageFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MeleeDamageFactor</defName>
+        <label>destruction</label>
+        <description>Archites in the arms strengthen the muscles, allowing the host to bash things apart with great ease.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.075</effectPerLevel>
+        <stat>MeleeDamageFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
 </Defs>

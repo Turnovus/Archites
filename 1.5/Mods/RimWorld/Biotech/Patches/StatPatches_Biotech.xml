@@ -22,34 +22,4 @@
         </value>
     </Operation>
 
-    <!-- Stagger Time Multiplier -->
-    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
-        <xpath>Defs/StatDef[defName="StaggerDurationFactor"]</xpath>
-        <value>
-            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
-                <architeDef>Turn_ArchiteUpgrade_StaggerDurationFactor</architeDef>
-            </li>
-        </value>
-    </Operation>
-
-    <!-- Ranged Cooldown Multiplier -->
-    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
-        <xpath>Defs/StatDef[defName="RangedCooldownFactor"]</xpath>
-        <value>
-            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
-                <architeDef>Turn_ArchiteUpgrade_RangedCooldownFactor</architeDef>
-            </li>
-        </value>
-    </Operation>
-
-    <!-- Melee Damage Factor -->
-    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
-        <xpath>Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
-        <value>
-            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
-                <architeDef>Turn_ArchiteUpgrade_MeleeDamageFactor</architeDef>
-            </li>
-        </value>
-    </Operation>
-
 </Patch>
