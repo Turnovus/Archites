@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!-- Base for all cells -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteThing" Name="ArchiteReinforcement.BaseArchiteCell" Abstract="True">
+        <description>A single-use pod containing a dose of specially-designed archotech mechanites. Upon activation, these archites will enter the user's body and remain there permanently, slightly enhancing their health capacities.</description>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchiteCell</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+
+        <thingCategories Inherit="False">
+            <li>Turn_ThingCategory_ArchiteCells</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ArchiteCell</li>
+        </tradeTags>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectAddToRecord">
+                <record>Turn_Record_ArchiteCellsUsed</record>
+                <amount>1</amount>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Capacities that mostly affect a pawn's day-to-day life, and not so much survivability or combat -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteCell" Name="ArchiteReinforcement.ArchiteCellMinor" Abstract="True">
+        <graphicData>
+            <color>(1.0, 0.0, 0.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryMidFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- Capacities that do affect things like survivability and combat, except for Consciousness -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteCell" Name="ArchiteReinforcement.ArchiteCellNormal" Abstract="True">
+        <graphicData>
+            <color>(0.0, 0.0, 1.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryMidFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- Basically just Consciousness, since it affects a lot of different things -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteCell" Name="ArchiteReinforcement.ArchiteCellMajor" Abstract="True">
+        <graphicData>
+            <color>(1.0, 0.0, 1.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryLowFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>2600</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Minor" Abstract="True">
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <marketValuePerLevel>150</marketValuePerLevel>
+        <levelProgressiveRate>0.04</levelProgressiveRate>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Normal" Abstract="True">
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <marketValuePerLevel>300</marketValuePerLevel>
+        <upgradeValue>2.5</upgradeValue>
+        <levelProgressiveRate>0.025</levelProgressiveRate>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef Name="ArchiteReinforcement.CapacityUpgrade_Major" Abstract="True">
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.08</effectPerLevel>
+        <marketValuePerLevel>750</marketValuePerLevel>
+        <upgradeValue>5.0</upgradeValue>
+        <levelProgressiveRate>0.01</levelProgressiveRate>
+    </ArchiteReinforcement.CapacityArchiteDef>
+    
+    <!--========== MINOR CELLS ==========-->
+    <!-- Talking -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
+        <defName>Turn_ArchiteCell_Talking</defName>
+        <label>archite cell of words</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Talking</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_Talking</defName>
+        <capacity>Talking</capacity>
+        <label>words</label>
+        <description>Archites inhabit the airways, enhancing the host's vocal organs as much as possible, while directly manipulating the acoustics of the vocal chamber.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Eating -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
+        <defName>Turn_ArchiteCell_Eating</defName>
+        <label>archite cell of jaws</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Eating</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_Eating</defName>
+        <capacity>Eating</capacity>
+        <label>jaws</label>
+        <upgradeValue>1.5</upgradeValue>
+        <description>Archites reside in the host's mouth, rending food apart as it is chewed.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Hearing -->
+    <!-- Minor cell, normal upgrade -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMinor">
+        <defName>Turn_ArchiteCell_Hearing</defName>
+        <label>archite cell of ears</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Hearing</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Hearing</defName>
+        <capacity>Hearing</capacity>
+        <label>ears</label>
+        <description>Archites reside in the host's inner ear, enhancing and stimulating the cochlear nerves to extend the audible range of sounds beyond what is normally possible.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+    
+    <!--========== NORMAL CELLS ==========-->
+    <!-- Moving -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Moving</defName>
+        <label>archite cell of legs</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Moving</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Moving</defName>
+        <capacity>Moving</capacity>
+        <label>legs</label>
+        <description>Archites saturate the muscle tissues of the host, providing energy to and relieving fatigue from cells, while strengthening the ligaments and tendons. This allows the host to move more quickly, and without risk of exhaustion.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Manipulation -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Manipulation</defName>
+        <label>archite cell of hands</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Manipulation</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Manipulation</defName>
+        <capacity>Manipulation</capacity>
+        <label>hands</label>
+        <description>Archites saturate the ligaments of the host's hands. They intercept signals from the central nervous system to improve stability, while also enhancing the the host's conscious control over their hands' movements.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Sight -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Sight</defName>
+        <label>archite cell of eyes</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Sight</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Sight</defName>
+        <capacity>Sight</capacity>
+        <label>eyes</label>
+        <description>Archites reside in the eyes. Working in tandem with the rods and cones of the eye, they are capable of sensing and interpreting wavelengths of light not normally visible to the human eye.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!--Breathing -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Breathing</defName>
+        <label>archite cell of lungs</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Breathing</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Breathing</defName>
+        <capacity>Breathing</capacity>
+        <label>lungs</label>
+        <description>Archites saturate the alveoli of the lungs, further facilitating the exchange of gasses to and from the blood cells.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Blood filtration -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_BloodFiltration</defName>
+        <label>archite cell of purity</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_BloodFiltration</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_BloodFiltration</defName>
+        <capacity>BloodFiltration</capacity>
+        <label>purity</label>
+        <description>Archites course through any and all of the host's ducts, tubes, and vessels, seeking out and neutralizing any threat to the host's health.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Blood pumping -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_BloodPumping</defName>
+        <label>archite cell of heart</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_BloodPumping</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_BloodPumping</defName>
+        <capacity>BloodPumping</capacity>
+        <label>heart</label>
+        <description>Archites bind to the host's red blood cells, carrying along additional oxygen and carbon monoxide.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!-- Metabolism -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellNormal">
+        <defName>Turn_ArchiteCell_Metabolism</defName>
+        <label>archite cell of energy</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Metabolism</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Metabolism</defName>
+        <capacity>Metabolism</capacity>
+        <label>energy</label>
+        <description>Archites travel within the host's blood plasma, improving the saturation and absorption of nutrients throughout the body.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+    <!--========== MAJOR CELLS ==========-->
+    <!-- Consciousness -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchiteCellMajor">
+        <defName>Turn_ArchiteCell_Consciousness</defName>
+        <label>archite cell of awakening</label>
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Consciousness</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.CapacityArchiteDef ParentName="ArchiteReinforcement.CapacityUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_Consciousness</defName>
+        <capacity>Consciousness</capacity>
+        <label>awakening</label>
+        <description>Archites bind to the synapses of the central nervous system, increasing neurological activity by stimulating and coordinating neural signals across the brain.</description>
+    </ArchiteReinforcement.CapacityArchiteDef>
+
+</Defs>

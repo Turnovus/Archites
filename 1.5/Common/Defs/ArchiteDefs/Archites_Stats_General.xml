@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Max Nutrition -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_MaxNutrition</defName>
+        <label>archite pod of hunger</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MaxNutrition</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_MaxNutrition</defName>
+        <label>hunger</label>
+        <description>Archites travel in the blood plasma, raising the saturation point of the nutrients it contains. This allows the host to intake additional nutrients effectively without excess.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.10</effectPerLevel>
+        <stat>MaxNutrition</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MINOR PODS ==========-->
+    <!-- Lifespan Factor -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_LifespanFactor</defName>
+        <label>archite pod of longevity</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_LifespanFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_LifespanFactor</defName>
+        <label>longevity</label>
+        <description>Archites saturate the cells, restoring genetic material, and replenishing cellular resources that deplete with age.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.15</effectPerLevel>
+        <levelProgressiveRate>0.2</levelProgressiveRate>
+        <stat>LifespanFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Move Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MoveSpeed</defName>
+        <label>archite pod of motion</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MoveSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MoveSpeed</defName>
+        <label>motion</label>
+        <description>Archites in the legs enhance the muscle tissue, allowing the host to move faster while withstanding a greater deal of strain.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.030</effectPerLevel>
+        <stat>MoveSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Mental Break Threshold -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MentalBreakThreshold</defName>
+        <label>archite pod of resilience</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MentalBreakThreshold</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MentalBreakThreshold</defName>
+        <label>resilience</label>
+        <description>Archites in the brain adjust hormones and neurotransmitters associated with mood, allowing the host to cope with dire external stimuli.</description>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.25</effectPerLevel>
+        <stat>MentalBreakThreshold</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Rest Rate Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_RestRateMultiplier</defName>
+        <label>archite pod of restfulness</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_RestRateMultiplier</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_RestRateMultiplier</defName>
+        <label>restfulness</label>
+        <description>Archites throughout the body clean out waste material and repair cellular damage as the host sleeps, accelerating the natural resting process.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <stat>RestRateMultiplier</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Minimum Comfortable Temperature -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ComfyTemperatureMin</defName>
+        <label>archite pod of heating</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Thermal</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ComfyTemperatureMin</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ComfyTemperatureMin</defName>
+        <label>heating</label>
+        <description>Archites beneath the skin trap in body heat, allowing the host to operate in colder temperatures while maintaining homeostasis.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>-2.5</effectPerLevel>
+        <levelProgressiveRate>0.5</levelProgressiveRate>
+        <stat>ComfyTemperatureMin</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Maximum Comfortable Temperature -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ComfyTemperatureMax</defName>
+        <label>archite pod of cooling</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Thermal</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ComfyTemperatureMax</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ComfyTemperatureMax</defName>
+        <label>cooling</label>
+        <description>Archites form a barrier beneath the skin to diffuse environmental heat, allowing the host to operate in excessively hot temperatures while maintaining homeostasis.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>2.5</effectPerLevel>
+        <levelProgressiveRate>0.5</levelProgressiveRate>
+        <stat>ComfyTemperatureMax</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Toxic Environment Resistance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ToxicEnvironmentResistance</defName>
+        <label>archite pod of freshness</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ToxicEnvironmentResistance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ToxicEnvironmentResistance</defName>
+        <label>freshness</label>
+        <description>Archites drift freely through the airways, collecting and disposing of any aerosolized toxins inhaled by the host.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.0625</effectPerLevel>
+        <maxUses>16</maxUses>
+        <stat>ToxicEnvironmentResistance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Rest Fall Rate Factor -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_RestFallRateFactor</defName>
+        <label>archite pod of insomnia</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_RestFallRateFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_RestFallRateFactor</defName>
+        <label>insomnia</label>
+        <description>Archites throughout the body maintian, nourish, and cleanse tissue, reducing the rate at which the host experiences fatigue.</description>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.20</effectPerLevel>
+        <stat>RestFallRateFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Toxic Resistance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_ToxicResistance</defName>
+        <label>archite pod of decontamination</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ToxicResistance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_ToxicResistance</defName>
+        <label>decontamination</label>
+        <description>Archites drift freely through the blood stream, collecting and disposing of any toxins inside of the host.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.0625</effectPerLevel>
+        <maxUses>16</maxUses>
+        <stat>ToxicResistance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Global learning factor -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_GlobalLearningFactor</defName>
+        <label>archite pod of education</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_GlobalLearningFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_GlobalLearningFactor</defName>
+        <label>education</label>
+        <description>Archites in the brain improve neuroplasticity, enhancing the host's ability to retain new knowledge.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.14</effectPerLevel>
+        <stat>GlobalLearningFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Immunity Gain Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_ImmunityGainSpeed</defName>
+        <label>archite pod of immunity</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ImmunityGainSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_ImmunityGainSpeed</defName>
+        <label>immunity</label>
+        <description>Archites throughout the body cultivate and strengthen immune cells, improving the host's ability to respond to various diseases.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.02</effectPerLevel>
+        <stat>ImmunityGainSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Injury Healing Factor -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_InjuryHealingFactor</defName>
+        <label>archite pod of regeneration</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_InjuryHealingFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_InjuryHealingFactor</defName>
+        <label>regeneration</label>
+        <description>Archites saturate the body tissue, aiding the natural healing process in repairing any injuries that may befall the host.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>InjuryHealingFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+</Defs>

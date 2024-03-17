@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    <!--========== TARGET RULES: ==========-->
+    <!-- 1) must be a ThingDef with @Class="AlienRace.ThingDef_AlienRace"
+            OR a AlienRace.ThingDef_AlienRace
+            OR a ThingDef with defName="Human"
+              Defs/*[(name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace"]
+         2) Cannot have @ParentName
+            UNLESS it has a comps/inspectorTabs with @Inherit="False"
+            OR @ParentName="BasePawn" (humans inherit from there, so anything above that would be the lowest level supported.)
+              This will make sure that races that inherit from an abstract def
+              don't double-dip, ending up with two comps or ITabs
+    -->
+
+    <!-- Stage 1: Add an empty comps block to all humanoid races that don't have one. -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success> <!-- There is a chance of our XPath not actually hitting anything. IE, no alien races installed and human def already had comps block added by another mod.-->
+        <xpath>Defs/*[((name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace") and not(comps)]</xpath>
+        <value>
+            <comps></comps>
+        </value>
+    </Operation>
+
+    <!-- Stage 2: Add the archite tracker comp to all of the race defs that need one. -->
+    <Operation Class="PatchOperationAdd">
+        <!-- No success tag here, because we should always be adding our comp to the human def at the very least. -->
+        <xpath>Defs/*[((name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace") and (not(@ParentName) or @ParentName="BasePawn" or (comps[@Inherit="False"]))]/comps</xpath>
+        <value>
+            <li>
+                <compClass>ArchiteReinforcement.CompArchiteTracker</compClass>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Stage 3: Add an empty inspectorTabs block to all humanoid races that don't have one. -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/*[((name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace") and not(inspectorTabs)]</xpath>
+        <value>
+            <inspectorTabs></inspectorTabs>
+        </value>
+    </Operation>
+
+    <!-- Stage 4: Add the archite tracker ITab to all of the race defs that need one. -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/*[((name()="ThingDef" and (@Class="AlienRace.ThingDef_AlienRace" or defName="Human")) or name()="AlienRace.ThingDef_AlienRace") and (not(@ParentName) or @ParentName="BasePawn" or (inspectorTabs[@Inherit="False"]))]/inspectorTabs</xpath>
+        <value>
+            <li>ArchiteReinforcement.ITab_Pawn_ArchiteUpgrades</li>
+        </value>
+    </Operation>
+
+</Patch>

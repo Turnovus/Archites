@@ -5,9 +5,12 @@
     <name>Archite Reinforcement</name>
     <packageId>Turnovus.RimWorld.ArchiteReinforcement</packageId>
     <author>Turnovus</author>
+    <modVersion IgnoreIfNoMatchingField="True">Alpha 6</modVersion>
+	<modIconPath IgnoreIfNoMatchingField="True">ArchiteReinforcment/UI/ArchiteReinforcementModIcon</modIconPath>
     <description>Simple stackable pawn upgrades, acquired as artifacts.</description>
     <supportedVersions>
         <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
     <loadAfter>
         <li>Ludeon.RimWorld</li>

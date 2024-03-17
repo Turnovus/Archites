@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Armor - Sharp -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ArmorRating_Sharp</defName>
+        <label>archite pod of deflection</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ArmorRating_Sharp</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ArmorRating_Sharp</defName>
+        <label>deflection</label>
+        <description>Archites under the skin condense and harden in response to incoming sharp objects, such as blades or bullets.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>ArmorRating_Sharp</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Armor - Blunt -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ArmorRating_Blunt</defName>
+        <label>archite pod of absorption</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ArmorRating_Blunt</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ArmorRating_Blunt</defName>
+        <label>absorption</label>
+        <description>Archites under the skin condense and harden in response to incoming blunt objects, such as hammers or human fists.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>ArmorRating_Blunt</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Armor - Heat -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ArmorRating_Heat</defName>
+        <label>archite pod of insulation</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ArmorRating_Heat</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ArmorRating_Heat</defName>
+        <label>insulation</label>
+        <description>Archites under the skin rapidly dissipate extreme heat away from the host, preventing burns.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.1</effectPerLevel>
+        <stat>ArmorRating_Heat</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Flammability -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_Flammability</defName>
+        <label>archite pod of fireproofing</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Flammability</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_Flammability</defName>
+        <label>fireproofing</label>
+        <description>Archites on the surface of the skin respond to and extinguish any flames that come into contact with their host.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>-0.04</effectPerLevel>
+        <maxUses>25</maxUses>
+        <stat>Flammability</stat>
+        <effectDescriptionOverride>reduces</effectDescriptionOverride>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

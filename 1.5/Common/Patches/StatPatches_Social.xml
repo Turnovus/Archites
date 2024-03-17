@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Arrest Success Chance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ArrestSuccessChance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ArrestSuccessChance</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Negotiation Ability -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="NegotiationAbility"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_NegotiationAbility</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Social Impact -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="SocialImpact"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_SocialImpact</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Pawn Beauty -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="PawnBeauty"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_PawnBeauty</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Trade Price Improvement -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="TradePriceImprovement"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_TradePriceImprovement</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

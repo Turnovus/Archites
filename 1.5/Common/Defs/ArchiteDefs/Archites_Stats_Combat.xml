@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Trap Spring Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_PawnTrapSpringChance</defName>
+        <label>archite pod of nimbleness</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PawnTrapSpringChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_PawnTrapSpringChance</defName>
+        <label>nimbleness</label>
+        <description>Archites in the ligaments and tendons improve the dexterity of their host, allowing them to move through traps with extreme care.</description>
+        <maxUses>10</maxUses>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>-0.10</effectPerLevel>
+        <stat>PawnTrapSpringChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Melee Armor Penetration -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MeleeArmorPenetration</defName>
+        <label>archite pod of piercing</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeArmorPenetration</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MeleeArmorPenetration</defName>
+        <label>piercing</label>
+        <description>Archites improve the strength and dexterity of the arm muscles, making the host capable of more deft and calculated strikes that have a higher chance of making it through an adversery's armor.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset> <!-- stat * 1 at level 0, * 1.04 at level 1 -->
+        <effectPerLevel>0.04</effectPerLevel>
+        <stat>MeleeArmorPenetration</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Mortar Miss Radius Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MortarMissRadiusFactor</defName>
+        <label>archite pod of bombardment</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MortarMissRadiusFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MortarMissRadiusFactor</defName>
+        <label>bombardment</label>
+        <description>Archites in the central nervous system improve their host's intuition in calculating long-range mortar trajectories.</description>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MortarMissRadiusFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Melee Dodge Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MeleeDodgeChance</defName>
+        <label>archite pod of swiftness</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeDodgeChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MeleeDodgeChance</defName>
+        <label>swiftness</label>
+        <description>Archites in the peripheral nervous system reduce the latency of nerve signals, allowing the host to respond to incoming threats more quickly.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MeleeDodgeChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Aiming Time -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_AimingDelayFactor</defName>
+        <label>archite pod of focus</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_AimingDelayFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_AimingDelayFactor</defName>
+        <label>focus</label>
+        <description>Archites in the arm muscles improve the stability and dexterity of the hands, reducing the amount of time needed for the host to line up a shot.</description>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <stat>AimingDelayFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Melee Hit Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MeleeHitChance</defName>
+        <label>archite pod of brawling</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Melee</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MeleeHitChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MeleeHitChance</defName>
+        <label>brawling</label>
+        <description>Archites in the peripheral nervous system coordinate signals going to and from the brain, improving the host's responsiveness in one-on-one conflicts.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>MeleeHitChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Shooting Accuracy -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_ShootingAccuracyPawn</defName>
+        <label>archite pod of precision</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shooting</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ShootingAccuracyPawn</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_ShootingAccuracyPawn</defName>
+        <label>precision</label>
+        <description>Archites in the eyes improve the host's visual acuity, allowing them to more easily aqcuire and track targets over long distances.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>ShootingAccuracyPawn</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Incoming Damage Multiplier -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_IncomingDamageFactor</defName>
+        <label>archite pod of durability</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_IncomingDamageFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_IncomingDamageFactor</defName>
+        <label>durability</label>
+        <description>Archites under the skin condesne and harden in response to any incoming threat, effectively increasing the amount of effort needed to meaningfully injure the host.</description>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.075</effectPerLevel>
+        <levelProgressiveRate>0.5</levelProgressiveRate>
+        <stat>IncomingDamageFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>
