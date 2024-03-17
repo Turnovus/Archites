@@ -238,6 +238,32 @@
         <stat>RestFallRateFactor</stat>
     </ArchiteReinforcement.StatArchiteDef>
 
+    <!-- Recreation Fall Rate -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_JoyFallRateFactor</defName>
+        <label>archite pod of amusement</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Smile</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_JoyFallRateFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_JoyFallRateFactor</defName>
+        <label>insomnia</label>
+        <description>Archites modulate pleasure signals in the brain, reducing the need for recreational diversions.</description>
+        <upgradeType>Denominator</upgradeType>
+        <baseOffset>1.0</baseOffset>
+        <effectPerLevel>0.20</effectPerLevel>
+        <stat>JoyFallRateFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
 
     <!--========== MAJOR PODS ==========-->
     <!-- Toxic Resistance -->
