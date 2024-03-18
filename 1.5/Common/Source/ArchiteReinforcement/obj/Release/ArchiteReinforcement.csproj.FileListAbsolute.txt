@@ -1,8 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.4\Common\Assemblies\ArchiteReinforcement.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.4\Common\Source\ArchiteReinforcement\obj\Release\ArchiteReinforcement.csprojAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.4\Common\Source\ArchiteReinforcement\obj\Release\ArchiteReinforcement.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.4\Common\Source\ArchiteReinforcement\obj\Release\ArchiteReinforcement.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.5\Common\Source\ArchiteReinforcement\obj\Release\ArchiteReinforcement.csprojAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.5\Common\Source\ArchiteReinforcement\obj\Release\ArchiteReinforcement.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.5\Common\Source\ArchiteReinforcement\obj\Release\ArchiteReinforcement.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Archites\1.5\Common\Assemblies\ArchiteReinforcement.dll
