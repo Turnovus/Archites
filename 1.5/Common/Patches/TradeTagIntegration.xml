@@ -41,7 +41,7 @@
     <!-- We want to exclude traders from selling the archolexicon alongside other books, so that we can treat it more like an artifact. -->
     <Operation Class="PatchOperationAdd">
         <success>Always</success> <!-- This patch will fail if all book-related stock generators already have a list of excluded things, as is the case in vanilla -->
-        <xpath>Defs/TraderKindDef/stockGenerators/li[categoryDef="Books"][not(excludedThingDefs)]</xpath>
+        <xpath>Defs/TraderKindDef/stockGenerators/li[categoryDef="Books" and not(excludedThingDefs)]</xpath>
         <value>
             <excludedThingDefs></excludedThingDefs>
         </value>
