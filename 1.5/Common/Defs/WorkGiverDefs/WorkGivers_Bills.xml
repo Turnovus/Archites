@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <WorkGiverDef>
+        <defName>Turn_WorkGiver_DoBillsArchiteCrucible</defName>
+        <label>reclaim archites</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>150</priorityInType> <!-- Higher than vanilla work, but not too high -->
+        <fixedBillGiverDefs>
+            <li>Turn_Building_ArchiteCrucible</li>
+        </fixedBillGiverDefs>
+        <verb>reclaim</verb>
+        <gerund>reclaiming archites at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+</Defs>

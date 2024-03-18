@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Fertility -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_Fertility</defName>
+        <label>archite pod of procreation</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Heart</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Fertility</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_Fertility</defName>
+        <label>procreation</label>
+        <description>Archites in the sex organs cultivate and foster the sex cells, improving the host's fertility.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>Fertility</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Learning Rate Factor (Child) -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_LearningRateFactor</defName>
+        <label>archite pod of childhood</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_LearningRateFactor</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_LearningRateFactor</defName>
+        <label>childhood</label>
+        <description>Archites in the brain enhance neuroplasticity, allowing hosts to gain more learning from childish activities.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>LearningRateFactor</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

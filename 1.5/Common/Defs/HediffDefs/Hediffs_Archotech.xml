@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="BodyPartArchotechBase">
+        <defName>Turn_Thing_ArchiteBeacon</defName>
+        <label>archite beacon</label>
+        <description>An ancient implant that attracts and distributes them throughout the body. Through means unknowable to human minds, this device is capable of communicating with and attracting individual archites from across vast distances. However, archites always arrive at a consistent rate. This has lead human scientists to believe that the device originally served as a single node within a greater archite logistics network, directing archites like blood through the body of an archotech.\n\nThe archite beacon will periodically produce either a stat or capacity archite, with a small chance of producing both at the same time. Archites collected will automatically be applied to the host, adding progress towards archite upgrades.\n\nThis implant can be self-installed without surgery.\n\nThis implant can be installed up to 4 times.</description>
+        <descriptionHyperlinks><HediffDef>Turn_Implant_ArchiteBeacon</HediffDef></descriptionHyperlinks>
+        <statBases>
+            <MarketValue>3200</MarketValue> <!-- TODO: Balancing -->
+            <Mass>0.3</Mass>
+        </statBases>
+
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <tradeTags>
+            <li>ArchiteAcquisition</li>
+        </tradeTags>
+
+        <comps>
+            <li Class="CompProperties_UseEffectDestroySelf" />
+            <li Class="CompProperties_Usable">
+                <compClass>ArchiteReinforcement.CompUsableImplantBeacon</compClass>
+                <useJob>UseItem</useJob>
+                <useLabel>Implant beacon</useLabel>
+              </li>
+              <li Class="ArchiteReinforcement.CompProperties_UseEffectInstallBeacon">
+                <hediffDef>Turn_Implant_ArchiteBeacon</hediffDef>
+                <maxSeverity>4</maxSeverity>
+              </li>
+        </comps>
+    </ThingDef>
+
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>Turn_Implant_ArchiteBeacon</defName>
+        <label>archite beacon</label>
+        <description>An installed archite beacon. Each level randomly grants one stat or capacity archite per day on average, with a small chance of both.</description>
+        <descriptionHyperlinks><ThingDef>Turn_Thing_ArchiteBeacon</ThingDef></descriptionHyperlinks>
+        <hediffClass>Hediff_Level</hediffClass> 
+
+        <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+        <isBad>false</isBad>
+        <priceImpact>true</priceImpact>
+        <initialSeverity>1</initialSeverity>
+        <minSeverity>0</minSeverity>
+        <maxSeverity>4</maxSeverity>
+        <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+        <levelIsQuantity>true</levelIsQuantity>
+
+        <comps>
+            <li Class="ArchiteReinforcement.HediffCompProperties_ArchiteGiver">
+                <mtbDays>1.0</mtbDays>
+                <extraArchiteChance>0.2</extraArchiteChance>
+                <divideBySeverity>true</divideBySeverity>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>
