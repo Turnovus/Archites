@@ -137,12 +137,15 @@
                 <li>figure->head of state</li>
                 <li>figure->lawyer</li>
                 <li>figure->lord</li>
+                <li>figure(p=0.2)->mechanoid</li>
                 <li>figure->monk</li>
                 <li>figure->prophet</li>
                 <li>figure->psycaster</li>
                 <li>figure->religious leader</li>
                 <li>figure->scientist</li>
+                <li>figure->sentient Von Neumann probe</li>
                 <li>figure->technologist</li>
+                <li>figure->xenohuman</li>
 
                 <li>figure(p=0.20)->sanguophage</li>
                 <li>figure(p=0.20)->sanguophage baron</li>
@@ -205,6 +208,13 @@
                 <li>mysterious->weird</li>
 
                 
+                <li>produce->author</li>
+                <li>produce->create</li>
+                <li>produce->devise</li>
+                <li>produce->make</li>
+                <li>produce->write</li>
+
+
                 <li>produced->authored</li>
                 <li>produced->created</li>
                 <li>produced->devised</li>
