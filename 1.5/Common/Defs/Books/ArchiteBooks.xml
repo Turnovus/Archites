@@ -42,8 +42,11 @@
         </comps>
 
         <thingSetMakerTags Inherit="False">
-
+            <li>RewardArchiteSecondary</li>
         </thingSetMakerTags>
+        <tradeTags>
+            <li>ArchiteAcquisition</li>
+        </tradeTags>
     </ThingDef>
 
 </Defs>
