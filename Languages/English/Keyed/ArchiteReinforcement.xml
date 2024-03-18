@@ -73,6 +73,9 @@
 
     <ArchiteReinforcement.UpgradeButtonTip.CreationMenu>This character has been enhanced by archites in their body. Click here to view the applied effects.</ArchiteReinforcement.UpgradeButtonTip.CreationMenu>
 
+    <ArchiteReinforcement.ArchitesPerHour.Capacity>Capacity archites per hour: {0}</ArchiteReinforcement.ArchitesPerHour.Capacity>
+    <ArchiteReinforcement.ArchitesPerHour.Stat>Stat archites per hour: {0}</ArchiteReinforcement.ArchitesPerHour.Stat>
+
     <!--==================== MOD SETTINGS ====================-->
 
     <ArchiteReinforcement.ModSettings.SettingsCategory>Archite Reinforcement</ArchiteReinforcement.ModSettings.SettingsCategory>

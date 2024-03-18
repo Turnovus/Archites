@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="BookBase">
+        <defName>Turn_Book_Archolexicon</defName>
+        <label>archolexicon</label>
+        <description>A book-shaped artifact imbued with advanced archotechnology. Studying it will further enhance archite upgrades.</description>
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Book/Archolexicon/Archolexicon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <uiIconPath>ArchiteReinforcement/Things/Item/Book/Archolexicon/Archolexicon</uiIconPath>
+        <statBases>
+            <MaxHitPoints>180</MaxHitPoints>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Flammability>0</Flammability>
+            <Beauty>3</Beauty>
+            <MarketValue>1400</MarketValue>
+        </statBases>
+
+        <comps>
+            <li Class="CompProperties_Book">
+                <nameMaker>Namer_Novel</nameMaker>
+                <descriptionMaker>Turn_Description_Archolexicon</descriptionMaker>
+                <ageYearsRange>500~5480</ageYearsRange>
+                <openGraphic>
+                    <texPath>ArchiteReinforcement/Things/Item/Book/Archolexicon/Archolexicon_Open</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>0.7</drawSize>
+                </openGraphic>
+                <verticalGraphic>
+                    <texPath>ArchiteReinforcement/Things/Item/Book/Archolexicon/Archolexicon_Vertical</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <addTopAltitudeBias>true</addTopAltitudeBias>
+                </verticalGraphic>
+                <doers>
+                    <li Class="ArchiteReinforcement.BookOutcomeProperties_GainArchites" />
+                </doers>
+            </li>
+        </comps>
+
+        <thingSetMakerTags Inherit="False">
+
+        </thingSetMakerTags>
+    </ThingDef>
+
+</Defs>

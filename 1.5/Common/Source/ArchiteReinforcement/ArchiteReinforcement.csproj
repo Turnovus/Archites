@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="AI\Jobs\ExtractArchites.cs" />
     <Compile Include="ArchiteDef.cs" />
+    <Compile Include="Books.cs" />
     <Compile Include="Building\Building_ArchitePillar.cs" />
     <Compile Include="Comps\HediffComps\HediffComp_ArchiteGiver.cs" />
     <Compile Include="Comps\ThingComps\CompArchiteTracker.cs" />
