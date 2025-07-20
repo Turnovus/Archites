@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThoughtDef>
+        <defName>Turn_Thought_ArchiteMoodOffset</defName>
+        <thoughtClass>ArchiteReinforcement.Thought_ArchiteMood</thoughtClass>
+        <workerClass>ArchiteReinforcement.ThoughtWorker_ArchiteMood</workerClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>archite joy</label>
+                <description>Natural bonus from archite upgrades.</description>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="ArchiteReinforcement.ArchiteStatUpgradeExtension">
+                <upgrade>Turn_ArchiteUpgrade_Mood</upgrade>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>Turn_Thought_ArchiteOpinionOutgoing</defName>
+        <thoughtClass>ArchiteReinforcement.Thought_ArchiteOpinionOutgoing</thoughtClass>
+        <workerClass>ArchiteReinforcement.ThoughtWorker_ArchiteOpinionOutgoing</workerClass>
+        <!-- Set this to false if we have performance issues later -->
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>archite friendliness</label>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="ArchiteReinforcement.ArchiteStatUpgradeExtension">
+                <upgrade>Turn_ArchiteUpgrade_OpinionOutgoing</upgrade>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>Turn_Thought_ArchiteOpinionIncoming</defName>
+        <thoughtClass>ArchiteReinforcement.Thought_ArchiteOpinionIncoming</thoughtClass>
+        <workerClass>ArchiteReinforcement.ThoughtWorker_ArchiteOpinionIncoming</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>archite popularity</label>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="ArchiteReinforcement.ArchiteStatUpgradeExtension">
+                <upgrade>Turn_ArchiteUpgrade_OpinionIncoming</upgrade>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+</Defs>

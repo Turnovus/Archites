@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/FactionDef[@Name="AncientsBase"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.FactionExtension">
+                <factionMemberArchiteGenChanceFactor>50</factionMemberArchiteGenChanceFactor>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

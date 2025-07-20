@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Max Nutrition -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MaxNutrition"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MaxNutrition</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Move Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MoveSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MoveSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Mental Break Threshold -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MentalBreakThreshold"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MentalBreakThreshold</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Rest Rate Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="RestRateMultiplier"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_RestRateMultiplier</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Minimum Comfortable Temperature -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ComfyTemperatureMin"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ComfyTemperatureMin</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Maximum Comfortable Temperature -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ComfyTemperatureMax"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ComfyTemperatureMax</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Lifespan Factor -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="LifespanFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_LifespanFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Toxic Environment Resisitance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ToxicEnvironmentResistance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ToxicEnvironmentResistance</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Rest Fall Rate Factor -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="RestFallRateFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_RestFallRateFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Recreation Fall Rate -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="JoyFallRateFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_JoyFallRateFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Toxic Resistance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ToxicResistance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ToxicResistance</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Global Learning Factor -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="GlobalLearningFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_GlobalLearningFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Immunity Gain Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ImmunityGainSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ImmunityGainSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Injury Healing Factor -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="InjuryHealingFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_InjuryHealingFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

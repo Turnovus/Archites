@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <RulePackDef>
+        <defName>Turn_Description_Archolexicon</defName>
+        <include>
+            <li>SeedGenerator</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>desc(p=4)->[summary]. [production].\n\n[contents].\n\n[interesting_fact].</li>
+                <li>desc->[summary]. [contents].\n\n[production].\n\n[interesting_fact].</li>
+                <li>desc->[summary]. [interesting_fact].\n\n[contents].\n\n[production].</li>
+
+                
+                <li>summary->A [detailed_book] [created] by [somebody]</li>
+                <li>summary->A [detailed_book] [created] by [somebody] [long_ago]</li>
+                <li>summary->This [detailed_book] was [created] by [somebody]</li>
+                <li>summary->This [detailed_book] was [created] by [somebody] [long ago]</li>
+                <li>summary->[somebody] [produced] this [detailed_book] [long_ago]</li>
+
+
+                <li>production->[ANYPAWN_label] was [working_for] a [impressive_figure] [reason_for_creation]</li>
+                <li>production->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
+                <li>production->[ANYPAWN_label] was [tasked] by a [impressive_figure] to [produce] it [reason_for_creation]</li>
+                <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it</li>
+                <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it [reason_for_creation]</li>
+
+
+                <li>contents->It appears to describe a [cool_thing] in great detail</li>
+                <li>contents->It tells a story of a [cool_thing] [long_ago]</li>
+                <li>contents->It contains a story about a [impressive_figure] who discovers a [cool_thing]</li>
+                <li>contents->Inside, [ANYPAWN_label] recounts [ANYPAWN_possessive] encounter with a [cool_thing]</li>
+                <li>contents->It contains thousands upon thousands of [stories], all of which describe the same [cool_thing]</li>
+
+                <li>contents(p=0.2)->Although it only contains the word "[r_seed]" repeated over and over, reading it is oddly edifying</li>
+                
+                
+                <li>interesting_fact->Physically speaking, this book technically does not exist</li>
+                <li>interesting_fact->The amount of radiation emitted by this book is mostly negligable</li>
+                <li>interesting_fact->If you listen to it closely, you can hear the author's screams</li>
+                <li>interesting_fact(p=0.5)->It may be dangerous</li>
+                <li>interesting_fact(p=0.5)->It's probably not dangerous. Probably</li>
+                <li>interesting_fact->On most core planets, owning this book would be incredibly illegal</li>
+                <li>interesting_fact->It has a will of its own, and chooses to be here</li>
+                <li>interesting_fact->It is unusually warm to the touch</li>
+                <li>interesting_fact->The cover feels tingly</li>
+                <li>interesting_fact->Several wars have been fought over this book</li>
+                <li>interesting_fact->It is impossible to copy this book. Attempting to do so proves to be excruciatingly painful</li>
+                <li>interesting_fact->There is a "used" sticker attached to the back cover</li>
+                <li>interesting_fact->Reading this book without gloves is known to cause blisters</li>
+                <li>interesting_fact->Whenever this book is destroyed, it shows up again somewhere else</li>
+                <li>interesting_fact->The mysteriously glowing pages are handy for night reading</li>
+                <li>interesting_fact->It is constantly buzzing</li>
+                <li>interesting_fact->Dust never collects on its cover</li>
+                <li>interesting_fact->Every surface of this book appears to be concave</li>
+                <li>interesting_fact->Prolonged exposure to this book has been linked to the onset of several rare health conditions</li>
+                <li>interesting_fact->This book's true title is unpronounceable by any human language</li>
+
+                <li>interesting_fact(p=3)->This book is not a book, but rather a book-shaped [cool_thing]. [unfortunately] [it_does_not_work]</li>
+
+
+                <li>book->almanac</li>
+                <li>book->book</li>
+                <li>book->encyclopedia</li>
+                <li>book->instruction manual</li>
+                <li>book->lexicon</li>
+                <li>book->novel</li>
+                <li>book->omnibus</li>
+                <li>book->tome</li>
+
+
+                <li>cool->archotech</li>
+                <li>cool->highly advanced</li>
+                <li>cool->highly improbable</li>
+                <li>cool->near-impossible</li>
+                <li>cool->sophisticated</li>
+                <li>cool->technologically advanced</li>
+
+
+                <li>cool_thing(p=4)->[thing]</li>
+                <li>cool_thing(p=2)->[cool] [thing]</li>
+                <li>cool_thing(p=3)->[thing] [that_is_cool]</li>
+                <li>cool_thing->[cool] [thing] [that_is_cool]</li>
+
+
+                <li>created->authored</li>
+                <li>created->created</li>
+                <li>created->devised</li>
+                <li>created->made</li>
+                <li>created->realized</li>
+                <li>created->written</li>
+
+                
+                <li>detailed_book->[book]</li>
+                <li>detailed_book->[mysterious] [book]</li>
+
+
+                <li>family_member(p=10)->spouse</li>
+
+                <li>family_member(p=4)->daughter</li>
+                <li>family_member(p=4)->son</li>
+                
+                <li>family_member(p=2)->father</li>
+                <li>family_member(p=2)->husband</li>
+                <li>family_member(p=2)->mother</li>
+                <li>family_member(p=2)->wife</li>
+
+                <li>family_member->cousin</li>
+                <li>family_member->kin</li>
+
+                <li>family_member(p=0.5)->aunt</li>
+                <li>family_member(p=0.5)->neice</li>
+                <li>family_member(p=0.5)->nephew</li>
+                <li>family_member(p=0.5)->uncle</li>
+
+                <li>family_member(p=0.2)->graddaughter</li>
+                <li>family_member(p=0.2)->grandfather</li>
+                <li>family_member(p=0.2)->grandmother</li>
+                <li>family_member(p=0.2)->grandson</li>
+
+
+                <li>figure->anthropologist</li>
+                <li>figure->archaeologist</li>
+                <li>figure->archotech intelligence</li>
+                <li>figure->archoscientist</li>
+                <li>figure->archotechnologist</li>
+                <li>figure->artifact hunter</li>
+                <li>figure->artificial intelligence</li>
+                <li>figure->author</li>
+                <li>figure->baron</li>
+                <li>figure->cryptologist</li>
+                <li>figure->cultist</li>
+                <li>figure->entrepreneur</li>
+                <li>figure->genie</li>
+                <li>figure->head of state</li>
+                <li>figure->lawyer</li>
+                <li>figure->lord</li>
+                <li>figure(p=0.2)->mechanoid</li>
+                <li>figure->monk</li>
+                <li>figure->prophet</li>
+                <li>figure->psycaster</li>
+                <li>figure->religious leader</li>
+                <li>figure->scientist</li>
+                <li>figure->sentient Von Neumann probe</li>
+                <li>figure->technologist</li>
+                <li>figure->xenohuman</li>
+
+                <li>figure(p=0.20)->sanguophage</li>
+                <li>figure(p=0.20)->sanguophage baron</li>
+                <li>figure(p=0.20)->sanguophage hunter</li>
+                <li>figure(p=0.20)->sanguophage lord</li>
+                <li>figure(p=0.20)->sanguophage master</li>
+
+
+                <li>impressive->ancient</li>
+                <li>impressive->centuries-old</li>
+                <li>impressive->deranged</li>
+                <li>impressive->fanatical</li>
+                <li>impressive->feared</li>
+                <li>impressive->generous</li>
+                <li>impressive->insane</li>
+                <li>impressive->jealous</li>
+                <li>impressive->kind</li>
+                <li>impressive->legendary</li>
+                <li>impressive->loathesome</li>
+                <li>impressive->mad</li>
+                <li>impressive->power-hungry</li>
+                <li>impressive->renowned</li>
+                <li>impressive->reviled</li>
+                <li>impressive->rogue</li>
+                <li>impressive->terrible</li>
+                <li>impressive->well-known</li>
+
+
+                <li>impressive_figure->[figure]</li>
+                <li>impressive_figure->[impressive] [figure]</li>
+
+
+                <li>it_does_not_work->it no longer serves this purpose</li>
+                <li>it_does_not_work->it appears to be broken</li>
+                <li>it_does_not_work->it seems that its charge has been depleted</li>
+                <li>it_does_not_work->its operation is incomprehensible to human minds</li>
+                <li>it_does_not_work->nobody can figure out how to operate it</li>
+                <li>it_does_not_work->nobody would dare to use it</li>
+                <li>it_does_not_work->using it would annihilate the entire universe</li>
+                <li>it_does_not_work->it was intentionally designed not to work</li>
+                <li>it_does_not_work(p=0.2)->it refuses to listen to us</li>
+                <li>it_does_not_work(p=0.2)->it prefers being a book, and refuses to serve as anything else</li>
+                <li>it_does_not_work(p=0.2)->it requires payment in an unknown currency to operate</li>
+                <li>it_does_not_work(p=0.2)->the software license has expired</li>
+
+
+                <li>long_ago->centuries ago</li>
+                <li>long_ago->in the distant past</li>
+
+
+                <li>mysterious->ancient</li>
+                <li>mysterious->bizarre</li>
+                <li>mysterious->eccentric</li>
+                <li>mysterious->exotic</li>
+                <li>mysteropis->improbable</li>
+                <li>mysterious->mysterious</li>
+                <li>mysterious->peculiar</li>
+                <li>mysterious->strange</li>
+                <li>mysterious->unusual</li>
+                <li>mysterious->weird</li>
+
+                
+                <li>produce->author</li>
+                <li>produce->create</li>
+                <li>produce->devise</li>
+                <li>produce->make</li>
+                <li>produce->write</li>
+
+
+                <li>produced->authored</li>
+                <li>produced->created</li>
+                <li>produced->devised</li>
+                <li>produced->made</li>
+                <li>produced->wrote</li>
+
+
+                <li>reason_for_creation->as a cruel joke</li>
+                <li>reason_for_creation->because of a recurring dream</li>
+                <li>reason_for_creation->for seemingly no reason</li>
+                <li>reason_for_creation->in exchange for [ANYPAWN_possessive] [family_member]'s [safety]</li>
+                <li>reason_for_creation->out of no choice of [ANYPAWN_possessive] own</li>
+                <li>reason_for_creation->to enlighten the heathen masses</li>
+                <li>reason_for_creation->to ensure [ANYPAWN_possessive] own [safety]</li>
+                <li>reason_for_creation->to fulfill a [mysterious] prophecy</li>
+                <li>reason_for_creation->to stave off a [mysterious] threat</li>
+                <li>reason_for_creation->to answer the ultimate question</li>
+                <li>reason_for_creation->under a threat to [ANYPAWN_possessive] [safety]</li>
+                <li>reason_for_creation->out of spite</li>
+                <li>reason_for_creation->after being inspired to do so</li>
+                <li>reason_for_creation->after receiving a severe concussion</li>
+                <li>reason_for_creation->while incredibly drunk</li>
+
+
+                <li>safety->continued existance</li>
+                <li>safety->freedom</li>
+                <li>safety->health</li>
+                <li>safety->immortality</li>
+                <li>safety->life</li>
+                <li>safety->safe passage</li>
+                <li>safety->safety</li>
+                <li>safety->survival</li>
+
+
+                <li>somebody(p=2)->[ANYPAWN_nameFull]</li>
+                <li>somebody->[title_pre] [ANYPAWN_nameFull]</li>
+                <li>somebody->[ANYPAWN_nameFull] [title_post]</li>
+
+
+                <li>stories->anecdotes</li>
+                <li>stories->entries</li>
+                <li>stories->hymns</li>
+                <li>stories->jokes</li>
+                <li>stories->limericks</li>
+                <li>stories->notes</li>
+                <li>stories->poems</li>
+                <li>stories->ramblings</li>
+                <li>stories->songs</li>
+                <li>stories->sonnets</li>
+                <li>stories->stories</li>
+                <li>stories->tales</li>
+
+
+                <li>tasked->commanded</li>
+                <li>tasked->forced</li>
+                <li>tasked->instructed</li>
+                <li>tasked->ordered</li>
+                <li>tasked->tasked</li>
+
+
+                <li>that_is_cool->made by an archotech intelligence</li>
+                <li>that_is_cool->from the depths of space</li>
+                <li>that_is_cool->sent backwards through time</li>
+                <li>that_is_cool->beyond human comprehension</li>
+                <li>that_is_cool->unlike any other</li>
+                <li>that_is_cool->made of a [mysterious] metamaterial</li>
+
+
+                <li>thing->anomaly</li>
+                <li>thing->bionic augment</li>
+                <li>thing->bioreactor</li>
+                <li>thing->cube</li>
+                <li>thing->fusion reactor</li>
+                <li>thing->hypercomputer</li>
+                <li>thing->interdimensional gateway</li>
+                <li>thing->interstellar vessel</li>
+                <li>thing->mechanoid</li>
+                <li>thing->neural supercharger</li>
+                <li>thing->personal weapons platform</li>
+                <li>thing->psychic dominator</li>
+                <li>thing->robosurgeon</li>
+                <li>thing->supercomputer</li>
+                <li>thing->synthetic hyperintelligence</li>
+                <li>thing->tea kettle</li>
+                <li>thing->terraformer</li>
+                <li>thing->vanometric power cell</li>
+                <li>thing->weapon of mass destruction</li>
+
+
+                <li>title_pre(p=10)->[title_any]</li>
+
+
+                <li>title_post(p=10)->[title_any]</li>
+
+
+                <li>title_any->the [impressive_figure]</li>
+
+
+                <li>unfortunately->Unfortunately,</li>
+                <li>unfortunately->However,</li>
+                <li>unfortunately->But</li>
+                <li>unfortunately->Sadly,</li>
+
+
+                <li>working_for->serving under</li>
+                <li>working_for->working for</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

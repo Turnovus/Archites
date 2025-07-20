@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== TRIVIAL PODS ==========-->
+    <!-- Repair Success Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_FixBrokenDownBuildingSuccessChance</defName>
+        <label>archite pod of restoration</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_FixBrokenDownBuildingSuccessChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_FixBrokenDownBuildingSuccessChance</defName>
+        <label>restoration</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing for careful manipulation of delicate machinery and electronics.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <maxUses>10</maxUses>
+        <stat>FixBrokenDownBuildingSuccessChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Cleaning Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Trivial">
+        <defName>Turn_ArchitePod_CleaningSpeed</defName>
+        <label>archite pod of tidiness</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_CleaningSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Trivial">
+        <defName>Turn_ArchiteUpgrade_CleaningSpeed</defName>
+        <label>tidiness</label>
+        <description>Archites break through dust, grime, mold, mildew, and stains. They work on carpets, hardwood, and tile. They leave surfaces looking good as new, or your money back, guaranteed.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.20</effectPerLevel>
+        <stat>CleaningSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MINOR PODS ==========-->
+    <!-- Smoothing Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_SmoothingSpeed</defName>
+        <label>archite pod of polishing</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_SmoothingSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_SmoothingSpeed</defName>
+        <label>polishing</label>
+        <description>Archites on the surfaces of the hands allow the host to change the grit of their palms at will, making them capable of sanding down and smoothing surfaces with ease.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.2</effectPerLevel>
+        <stat>SmoothingSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Animal Gather Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_AnimalGatherSpeed</defName>
+        <label>archite pod of ranching</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_AnimalGatherSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_AnimalGatherSpeed</defName>
+        <label>ranching</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing them to gather products from animals more quickly.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.20</effectPerLevel>
+        <stat>AnimalGatherSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Construct Success Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_ConstructSuccessChance</defName>
+        <label>archite pod of measurement</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ConstructSuccessChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_ConstructSuccessChance</defName>
+        <label>measurement</label>
+        <description>Archites in the brain's visual center enhance their host's innate understanding of the scale of the world around them, improving their precision in construction tasks.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <maxUses>10</maxUses>
+        <stat>ConstructSuccessChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Mining Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_MiningSpeed</defName>
+        <label>archite pod of tunneling</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MiningSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_MiningSpeed</defName>
+        <label>tunneling</label>
+        <description>Archites in the arms enhance the strength of the muscles, allowing the host to break through rocks more easily.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>MiningSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Deep Drilling Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_DeepDrillingSpeed</defName>
+        <label>archite pod of excavation</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_DeepDrillingSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_DeepDrillingSpeed</defName>
+        <label>excavation</label>
+        <description>Archites in the arm and back muscles support the host while operating heavy mining equipment.</description>
+        <upgradeType>Factor</upgradeType>
+        <effectPerLevel>0.15</effectPerLevel>
+        <baseOffset>1.0</baseOffset>
+        <stat>DeepDrillingSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Research Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ResearchSpeed</defName>
+        <label>archite pod of discovery</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ResearchSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ResearchSpeed</defName>
+        <label>discovery</label>
+        <description>Archites in the brain accelerate and coordinate synapses in the regions associated with problem-solving and creative thinking, making the host more adept at performing research.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.10</effectPerLevel>
+        <levelProgressiveRate>0.25</levelProgressiveRate>
+        <stat>ResearchSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Plant Work Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_PlantWorkSpeed</defName>
+        <label>archite pod of agriculture</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PlantWorkSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_PlantWorkSpeed</defName>
+        <label>agriculture</label>
+        <description>Archites in the hands improve the host's manual dexterity, allowing them to sow and harvest crops more efficiently</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>PlantWorkSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Hunting Stealth -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_HuntingStealth</defName>
+        <label>archite pod of forestry</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_HuntingStealth</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_HuntingStealth</defName>
+        <label>forestry</label>
+        <description>Archites on the surface of the skin mask the host's scent, making them less detectable by wild animals.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <maxUses>15</maxUses>
+        <effectPerLevel>0.075</effectPerLevel>
+        <stat>HuntingStealth</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Construction Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_ConstructionSpeed</defName>
+        <label>archite pod of building</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_ConstructionSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_ConstructionSpeed</defName>
+        <label>building</label>
+        <description>Archites throughout the body improve the host's lifting strength, allowing them to perform construction tasks more easily.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <stat>ConstructionSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Global work speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_WorkSpeedGlobal</defName>
+        <label>archite pod of efficiency</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_WorkSpeedGlobal</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_WorkSpeedGlobal</defName>
+        <label>efficiency</label>
+        <description>Archites in the arms and hands greatly improve manual dexterity, allowing the host to carry out a number of tasks more quickly.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.15</effectPerLevel>
+        <levelProgressiveRate>0.2</levelProgressiveRate>
+        <stat>WorkSpeedGlobal</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Mining Yield -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_MiningYield</defName>
+        <label>archite pod of prospecting</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_MiningYield</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_MiningYield</defName>
+        <label>prsopecting</label>
+        <description>Archites mysteriously enhance the amount of resources their host produces when mining. Nobody is quite sure where the extra resources come from.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.12</effectPerLevel>
+        <stat>MiningYield</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Animal Gather Yield -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_AnimalGatherYield</defName>
+        <label>archite pod of farming</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_AnimalGatherYield</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_AnimalGatherYield</defName>
+        <label>farming</label>
+        <description>Archites mysteriously enhance the amount of product their host produces when collecting from animals. Nobody is quite sure where the extra products come from.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.12</effectPerLevel>
+        <stat>AnimalGatherYield</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Plant Gather Yield -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_PlantHarvestYield</defName>
+        <label>archite pod of botany</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Plant</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PlantHarvestYield</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_PlantHarvestYield</defName>
+        <label>botany</label>
+        <description>Archites mysteriously enhance the amount of harvest their host produces from plants. Nobody is quite sure where the extra harvest comes from.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.08</effectPerLevel>
+        <stat>PlantHarvestYield</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

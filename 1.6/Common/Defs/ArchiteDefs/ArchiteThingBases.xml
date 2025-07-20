@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!-- Base for all archite devices, regardless of purpose -->
+    <ThingDef ParentName="ResourceBase" Name="ArchiteReinforcement.BaseArchiteThing" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <techLevel>Archotech</techLevel>
+
+        <stackLimit>1</stackLimit>
+        <tradeNeverStack>true</tradeNeverStack>
+        <relicChance>0.2</relicChance>
+
+        <thingCategories>
+            <li>Turn_ThingCategory_Archites</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ArchiteReinforcement</li>
+        </tradeTags>
+
+        <statBases>
+            <Mass>0.25</Mass>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+        </statBases>
+
+        <comps>
+            <li Class="CompProperties_Usable">
+                <useJob>UseArtifact</useJob>
+                <useLabel>Use {0_label}</useLabel>
+            </li>
+            <li Class="CompProperties_UseEffectDestroySelf" />
+            <li Class="CompProperties_Styleable"></li>
+        </comps>
+    </ThingDef>
+
+    <!-- Base for all pods -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteThing" Name="ArchiteReinforcement.BaseArchitePod" Abstract="True">
+        <description>A single-use pod containing a dose of specially-designed archotech mechanites. Upon activation, these archites will enter the user's body and remain there permanently, slightly enhancing their capabilities.</description>
+        
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+
+        <thingCategories Inherit="False">
+            <li>Turn_ThingCategory_ArchitePods</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ArchitePod</li>
+        </tradeTags>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectAddToRecord">
+                <record>Turn_Record_ArchitePodsUsed</record>
+                <amount>1</amount>
+            </li>
+        </comps>
+        
+    </ThingDef>
+
+    <!-- Pods that have incredibly niche, or in some cases outright silly applications -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchitePod" Name="ArchiteReinforcement.ArchitePod_Trivial" Abstract="True">
+        <graphicData>
+            <color>(0.4, 0.4, 0.4)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryLowFreq</li> <!-- Low freq because low desirability -->
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>750</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- Pods that affect gameplay, but can be scaled upwards quite a bit without serious balance implications -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchitePod" Name="ArchiteReinforcement.ArchitePod_Minor" Abstract="True">
+        <graphicData>
+            <color>(0.0, 1.0, 0.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryHighFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- The baseline for pods, in terms of gameplay impact -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchitePod" Name="ArchiteReinforcement.ArchitePod_Normal" Abstract="True">
+        <graphicData>
+            <color>(0.0, 0.0, 1.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryMidFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>1900</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <!-- Pods that, when stacked, can create ludicrously powerful pawns -->
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchitePod" Name="ArchiteReinforcement.ArchitePod_Major" Abstract="True">
+        <graphicData>
+            <color>(1.0, 0.0, 0.0)</color>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchitePrimaryLowFreq</li>
+        </thingSetMakerTags>
+
+        <statBases>
+            <MarketValue>3500</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef Name="ArchiteReinforcement.StatUpgrade_Trivial" Abstract="True">
+        <marketValuePerLevel>75</marketValuePerLevel>
+        <upgradeValue>0.75</upgradeValue>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <ArchiteReinforcement.StatArchiteDef Name="ArchiteReinforcement.StatUpgrade_Minor" Abstract="True">
+        <marketValuePerLevel>75</marketValuePerLevel>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <ArchiteReinforcement.StatArchiteDef Name="ArchiteReinforcement.StatUpgrade_Normal" Abstract="True">
+        <marketValuePerLevel>150</marketValuePerLevel>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <ArchiteReinforcement.StatArchiteDef Name="ArchiteReinforcement.StatUpgrade_Major" Abstract="True">
+        <marketValuePerLevel>300</marketValuePerLevel>
+        <upgradeValue>2.0</upgradeValue>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

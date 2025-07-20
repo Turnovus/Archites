@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== MAJOR PODS ==========-->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_Mood</defName>
+        <label>archite pod of joy</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Smile</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_Mood</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_Mood</defName>
+        <label>joy</label>
+        <description>Archites in the brain alter the host's perception of reality, giving them a more cheery disposition without affecting their risk-reward system.</description>
+        <upgradeType>Offset</upgradeType>
+        <baseOffset>0</baseOffset>
+        <effectPerLevel>1</effectPerLevel>
+        <statLabelOverride>natural mood</statLabelOverride>
+        <!-- High cost because pawns becoming too happy too quickly can be a serious balance issue -->
+        <upgradeValue>4.0</upgradeValue> 
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

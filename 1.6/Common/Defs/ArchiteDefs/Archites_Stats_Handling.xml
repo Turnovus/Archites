@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== MINOR PODS ==========-->
+    <!-- Tame Animal Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_TameAnimalChance</defName>
+        <label>archite pod of domestication</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_TameAnimalChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_TameAnimalChance</defName>
+        <label>domestication</label>
+        <description>Archites emanate a dim psychic aura around the host. The aura is tuned to the minds of wild animals, making them more likely to respond positively to taming attempts.</description>
+        <upgradeType>Factor</upgradeType>
+        <effectPerLevel>0.15</effectPerLevel>
+        <baseOffset>1</baseOffset>
+        <stat>TameAnimalChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Train Animal Chance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_TrainAnimalChance</defName>
+        <label>archite pod of commanding</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_TrainAnimalChance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_TrainAnimalChance</defName>
+        <label>commanding</label>
+        <description>Archites emanate a dim psychic aura around the host. The aura is tuned to the minds of domestic animals, making them more receptive towards commands.</description>
+        <upgradeType>Factor</upgradeType>
+        <effectPerLevel>0.15</effectPerLevel>
+        <baseOffset>1</baseOffset>
+        <stat>TrainAnimalChance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

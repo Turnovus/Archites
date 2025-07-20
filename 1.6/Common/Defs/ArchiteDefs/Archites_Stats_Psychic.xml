@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!--========== NORMAL PODS ==========-->
+    <!-- Psychic silence -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_PsychicSilence</defName>
+        <label>archite pod of silence</label>
+        
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PsychicSilence</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_PsychicSilence</defName>
+        <label>silence</label>
+        <description>Archites in the brain block incoming and outgoing psychic energies, dulling the host's psychic presence.</description>
+        <maxUses>16</maxUses>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>-0.0625</effectPerLevel>
+        <stat>PsychicSensitivity</stat>
+        <exclusionTags>
+            <li>PsychicSensitivity</li>
+            <li>PsychicEntropyGain</li>
+            <li>MeditationFocusGain</li>
+            <li>PsychicEntropyMax</li>
+            <li>PsychicEntropyRecoveryRate</li>
+        </exclusionTags>
+        <effectDescriptionOverride>reduces</effectDescriptionOverride>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--========== MAJOR PODS ==========-->
+    <!-- Psychic sensitivity -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Major">
+        <defName>Turn_ArchitePod_PsychicSensitivity</defName>
+        <label>archite pod of attunement</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Psychic</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PsychicSensitivity</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Major">
+        <defName>Turn_ArchiteUpgrade_PsychicSensitivity</defName>
+        <label>attunement</label>
+        <description>Archites in the brain amplify incoming and outgoing psychic energies, strengthening the host's psychic presence.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.030</effectPerLevel>
+        <levelProgressiveRate>0.1</levelProgressiveRate>
+        <stat>PsychicSensitivity</stat>
+        <exclusionTags>
+            <li>PsychicSensitivity</li>
+        </exclusionTags>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

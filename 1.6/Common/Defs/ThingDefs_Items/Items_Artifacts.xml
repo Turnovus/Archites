@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteThing">
+        <defName>Turn_ArchiteReinforcement_Chamber</defName>
+        <label>archite chamber</label>
+        <description>A storage device for countless archotech mechanites. The chamber is capable of infusing any humanoid with its contained archites. These archites will then proceed to permanently enhance some aspect of their new host.</description>
+
+        <relicChance>0</relicChance>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchiteChamber</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <thingSetMakerTags>
+            <li>RewardArchiteSecondary</li>
+        </thingSetMakerTags>
+        <tradeTags Inherit="False">
+            <li>ArchiteUpgrade</li>
+        </tradeTags>
+
+        <statBases>
+            <MarketValue>650</MarketValue>
+        </statBases>
+
+        <comps Inherit="False">
+            <li Class="CompProperties_Usable">
+                <useJob>UseArtifact</useJob>
+                <useLabel>Use {0_label}</useLabel>
+            </li>
+            <li Class="CompProperties_UseEffectDestroySelf" />
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteProgress">
+                <defaultStoredArchites>150</defaultStoredArchites>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ArchiteReinforcement.BaseArchiteThing">
+        <defName>Turn_ArchiteReinforcement_ReclaimedArchites</defName>
+        <label>reclaimed archites</label>
+        <description>A cluster of reclaimed archites that have shaped themselves into a crude chamber. The chamber is capable of infusing any humanoid with its contained archites. These archites will then proceed to permanently enhance some aspect of their new host.</description>
+
+        <relicChance>0</relicChance>
+        <tradeability>Sellable</tradeability>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ReclaimedArchites</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+
+        <statBases>
+            <MarketValue>160</MarketValue>
+        </statBases>
+
+        <comps Inherit="False">
+            <li Class="CompProperties_Usable">
+                <useJob>UseArtifact</useJob>
+                <useLabel>Use {0_label}</useLabel>
+            </li>
+            <li Class="CompProperties_UseEffectDestroySelf" />
+            <li Class="CompProperties_UseEffect">
+                <compClass>ArchiteReinforcement.CompUseEffect_ReclaimedArchites</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

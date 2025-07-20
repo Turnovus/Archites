@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <RecordDef>
+        <defName>Turn_Record_ArchitePodsUsed</defName>
+        <label>archite pods used</label>
+        <description>The number of archite pods I have used to improve my stats.</description>
+        <type>Int</type>
+    </RecordDef>
+
+    <RecordDef>
+        <defName>Turn_Record_ArchiteCellsUsed</defName>
+        <label>archite cells used</label>
+        <description>The number of archite cells I have used to improve my capacities.</description>
+        <type>Int</type>
+    </RecordDef>
+
+    <RecordDef>
+        <defName>Turn_Record_ArchitesAcquired_Stat</defName>
+        <label>stat archites acquired</label>
+        <description>The number of stat archite points I have acquired from chambers or other sources.</description>
+        <type>Float</type>
+    </RecordDef>
+
+    <RecordDef>
+        <defName>Turn_Record_ArchitesAcquired_Capacity</defName>
+        <label>capacity archites acquired</label>
+        <description>The number of capacity archite points I have acquired from chambers or other sources.</description>
+        <type>Float</type>
+    </RecordDef>
+
+    <RecordDef>
+        <defName>Turn_Record_ArchitesSpent_Stat</defName>
+        <label>stat archites spent</label>
+        <description>The number of archite points I have spent on improving my stats.</description>
+        <type>Float</type>
+    </RecordDef>
+
+    <RecordDef>
+        <defName>Turn_Record_ArchitesSpent_Capacity</defName>
+        <label>capacity archites spent</label>
+        <description>The number of archite points I have spent on improving my capacities.</description>
+        <type>Float</type>
+    </RecordDef>
+
+</Defs>

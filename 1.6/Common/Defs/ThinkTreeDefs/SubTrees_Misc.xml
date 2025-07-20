@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <ThinkTreeDef>
+        <defName>Turn_SubTree_WithdrawPillar</defName>
+        <insertTag>Humanlike_PostDuty</insertTag>
+        <insertPriority>60</insertPriority>
+        <thinkRoot Class="ArchiteReinforcement.JobGiver_ExtractArchites"/>
+    </ThinkTreeDef>
+
+</Defs>

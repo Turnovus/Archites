@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!-- UNUSED -->
+    <RulePackDef>
+        <defName>Turn_Namer_Archolexicon</defName>
+        <include>
+
+        </include>
+
+        <rulePack>
+            <rulesStrings>
+                <li>title->TODO</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

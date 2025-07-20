@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <!-- Root/Items/Artifacts/Archite -->
+    <ThingCategoryDef>
+        <defName>Turn_ThingCategory_Archites</defName>
+        <label>archite</label>
+        <parent>Artifacts</parent>
+    </ThingCategoryDef>
+
+    <!-- Root/Items/Artifacts/Archite/Pods -->
+    <ThingCategoryDef>
+        <defName>Turn_ThingCategory_ArchitePods</defName>
+        <label>pods</label>
+        <parent>Turn_ThingCategory_Archites</parent>
+    </ThingCategoryDef>
+
+    <!-- Root/Items/Artifacts/Archite/Cells -->
+    <ThingCategoryDef>
+        <defName>Turn_ThingCategory_ArchiteCells</defName>
+        <label>cells</label>
+        <parent>Turn_ThingCategory_Archites</parent>
+    </ThingCategoryDef>
+
+</Defs>

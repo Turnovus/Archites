@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    
+    <!-- Trap Spring Chance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="PawnTrapSpringChance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_PawnTrapSpringChance</architeDef>
+            </li>
+        </value>
+        <prepend>true</prepend>
+    </Operation>
+
+    <!-- Melee Armor Penetration -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MeleeArmorPenetration"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MeleeArmorPenetration</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Mortar Miss Radius Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MortarMissRadiusFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MortarMissRadiusFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Stagger Time Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="StaggerDurationFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_StaggerDurationFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Ranged Cooldown Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="RangedCooldownFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_RangedCooldownFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Melee Hit Chance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MeleeHitChance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MeleeHitChance</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Melee Dodge Chance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MeleeDodgeChance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MeleeDodgeChance</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Shooting Accuracy -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ShootingAccuracyPawn"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ShootingAccuracyPawn</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Aiming Time -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="AimingDelayFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_AimingDelayFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Incoming Damage Multiplier -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_IncomingDamageFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Melee Damage Factor -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MeleeDamageFactor</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

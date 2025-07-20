@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+    <SitePartDef>
+        <defName>Turn_Site_ArchiteCrucible</defName>
+        <label>archite crucible</label>
+        <description>An archotech device that can break down artifacts into archites for reuse. Capture the site and you can take the crucible with you.</description>
+        <workerClass>ArchiteReinforcement.SitePartWorker_ArchiteCrucible</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>ArchiteReinforcement/Things/Item/Artifact/ArchitePod</expandingIconTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
+        <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+        <tags>
+            <li>Turn_Site_ArchiteCrucible</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>Turn_GenStep_ArchiteCrucible</defName>
+        <linkWithSite>Turn_Site_ArchiteCrucible</linkWithSite>
+        <order>460</order>
+        <genStep Class="ArchiteReinforcement.GenStep_ArchiteCrucible">
+        </genStep>
+    </GenStepDef>
+
+</Defs>

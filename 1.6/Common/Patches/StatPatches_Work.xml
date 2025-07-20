@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Global work speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="WorkSpeedGlobal"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_WorkSpeedGlobal</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Repair Success Chance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="FixBrokenDownBuildingSuccessChance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_FixBrokenDownBuildingSuccessChance</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Cleaning Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="CleaningSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_CleaningSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Smoothing Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="SmoothingSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_SmoothingSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Animal Gather Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="AnimalGatherSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_AnimalGatherSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Construct Success Chance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ConstructSuccessChance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ConstructSuccessChance</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Mining Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MiningSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MiningSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Deep Drilling Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="DeepDrillingSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_DeepDrillingSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Research Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ResearchSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ResearchSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Plant Work Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="PlantWorkSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_PlantWorkSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Hunting Stealth -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="HuntingStealth"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_HuntingStealth</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Construction Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ConstructionSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ConstructionSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Mining Yield -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="MiningYield"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_MiningYield</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Animal Gather Yield -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="AnimalGatherYield"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_AnimalGatherYield</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Plant Gather Yield -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="PlantHarvestYield"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_PlantHarvestYield</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

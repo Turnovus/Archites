@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Armor - Sharp -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ArmorRating_Sharp"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ArmorRating_Sharp</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Armor - Blunt -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ArmorRating_Blunt"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ArmorRating_Blunt</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Armor - Heat -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="ArmorRating_Heat"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_ArmorRating_Heat</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Flammability -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="Flammability"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_Flammability</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

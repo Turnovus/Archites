@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+
+    <!--========== MINOR PODS ==========-->
+    <!-- My Opinion of Other Colonists -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_OpinionOutgoing</defName>
+        <label>archite pod of friendliness</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Smile</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_OpinionOutgoing</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_OpinionOutgoing</defName>
+        <label>friendliness</label>
+        <description>Archites in the brain alter the host's perception, causing them to be more appreciative of their peers.</description>
+        <upgradeType>Offset</upgradeType>
+        <baseOffset>0</baseOffset>
+        <effectPerLevel>1</effectPerLevel>
+        <statLabelOverride>host's opinion of others</statLabelOverride>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Other Humanlikes' Opinion of Me -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Minor">
+        <defName>Turn_ArchitePod_OpinionIncoming</defName>
+        <label>archite pod of popularity</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Smile</texPath>
+        </graphicData>
+
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_OpinionIncoming</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Minor">
+        <defName>Turn_ArchiteUpgrade_OpinionIncoming</defName>
+        <label>popularity</label>
+        <description>Archites in the brain alter the host's perception, causing them to be more appreciative of their peers.</description>
+        <upgradeType>Offset</upgradeType>
+        <baseOffset>0</baseOffset>
+        <effectPerLevel>1</effectPerLevel>
+        <statLabelOverride>everyone's opinion of host</statLabelOverride>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>

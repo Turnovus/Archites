@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/XenotypeDef[defName="Sanguophage"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.XenotypeExtension">
+                <architeGenChanceFactor>10</architeGenChanceFactor>
+                <architesNeverForbidden>true</architesNeverForbidden>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/XenotypeDef[defName="Neanderthal"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.XenotypeExtension">
+                <architeGenChanceFactor>0.5</architeGenChanceFactor>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>
