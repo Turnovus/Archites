@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiteReinforcement", "ArchiteReinforcement.csproj", "{91FDDA4B-F0E3-4784-83F3-27ED761BE364}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiteReinforcement", "ArchiteReinforcement\ArchiteReinforcement.csproj", "{91FDDA4B-F0E3-4784-83F3-27ED761BE364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
