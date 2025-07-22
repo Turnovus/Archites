@@ -28,7 +28,7 @@ namespace ArchiteReinforcement
 
         public bool ShowGizmos => Faction == Faction.OfPlayer; // I don't know how the compiler can read this but okay.
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (Rand.MTBEventOccurs(Tuning.architeMtbDays, GenDate.TicksPerDay, 1f))
