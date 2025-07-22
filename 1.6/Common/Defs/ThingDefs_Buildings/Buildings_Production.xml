@@ -28,7 +28,6 @@
 
         <castEdgeShadows>true</castEdgeShadows>
         <staticSunShadowHeight>0.20</staticSunShadowHeight>
-        <costStuffCount>50</costStuffCount>
 
         <!-- Copied from vanometric power cell -->
         <costList>
