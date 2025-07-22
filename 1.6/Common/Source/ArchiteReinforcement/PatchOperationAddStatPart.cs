@@ -12,8 +12,8 @@ namespace ArchiteReinforcement
     class PatchOperationAddStatPart : PatchOperationPathed
     {
 #pragma warning disable CS0649
-        private XmlContainer value;
-        bool prepend = false;
+        public XmlContainer value;
+        public bool prepend = false;
 #pragma warning restore CS0649
 
         protected override bool ApplyWorker(XmlDocument xml)
