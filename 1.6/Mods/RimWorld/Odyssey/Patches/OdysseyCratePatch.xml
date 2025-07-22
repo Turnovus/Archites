@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingSetMakerDef[defName="Reward_AncientSafe"]/root/options</xpath>
+        <value>
+            <li>
+                <weight>0.03</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                    <fixedParams>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryLowFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+            <li>
+                <weight>0.06</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                    <fixedParams>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryMidFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+            <li>
+                <weight>0.09</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                    <fixedParams>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryHighFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+        </value>
+    </Operation>
+</Patch>
