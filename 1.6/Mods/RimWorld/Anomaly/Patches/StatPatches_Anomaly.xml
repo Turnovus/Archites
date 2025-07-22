@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Study Efficiency -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="StudyEfficiency"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_StudyEfficiency</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

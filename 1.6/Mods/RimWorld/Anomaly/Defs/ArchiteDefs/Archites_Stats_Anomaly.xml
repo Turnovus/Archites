@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <!--========== NORMAL PODS ==========-->
+    <!-- Study Efficiency -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_StudyEfficiency</defName>
+        <label>archite pod of anomaly</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Bulb</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_StudyEfficiency</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_StudyEfficiency</defName>
+        <label>anomaly</label>
+        <description>Archites resonate with void-sourced archotechnology, improving comprehension of anomalous phenomena.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>StudyEfficiency</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>
