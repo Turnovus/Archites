@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+    <!-- Vacuum Resistance -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="VacuumResistance"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_VacuumResistance</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Fishing Speed -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="FishingSpeed"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_FishingSpeed</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- Piloting Ability -->
+    <Operation Class="ArchiteReinforcement.PatchOperationAddStatPart">
+        <xpath>Defs/StatDef[defName="PilotingAbility"]</xpath>
+        <value>
+            <li Class="ArchiteReinforcement.StatPart_ArchiteUpgrades">
+                <architeDef>Turn_ArchiteUpgrade_PilotingAbility</architeDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

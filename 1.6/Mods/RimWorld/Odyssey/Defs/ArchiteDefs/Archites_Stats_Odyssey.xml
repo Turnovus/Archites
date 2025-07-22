@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <!--========== NORMAL PODS ==========-->
+    <!-- Vacuum Resistance -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_VacuumResistance</defName>
+        <label>archite pod of space</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Shield</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_VacuumResistance</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_VacuumResistance</defName>
+        <label>space</label>
+        <description>Archites fortify the host's skin against negative-pressure environments, such as the vacuum of space.</description>
+        <upgradeType>Offset</upgradeType>
+        <effectPerLevel>0.01</effectPerLevel>
+        <maxUses>100</maxUses>
+        <stat>VacuumResistance</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!-- Fishing Speed -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_FishingSpeed</defName>
+        <label>archite pod of angling</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Work</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_FishingSpeed</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_FishingSpeed</defName>
+        <label>angling</label>
+        <description>Archites telepathically manipulate fish, making them easier for the host to catch.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>FishingSpeed</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+    <!--Piloting Ability -->
+    <ThingDef ParentName="ArchiteReinforcement.ArchitePod_Normal">
+        <defName>Turn_ArchitePod_PilotingAbility</defName>
+        <label>archite pod of aviation</label>
+
+        <graphicData>
+            <texPath>ArchiteReinforcement/Things/Item/Artifact/ArchitePod/ArchitePod_Wing</texPath>
+        </graphicData>
+        
+        <comps>
+            <li Class="ArchiteReinforcement.CompProperties_UseEffectArchiteUpgrade">
+                <upgrade>Turn_ArchiteUpgrade_PilotingAbility</upgrade>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ArchiteReinforcement.StatArchiteDef ParentName="ArchiteReinforcement.StatUpgrade_Normal">
+        <defName>Turn_ArchiteUpgrade_PilotingAbility</defName>
+        <label>aviation</label>
+        <description>Archites assist the host with piloting craft.</description>
+        <upgradeType>Factor</upgradeType>
+        <baseOffset>1</baseOffset>
+        <effectPerLevel>0.05</effectPerLevel>
+        <stat>PilotingAbility</stat>
+    </ArchiteReinforcement.StatArchiteDef>
+
+</Defs>
