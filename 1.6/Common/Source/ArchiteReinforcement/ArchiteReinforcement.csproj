@@ -12,4 +12,11 @@
       <DebugType>none</DebugType>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
+    </ItemGroup>
+
 </Project>

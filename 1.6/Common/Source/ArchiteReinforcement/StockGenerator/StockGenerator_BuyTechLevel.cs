@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using RimWorld;
+using RimWorld.Planet;
 
 namespace ArchiteReinforcement
 {
@@ -14,7 +15,7 @@ namespace ArchiteReinforcement
         public TechLevel techLevel;
 #pragma warning restore CS0649
 
-        public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null) =>
+        public override IEnumerable<Thing> GenerateThings(PlanetTile forTile, Faction faction = null) =>
             Enumerable.Empty<Thing>();
 
         public override bool HandlesThingDef(ThingDef thingDef) =>
