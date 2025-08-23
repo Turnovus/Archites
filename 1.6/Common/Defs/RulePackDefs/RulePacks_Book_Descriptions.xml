@@ -22,7 +22,9 @@
 
 
                 <li>production->[ANYPAWN_label] was [working_for] a [impressive_figure] [reason_for_creation]</li>
-                <li>production->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
+                <li>production(p=3)->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
+                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] was [tasked] to [produced] it</li>
+                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it
                 <li>production->[ANYPAWN_label] was [tasked] by a [impressive_figure] to [produce] it [reason_for_creation]</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it [reason_for_creation]</li>
@@ -58,7 +60,7 @@
                 <li>interesting_fact->Prolonged exposure to this book has been linked to the onset of several rare health conditions</li>
                 <li>interesting_fact->This book's true title is unpronounceable by any human language</li>
 
-                <li>interesting_fact(p=3)->This book is not a book, but rather a book-shaped [cool_thing]. [unfortunately] [it_does_not_work]</li>
+                <li>interesting_fact(p=2.5)->This book is not a book, but rather a book-shaped [cool_thing]. [unfortunately] [it_does_not_work]</li>
 
 
                 <li>book->almanac</li>
@@ -72,11 +74,14 @@
 
 
                 <li>cool->archotech</li>
+                <li>cool->gravtech</li>
                 <li>cool->highly advanced</li>
                 <li>cool->highly improbable</li>
                 <li>cool->near-impossible</li>
                 <li>cool->sophisticated</li>
                 <li>cool->technologically advanced</li>
+                <li>cool->ultratech</li>
+                <li>cool->vanometric</li>
 
 
                 <li>cool_thing(p=4)->[thing]</li>
@@ -110,16 +115,16 @@
                 <li>family_member->cousin</li>
                 <li>family_member->kin</li>
 
-                <li>family_member(p=0.5)->aunt</li>
-                <li>family_member(p=0.5)->neice</li>
-                <li>family_member(p=0.5)->nephew</li>
-                <li>family_member(p=0.5)->uncle</li>
+                <li>family_member(p=0.5)->graddaughter</li>
+                <li>family_member(p=0.5)->grandfather</li>
+                <li>family_member(p=0.5)->grandmother</li>
+                <li>family_member(p=0.5)->grandson</li>
 
-                <li>family_member(p=0.2)->graddaughter</li>
-                <li>family_member(p=0.2)->grandfather</li>
-                <li>family_member(p=0.2)->grandmother</li>
-                <li>family_member(p=0.2)->grandson</li>
-
+                <li>family_member(p=0.2)->aunt</li>
+                <li>family_member(p=0.2)->neice</li>
+                <li>family_member(p=0.2)->nephew</li>
+                <li>family_member(p=0.2)->uncle</li>
+                <li>family_member(p=0.2)->cousin</li>
 
                 <li>figure->anthropologist</li>
                 <li>figure->archaeologist</li>
@@ -155,6 +160,7 @@
 
 
                 <li>impressive->ancient</li>
+                <li>impressive->bionically enhanced</li>
                 <li>impressive->centuries-old</li>
                 <li>impressive->deranged</li>
                 <li>impressive->fanatical</li>
@@ -171,6 +177,7 @@
                 <li>impressive->reviled</li>
                 <li>impressive->rogue</li>
                 <li>impressive->terrible</li>
+                <li>impressive->wealthy</li>
                 <li>impressive->well-known</li>
 
 
@@ -199,8 +206,9 @@
                 <li>mysterious->ancient</li>
                 <li>mysterious->bizarre</li>
                 <li>mysterious->eccentric</li>
+                <li>mysterious->esoteric</li>
                 <li>mysterious->exotic</li>
-                <li>mysteropis->improbable</li>
+                <li>mysterious->improbable</li>
                 <li>mysterious->mysterious</li>
                 <li>mysterious->peculiar</li>
                 <li>mysterious->strange</li>
@@ -237,6 +245,9 @@
                 <li>reason_for_creation->after being inspired to do so</li>
                 <li>reason_for_creation->after receiving a severe concussion</li>
                 <li>reason_for_creation->while incredibly drunk</li>
+                <li>reason_for_creation->by accident</li>
+                <li>reason_for_creation->for lust of [wealth]</li>
+                <li>reason_for_creation->to acquire [wealth]</li>
 
 
                 <li>safety->continued existance</li>
@@ -244,6 +255,7 @@
                 <li>safety->health</li>
                 <li>safety->immortality</li>
                 <li>safety->life</li>
+                <li>safety(p=0.5)->profit margins</li>
                 <li>safety->safe passage</li>
                 <li>safety->safety</li>
                 <li>safety->survival</li>
@@ -268,8 +280,12 @@
                 <li>stories->tales</li>
 
 
+                <li>tasked->asked</li>
+                <li>tasked->compelled</li>
                 <li>tasked->commanded</li>
+                <li>tasked->commissioned</li>
                 <li>tasked->forced</li>
+                <li>tasked->inspired</li>
                 <li>tasked->instructed</li>
                 <li>tasked->ordered</li>
                 <li>tasked->tasked</li>
@@ -281,6 +297,9 @@
                 <li>that_is_cool->beyond human comprehension</li>
                 <li>that_is_cool->unlike any other</li>
                 <li>that_is_cool->made of a [mysterious] metamaterial</li>
+                <li>that_is_cool->with godlike power</li>
+                <li>that_is_cool->which could bend the fabric of reality</li>
+                <li>that_is_cool->described in ancient legend</li>
 
 
                 <li>thing->anomaly</li>
@@ -288,6 +307,9 @@
                 <li>thing->bioreactor</li>
                 <li>thing->cube</li>
                 <li>thing->fusion reactor</li>
+                <li>thing(p=0.33)->grav engine</li>
+                <li>thing(p=0.33)->gravcore</li>
+                <li>thing(p=0.33)->gravship</li>
                 <li>thing->hypercomputer</li>
                 <li>thing->interdimensional gateway</li>
                 <li>thing->interstellar vessel</li>
@@ -311,6 +333,7 @@
 
 
                 <li>title_any->the [impressive_figure]</li>
+                <li>title_any(p=0.3)->the [mysterious] [impressive_figure]</li>
 
 
                 <li>unfortunately->Unfortunately,</li>
@@ -319,8 +342,21 @@
                 <li>unfortunately->Sadly,</li>
 
 
+                <li>working_for->by order of</li>
                 <li>working_for->serving under</li>
+                <li>working_for->under the guidance of</li>
                 <li>working_for->working for</li>
+
+
+                <li>wealth->[mysterious] knowledge</li>
+                <li>wealth->fame</li>
+                <li>wealth->fortune</li>
+                <li>wealth->glory</li>
+                <li>wealth->honor</li>
+                <li>wealth->money</li>
+                <li>wealth->power</li>
+                <li>wealth->profit</li>
+                <li>wealth->wealth</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
