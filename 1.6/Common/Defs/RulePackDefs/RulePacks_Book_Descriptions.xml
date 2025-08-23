@@ -9,9 +9,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>desc(p=4)->[summary]. [production].\n\n[contents].\n\n[interesting_fact].</li>
+                <li>desc(p=2)->[summary]. [production].\n\n[contents].\n\n[interesting_fact].</li>
                 <li>desc->[summary]. [contents].\n\n[production].\n\n[interesting_fact].</li>
                 <li>desc->[summary]. [interesting_fact].\n\n[contents].\n\n[production].</li>
+                <li>desc(p=2)->[summary_uncertain].\n\n[contents_unknown_author].\n\n[interesting_fact].</li>
 
                 
                 <li>summary->A [detailed_book] [created] by [somebody]</li>
@@ -23,21 +24,27 @@
 
                 <li>production->[ANYPAWN_label] was [working_for] a [impressive_figure] [reason_for_creation]</li>
                 <li>production(p=3)->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
-                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] was [tasked] to [produced] it</li>
-                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it
+                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] was [tasked] to [produce] it</li>
                 <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it</li>
                 <li>production->[ANYPAWN_label] was [tasked] by a [impressive_figure] to [produce] it [reason_for_creation]</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it [reason_for_creation]</li>
 
 
-                <li>contents->It appears to describe a [cool_thing] in great detail</li>
-                <li>contents->It tells a story of a [cool_thing] [long_ago]</li>
-                <li>contents->It contains a story about a [impressive_figure] who discovers a [cool_thing]</li>
-                <li>contents->Inside, [ANYPAWN_label] recounts [ANYPAWN_possessive] encounter with a [cool_thing]</li>
-                <li>contents->It contains thousands upon thousands of [stories], all of which describe the same [cool_thing]</li>
+                <li>contents(p=4)->[contents_unknown_author]</li>
+                <li>contents->[contents_known_author]</li>
 
-                <li>contents(p=0.2)->Although it only contains the word "[r_seed]" repeated over and over, reading it is oddly edifying</li>
+
+                <li>contents_unknown_author->It appears to describe a [cool_thing] in great detail</li>
+                <li>contents_unknown_author->It tells a story of a [cool_thing] [long_ago]</li>
+                <li>contents_unknown_author->It contains a story about a [impressive_figure] who discovers a [cool_thing]</li>
+                <li>contents_unknown_author->It contains thousands upon thousands of [stories], all of which describe the same [cool_thing]</li>
+
+                <li>contents_unknown_author(p=0.2)->Although it only contains the word "[r_seed]" repeated over and over, reading it is oddly edifying</li>
+
+
+                <li>contents_known_author->Inside, [ANYPAWN_label] [explains] [ANYPAWN_possessive] [experience] with a [cool_thing]</li>
+                <li>contents_known_author->It contains [stories] about [ANYPAWN_label]'s [experience]s with a [cool_thing]</li>
                 
                 
                 <li>interesting_fact->Physically speaking, this book technically does not exist</li>
@@ -62,6 +69,18 @@
                 <li>interesting_fact->This book's true title is unpronounceable by any human language</li>
 
                 <li>interesting_fact(p=2.5)->This book is not a book, but rather a book-shaped [cool_thing]. [unfortunately] [it_does_not_work]</li>
+
+
+                <li>summary_uncertain->[intro_uncertain]</li>
+                <li>summary_uncertain->[intro_uncertain]. [production_uncertain]</li>
+
+
+                <li>intro_uncertain->The reason for this [book]'s [existance] [is_unknown]</li>
+                <li>intro_uncertain->Why this [book] was [created] [is_unkown]</li>
+
+
+                <li>production_uncertain->[perhaps] the author [produced] it [reason_for_creation]</li>
+                <li>production_uncertain->Judging by its contents, it was likely made for [wealth]</li>
 
 
                 <li>book->almanac</li>
@@ -200,7 +219,10 @@
                 <li>it_does_not_work(p=0.2)->the software license has expired</li>
 
 
+                <li>long_ago->according to ancient legend</li>
+                <li>long_ago->ages ago</li>
                 <li>long_ago->centuries ago</li>
+                <li>long_ago->in a distant era</li>
                 <li>long_ago->in the distant past</li>
 
 
@@ -301,6 +323,7 @@
                 <li>that_is_cool->with godlike power</li>
                 <li>that_is_cool->which could bend the fabric of reality</li>
                 <li>that_is_cool->described in ancient legend</li>
+                <li>that_is_cool->containing advanced technology</li>
 
 
                 <li>thing->anomaly</li>
@@ -328,6 +351,8 @@
 
 
                 <li>title_pre(p=10)->[title_any]</li>
+                <li>title_pre->Doctor</li>
+                <li>title_pre->Professor</li>
 
 
                 <li>title_post(p=10)->[title_any]</li>
@@ -358,6 +383,37 @@
                 <li>wealth->power</li>
                 <li>wealth->profit</li>
                 <li>wealth->wealth</li>
+
+
+                <li>explains->describes</li>
+                <li>explains->explains</li>
+                <li>explains->recalls</li>
+                <li>explains->recounts</li>
+                <li>explains->writes about</li>
+
+
+                <li>experience->adventure</li>
+                <li>experience->conflict</li>
+                <li>experience->encounter</li>
+                <li>experience->experience</li>
+                <li>experience->experiment</li>
+                <li>experience->struggle</li>
+
+
+                <li>is_unknown->cannot be determined</li>
+                <li>is_unknown->is unknown</li>
+                <li>is_unknown->was lost to time</li>
+
+
+                <li>existance->being</li>
+                <li>existance->creation</li>
+                <li>existance->existance</li>
+
+
+                <li>perhaps->according to legend,</li>
+                <li>perhaps->it is said that</li>
+                <li>perhaps->perhaps</li>
+                <li>perhaps->some say</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
