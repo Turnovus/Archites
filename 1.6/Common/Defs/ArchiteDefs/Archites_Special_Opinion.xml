@@ -26,7 +26,7 @@
         <description>Archites in the brain alter the host's perception, causing them to be more appreciative of their peers.</description>
         <upgradeType>Offset</upgradeType>
         <baseOffset>0</baseOffset>
-        <effectPerLevel>1</effectPerLevel>
+        <effectPerLevel>3</effectPerLevel>
         <statLabelOverride>host's opinion of others</statLabelOverride>
     </ArchiteReinforcement.StatArchiteDef>
 
@@ -52,7 +52,7 @@
         <description>Archites in the brain alter the host's perception, causing them to be more appreciative of their peers.</description>
         <upgradeType>Offset</upgradeType>
         <baseOffset>0</baseOffset>
-        <effectPerLevel>1</effectPerLevel>
+        <effectPerLevel>3</effectPerLevel>
         <statLabelOverride>everyone's opinion of host</statLabelOverride>
     </ArchiteReinforcement.StatArchiteDef>
 
