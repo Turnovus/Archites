@@ -50,7 +50,7 @@ namespace ArchiteReinforcement
         public BodyPartRecord CorePart(Pawn pawn) => pawn.RaceProps.body.corePart;
     }
 
-    public class CompProperties_UseEffectInstallBeacon : CompProperties_Usable
+    public class CompProperties_UseEffectInstallBeacon : CompProperties_UseEffect
     {
         public HediffDef hediffDef;
         public bool allowNonColonists;
