@@ -25,6 +25,7 @@
                 <li>production(p=3)->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
                 <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] was [tasked] to [produced] it</li>
                 <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it
+                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it</li>
                 <li>production->[ANYPAWN_label] was [tasked] by a [impressive_figure] to [produce] it [reason_for_creation]</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it [reason_for_creation]</li>
