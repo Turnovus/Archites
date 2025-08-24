@@ -28,10 +28,14 @@ namespace ArchiteReinforcement
 
         public bool ShowGizmos => Faction == Faction.OfPlayer; // I don't know how the compiler can read this but okay.
 
-        protected override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
-            if (Rand.MTBEventOccurs(Tuning.architeMtbDays, GenDate.TicksPerDay, 1f))
+            base.TickInterval(delta);
+
+            if (!Spawned)
+                return;
+            
+            if (Rand.MTBEventOccurs(Tuning.architeMtbDays, GenDate.TicksPerDay, delta))
                 AddRandomArchite();
         }
 
