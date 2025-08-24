@@ -57,7 +57,7 @@
         <minifiedDef>MinifiedThing</minifiedDef>
 
         <statBases>
-            <MarketValue>5500</MarketValue> <!-- TODO: Balance -->
+            <MarketValue>3500</MarketValue> <!-- TODO: Balance -->
             <MaxHitPoints>350</MaxHitPoints>
             <Flammability>0</Flammability>
             <Beauty>0</Beauty>
