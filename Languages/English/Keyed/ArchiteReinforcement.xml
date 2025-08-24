@@ -46,8 +46,8 @@
     <ArchiteReinforcement.DescriptionMaxLevel>Max uses: {0}</ArchiteReinforcement.DescriptionMaxLevel>
     <ArchiteReinforcement.DescriptionMaxLevel.Unlimited>Unlimited</ArchiteReinforcement.DescriptionMaxLevel.Unlimited>
 
-    <ArchiteReinforcement.PawnGainedUpgrade>{0} has a new {1} archite point to spend.</ArchiteReinforcement.PawnGainedUpgrade>
-    <ArchiteReinforcement.PawnGainedUpgrade.Plural>{0} has {2} new {1} archites to spend.</ArchiteReinforcement.PawnGainedUpgrade.Plural>
+    <ArchiteReinforcement.PawnGainedUpgrade>{0} has a new {1} upgrade point to spend.</ArchiteReinforcement.PawnGainedUpgrade>
+    <ArchiteReinforcement.PawnGainedUpgrade.Plural>{0} has {2} new {1} upgrade points to spend.</ArchiteReinforcement.PawnGainedUpgrade.Plural>
 
     <ArchiteReinforcement.InspectCapacityCount>Capacity archites: {0}</ArchiteReinforcement.InspectCapacityCount>
     <ArchiteReinforcement.InspectStatCount>Stat Archites: {0}</ArchiteReinforcement.InspectStatCount>
