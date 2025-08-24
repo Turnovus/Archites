@@ -22,7 +22,7 @@
         </tradeTags>
 
         <statBases>
-            <MarketValue>650</MarketValue>
+            <MarketValue>850</MarketValue>
         </statBases>
 
         <comps Inherit="False">
