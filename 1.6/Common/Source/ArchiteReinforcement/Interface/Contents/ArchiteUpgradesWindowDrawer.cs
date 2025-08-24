@@ -37,7 +37,7 @@ namespace ArchiteReinforcement
             CompArchiteTracker tracker,
             Rect rect,
             ref Vector2 capacityScrollPosition,
-            ref Vector2 StatScrollPosition,
+            ref Vector2 statScrollPosition,
             bool allowPurchases
         )
         {
@@ -57,7 +57,7 @@ namespace ArchiteReinforcement
             FillCapacityUpgradeList(tracker, capacityUpgradeRect, allowPurchases, ref capacityScrollPosition);
 
             Rect statUpgradeRect = new Rect(0, progressRectHeight + listRectHeight, mainRectWidth, listRectHeight);
-            FillStatUpgradeList(tracker, statUpgradeRect, allowPurchases, ref StatScrollPosition);
+            FillStatUpgradeList(tracker, statUpgradeRect, allowPurchases, ref statScrollPosition);
 
             GUI.EndGroup(); // mainRect
         }
@@ -298,10 +298,14 @@ namespace ArchiteReinforcement
             if (!allowPurchases)
                 return;
 
+            string upgradeTypeKey = upgrade is StatArchiteDef
+                ? "ArchiteReinforcement.UpgradeTypeStat"
+                : "ArchiteReinforcement.UpgradeTypeCapacity";
+
             Rect costRect = new Rect(rect.x + halfWidth, rect.y, halfWidth, halfHeight);
             Widgets.Label(costRect, "ArchiteReinforcement.MenuItemCost".Translate(
                 upgrade.upgradeValue.ToStringByStyle(ToStringStyle.FloatMaxTwo),
-                "ArchiteReinforcement.UpgradeTypeCapacity".Translate()
+                upgradeTypeKey.Translate()
             ));
 
             Rect buttonRect = new Rect(rect.x + halfWidth, rect.y + halfHeight, halfWidth, halfHeight);
@@ -318,7 +322,7 @@ namespace ArchiteReinforcement
         {
             if (budget < upgrade.upgradeValue)
                 return;
-            if (upgrade.maxUses != null && upgrade.maxUses == level)
+            if (upgrade.maxUses != null && upgrade.maxUses <= level)
                 return;
 
             if (Widgets.ButtonText(rect, "ArchiteReinforcement.MenuItemButton".Translate()))
