@@ -1,17 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Defs>
-
-    <!-- UNUSED -->
     <RulePackDef>
         <defName>Turn_Namer_Archolexicon</defName>
         <include>
-
+            <li>ArtNameUtility</li>
         </include>
 
         <rulePack>
             <rulesStrings>
-                <li>title->TODO</li>
+                <li>title->[some_words] [number_any]</li>
+                <li>title->[some_words]</li>
+                <li>title(p=0.5)->[Game] of [big_word]</li>
+
+
+                <li>some_words->[word_any]</li>
+                <li>some_words->[word_any] [word_any]</li>
+
+
+                <li>word_any(p=0.3)->[ConceptAny]</li>
+                <li>word_any->[big_word]</li>
+
+
+                <li>big_word->[big_word_start][big_word_end]</li>
+                <li>big_word(p=0.8)->[big_word_start][big_word_middle][big_word_end]</li>
+
+
+                <li>big_word_start->archo</li>
+                <li>big_word_start->bio</li>
+                <li>big_word_start->calcu</li>
+                <li>big_word_start->compu</li>
+                <li>big_word_start->crypto</li>
+                <li>big_word_start->cyto</li>
+                <li>big_word_start->electro</li>
+                <li>big_word_start->lexi</li>
+                <li>big_word_start->necro</li>
+                <li>big_word_start->presti</li>
+                <li>big_word_start->psycho</li>
+                <li>big_word_start->quasi</li>
+                <li>big_word_start->techno</li>
+                <li>big_word_start(p=0.25)->trickno</li>
+
+
+                <li>big_word_middle->bi</li>
+                <li>big_word_middle->coni</li>
+                <li>big_word_middle->digi</li>
+                <li>big_word_middle->lo</li>
+                <li>big_word_middle->magi</li>
+                <li>big_word_middle->nomi</li>
+
+
+                <li>big_word_end->cs</li>
+                <li>big_word_end->con</li>
+                <li>big_word_end->logy</li>
+                <li>big_word_end->lus</li>
+                <li>big_word_end->magus</li>
+                <li>big_word_end->nomics</li>
+                <li>big_word_end->tech</li>
+                <li>big_word_end->tor</li>
+                <li>big_word_end->tronics</li>
+
+
+                <li>number_any->[digit_first]000</li>
+                <li>number_any->[digit_first][digit_any][digit_any]</li>
+
+
+                <li>digit_any->0</li>
+                <li>digit_any(p=9)->[digit_first]</li>
+
+
+                <li>digit_first->1</li>
+                <li>digit_first->2</li>
+                <li>digit_first->3</li>
+                <li>digit_first->4</li>
+                <li>digit_first->5</li>
+                <li>digit_first->6</li>
+                <li>digit_first->7</li>
+                <li>digit_first->8</li>
+                <li>digit_first->6</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>

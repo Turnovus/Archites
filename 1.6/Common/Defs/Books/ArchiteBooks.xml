@@ -22,7 +22,7 @@
 
         <comps>
             <li Class="CompProperties_Book">
-                <nameMaker>Namer_Novel</nameMaker>
+                <nameMaker>Turn_Namer_Archolexicon</nameMaker>
                 <descriptionMaker>Turn_Description_Archolexicon</descriptionMaker>
                 <ageYearsRange>500~5480</ageYearsRange>
                 <openGraphic>
