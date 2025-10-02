@@ -298,9 +298,7 @@ namespace ArchiteReinforcement
             if (!allowPurchases)
                 return;
 
-            string upgradeTypeKey = upgrade is StatArchiteDef
-                ? "ArchiteReinforcement.UpgradeTypeStat"
-                : "ArchiteReinforcement.UpgradeTypeCapacity";
+            string upgradeTypeKey = upgrade.UpgradeTypeNameKey;
 
             Rect costRect = new Rect(rect.x + halfWidth, rect.y, halfWidth, halfHeight);
             Widgets.Label(costRect, "ArchiteReinforcement.MenuItemCost".Translate(

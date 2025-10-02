@@ -25,6 +25,8 @@ namespace ArchiteReinforcement
 
         public abstract string NameOfThingToUpgradeLower { get; }
         public abstract string NameOfThingToUpgrade { get; }
+        
+        public abstract string UpgradeTypeNameKey { get; }
 
         public float ModAtLevel(int level)
         {
@@ -215,6 +217,7 @@ namespace ArchiteReinforcement
 
         public override string NameOfThingToUpgradeLower => statLabelOverride ?? stat?.label ?? "ArchiteReinforcement.UpgradeNameFallback.Lower".Translate();
         public override string NameOfThingToUpgrade => statLabelOverride?.CapitalizeFirst() ?? stat?.LabelCap ?? "ArchiteReinforcement.UpgradeNameFallback".Translate();
+        public override string UpgradeTypeNameKey => "ArchiteReinforcement.UpgradeTypeStat";
 
         public override int CompareTo(ArchiteDef other)
         {
@@ -249,6 +252,7 @@ namespace ArchiteReinforcement
 
         public override string NameOfThingToUpgradeLower => capacity.label;
         public override string NameOfThingToUpgrade => capacity.LabelCap;
+        public override string UpgradeTypeNameKey => "ArchiteReinforcement.UpgradeTypeStat";
 
         public override int CompareTo(ArchiteDef other)
         {
