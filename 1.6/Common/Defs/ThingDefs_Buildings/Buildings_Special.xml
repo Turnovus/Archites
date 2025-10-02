@@ -38,8 +38,8 @@
         </comps>
         <modExtensions>
             <li Class="ArchiteReinforcement.ArchitePillarTuning">
-                <architeMtbDays>0.55</architeMtbDays>
-                <extraArchiteChance>0.20</extraArchiteChance>
+                <architeMtbDays>0.16</architeMtbDays>
+                <extraArchiteChance>0.25</extraArchiteChance>
             </li>
         </modExtensions>
 
