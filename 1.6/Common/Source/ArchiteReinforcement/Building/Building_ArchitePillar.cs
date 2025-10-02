@@ -28,6 +28,8 @@ namespace ArchiteReinforcement
 
         public bool ShowGizmos => Faction == Faction.OfPlayer; // I don't know how the compiler can read this but okay.
 
+        public bool ShouldAutoWithdraw => CanWithdraw && collectAt <= capArchites + statArchites;
+
         protected override void TickInterval(int delta)
         {
             base.TickInterval(delta);

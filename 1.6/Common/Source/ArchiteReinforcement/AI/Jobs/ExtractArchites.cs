@@ -40,6 +40,9 @@ namespace ArchiteReinforcement
     {
         protected override Job TryGiveJob(Pawn pawn)
         {
+            if (pawn.Map.listerBuildings.AllBuildingsColonistOfDef(MyDefOf.Turn_Building_ArchitePillar).Count <= 0)
+                return null;
+            
             Predicate<Thing> validator = delegate(Thing t)
             {
                 if (!(t is Building_ArchitePillar pillar))
@@ -48,12 +51,12 @@ namespace ArchiteReinforcement
                     return false;
                 if (pillar.IsBurning())
                     return false;
-                return pillar.AssignedPawn == pawn && pillar.CanWithdraw;
+                return pillar.AssignedPawn == pawn && pillar.ShouldAutoWithdraw;
             };
             Thing thing = GenClosest.ClosestThing_Global_Reachable(
                 pawn.Position,
                 pawn.Map,
-                pawn.Map.listerBuildings.allBuildingsColonist,
+                pawn.Map.listerBuildings.AllBuildingsColonistOfDef(MyDefOf.Turn_Building_ArchitePillar),
                 PathEndMode.Touch,
                 TraverseParms.For(pawn),
                 9999f,
