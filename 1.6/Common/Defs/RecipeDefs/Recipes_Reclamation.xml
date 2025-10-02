@@ -61,6 +61,10 @@
                     <thingDefs>
                         <li>Apparel_PsychicShockLance</li>
                         <li>Apparel_PsychicInsanityLance</li>
+                        <li MayRequire="Ludeon.RimWorld.Biotech">ArchiteCapsule</li>
+
+                        <li MayRequire="vanillaracesexpanded.archon">VREA_Apparel_Archoplate</li>
+                        <li MayRequire="vanillaracesexpanded.archon">VREA_MeleeWeapon_ArchobladeBladelink</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -78,6 +82,9 @@
                 <li>Apparel_PsychicShockLance</li>
                 <li>Apparel_PsychicInsanityLance</li>
                 <li MayRequire="Ludeon.RimWorld.Biotech">ArchiteCapsule</li>
+
+                <li MayRequire="vanillaracesexpanded.archon">VREA_Apparel_Archoplate</li>
+                <li MayRequire="vanillaracesexpanded.archon">VREA_MeleeWeapon_ArchobladeBladelink</li>
             </thingDefs>
         </fixedIngredientFilter>
 
