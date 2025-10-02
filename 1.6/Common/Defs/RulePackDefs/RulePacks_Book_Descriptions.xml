@@ -23,15 +23,15 @@
 
 
                 <li>production->[ANYPAWN_label] was [working_for] a [impressive_figure] [reason_for_creation]</li>
-                <li>production(p=3)->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
+                <li>production(p=6)->[ANYPAWN_label] [produced] it [reason_for_creation]</li>
                 <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] was [tasked] to [produce] it</li>
-                <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it</li>
+                <!-- <li>production(p=3)->[reason_for_creation], [ANYPAWN_label] [produced] it</li> -->
                 <li>production->[ANYPAWN_label] was [tasked] by a [impressive_figure] to [produce] it [reason_for_creation]</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it</li>
                 <li>production->A [impressive_figure] [tasked] [ANYPAWN_label] to [produce] it [reason_for_creation]</li>
 
 
-                <li>contents(p=4)->[contents_unknown_author]</li>
+                <li>contents(p=1.5)->[contents_unknown_author]</li>
                 <li>contents->[contents_known_author]</li>
 
 
@@ -231,6 +231,7 @@
                 <li>mysterious->eccentric</li>
                 <li>mysterious->esoteric</li>
                 <li>mysterious->exotic</li>
+                <li>mysterious->forbidden</li>
                 <li>mysterious->improbable</li>
                 <li>mysterious->mysterious</li>
                 <li>mysterious->peculiar</li>
@@ -376,6 +377,7 @@
 
                 <li>wealth->[mysterious] knowledge</li>
                 <li>wealth->fame</li>
+                <li>wealth(p=0.2)->friendship</li>
                 <li>wealth->fortune</li>
                 <li>wealth->glory</li>
                 <li>wealth->honor</li>
@@ -401,7 +403,10 @@
 
 
                 <li>is_unknown->cannot be determined</li>
+                <li>is_unknown->is shrouded in mystery</li>
+                <li>is_unknown->is unclear</li>
                 <li>is_unknown->is unknown</li>
+                <li>is_unknown->is widely debated</li>
                 <li>is_unknown->was lost to time</li>
 
 
