@@ -1,11 +1,5 @@
-1.4/Common/Source/ArchiteReinforcement/.vs/
-1.4/Common/Source/ArchiteReinforcement/bin/
-1.4/Common/Source/ArchiteReinforcement/obj/
-1.5/Common/Source/ArchiteReinforcement/.vs/
-1.5/Common/Source/ArchiteReinforcement/bin/
-1.5/Common/Source/ArchiteReinforcement/obj/
-1.6/Common/Source/ArchiteReinforcement/.vs/
-1.6/Common/Source/ArchiteReinforcement/bin/
-1.6/Common/Source/ArchiteReinforcement/obj/
 *.csproj.user
 *.idea/
+*.user
+*obj/
+*bin/
