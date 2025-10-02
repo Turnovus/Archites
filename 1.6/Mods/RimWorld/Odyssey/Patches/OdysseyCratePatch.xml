@@ -42,4 +42,46 @@
             </li>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingSetMakerDef[defName="MapGen_ScarlandsHermeticCrate" or defName="Reward_AncientSealedContainer"]/root/options</xpath>
+        <value>
+            <li>
+                <weight>0.05</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                    <fixedParams>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryLowFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+            <li>
+                <weight>0.15</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                    <fixedParams>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryMidFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+            <li>
+                <weight>0.25</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                    <fixedParams>
+                        <filter>
+                            <thingSetMakerTagsToAllow>
+                                <li>RewardArchitePrimaryHighFreq</li>
+                            </thingSetMakerTagsToAllow>
+                        </filter>
+                    </fixedParams>
+                </thingSetMaker>
+            </li>
+        </value>
+    </Operation>
 </Patch>
