@@ -32,6 +32,10 @@ namespace ArchiteReinforcement
 
             foreach (Thing ingredient in ingredients)
             {
+                CompBiocodable biocodable = ingredient.TryGetComp<CompBiocodable>();
+                if (biocodable != null)
+                    biocodable.UnCode();
+                
                 capacityArchites += CapacityArchitesFrom(ingredient);
                 statArchites += StatArchitesFrom(ingredient);
             }
