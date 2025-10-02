@@ -10,20 +10,22 @@ namespace ArchiteReinforcement
 {
     public class BookOutcomeProperties_GainArchites : BookOutcomeProperties
     {
+        public float bothChance;
+        public float capacitySpecializeChance;
+        public float mixedBookEffectivenessFactor;
+
+        public float baseArchiteRate;
+        public float architeRatePerQuality;
+        
         public override Type DoerClass => typeof(BookOutcomeDoer_GainArchites);
     }
 
     public class BookOutcomeDoer_GainArchites : BookOutcomeDoer
     {
-        private const float BothChance = 0.1f;
-        private const float CapacitySpecializeChance = 0.25f;
-        private const float MixedBookEffectivenessFactor = 0.75f;
-
-        private const float BaseArchiteRate = 0.8f;
-        private const float ArchiteRatePerQuality = 0.3f;
-
         private float architesPerHour;
         private ArchiteBookType bookType;
+        
+        BookOutcomeProperties_GainArchites ArchiteProps => props as BookOutcomeProperties_GainArchites;
 
         public override bool DoesProvidesOutcome(Pawn reader)
         {
@@ -37,18 +39,18 @@ namespace ArchiteReinforcement
 
             architesPerHour = ArchiteRateAtQuality(Quality);
 
-            if (Rand.Chance(BothChance))
+            if (Rand.Chance(ArchiteProps.bothChance))
             {
                 bookType = ArchiteBookType.Both;
-                architesPerHour *= MixedBookEffectivenessFactor;
+                architesPerHour *= ArchiteProps.mixedBookEffectivenessFactor;
             }
             else
-                bookType = Rand.Chance(CapacitySpecializeChance) ? ArchiteBookType.Capacity : ArchiteBookType.Stat;
+                bookType = Rand.Chance(ArchiteProps.capacitySpecializeChance) ? ArchiteBookType.Capacity : ArchiteBookType.Stat;
         }
 
-        private static float ArchiteRateAtQuality(QualityCategory quality)
+        private float ArchiteRateAtQuality(QualityCategory quality)
         {
-            return BaseArchiteRate + ArchiteRatePerQuality * (int)quality;
+            return ArchiteProps.baseArchiteRate + ArchiteProps.architeRatePerQuality * (int)quality;
         }
 
         public override void OnReadingTick(Pawn reader, float factor)

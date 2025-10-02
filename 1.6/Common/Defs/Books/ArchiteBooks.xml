@@ -36,7 +36,14 @@
                     <addTopAltitudeBias>true</addTopAltitudeBias>
                 </verticalGraphic>
                 <doers>
-                    <li Class="ArchiteReinforcement.BookOutcomeProperties_GainArchites" />
+                    <li Class="ArchiteReinforcement.BookOutcomeProperties_GainArchites">
+                        <bothChance>0.15</bothChance>
+                        <capacitySpecializeChance>0.25</capacitySpecializeChance>
+                        <mixedBookEffectivenessFactor>0.75</mixedBookEffectivenessFactor>
+
+                        <baseArchiteRate>2.5</baseArchiteRate>
+                        <architeRatePerQuality>0.8</architeRatePerQuality>
+                    </li>
                 </doers>
             </li>
         </comps>
